@@ -1,0 +1,25 @@
+@use "../global" as *;
+
+.l-header{
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 102;
+  background: $white-color;
+}
+
+.l-header__inner{
+    width: 100%;
+    padding-block: rclamp(16, 44, 375, 1023);
+    padding-inline: rclamp(20, 55, 375, 1023);
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-header-branding__link--image{
+    width: rclamp(187, 510, 375, 1023);
+    display: block;
+}

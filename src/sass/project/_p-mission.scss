@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+.p-mission{
+    background: $brown-background;
+}
+
+.p-mission__lead{
+    font-size: rclamp(15, 41, 375, 1023);
+}
+
+.p-mission-list{
+    margin-top: rclamp(20, 55, 375, 1023);
+}
+
+.p-mission-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-mission-item {
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(8, 22, 375, 1023);
+    padding-inline: rclamp(12, 33, 375, 1023);
+}
+
+.p-mission-item__image{
+    padding-inline: rclamp(50, 136, 375, 1023);
+    padding-top: rclamp(46, 125, 375, 1023);
+    padding-bottom: rclamp(15, 41, 375, 1023);
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: auto;
+        height: rclamp(110, 300, 375, 1023);
+    }
+}
+
+.p-mission-item__textBox{
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(8, 22, 375, 1023);
+}
+
+.p-mission-item__title {
+    text-align: center;
+    font-size: rclamp(18, 49, 375, 1023);
+    letter-spacing: 0.9px;
+    line-height: 1.5;
+}

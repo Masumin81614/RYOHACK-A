@@ -1,0 +1,93 @@
+@use "../global" as *;
+
+.p-hero {
+    background: url(../img/bg_fv.webp) no-repeat top center / cover;
+}
+
+
+.p-hero__inner{
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(40, 109, 375, 1023);
+}
+
+.p-hero__content{
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(16, 44, 375, 1023);
+}
+
+.p-hero__title {
+    font-size: rclamp(40, 109, 375, 1023);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.p-hero__text{
+    font-size: rclamp(18, 49, 375, 1023);
+    font-weight: 700;
+    letter-spacing: 0.9px;
+}
+
+.p-hero__cta {
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(4, 11, 375, 1023);
+}
+.p-hero__cta--lead {
+    font-size: rclamp(18, 49, 375, 1023);
+    font-weight: 700;
+    line-height: 160%;
+    letter-spacing: 0.9px;
+    text-align: center;
+}
+
+// Slider
+
+/* ================================
+  Reset
+=============================== */
+.p-hero__swiper-container,
+.p-hero__swiper,
+.p-hero__swiper-wrapper,
+.p-hero__slide {
+  position: relative;
+}
+
+/* 位置のreset */
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   ページネーション (bullets)
+============================= */
+/* 位置の設定 (枠組み) */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: auto;
+}
+
+/* それぞれのページネーション */
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet {
+  opacity: 1;
+  width: rclamp(10, 27, 375, 1023);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid $main-blue-color;
+  margin-inline: calc(11px / 2);
+}
+
+/* activeな部分 */
+.swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
+  background: $main-blue-color;;
+}
+

@@ -1,0 +1,6 @@
+@use "../global" as *;
+
+.l-inner{
+    padding-inline: rclamp(20, 55, 375, 1023);
+    padding-block: rclamp(80, 218, 375, 1023);
+}

@@ -1,0 +1,16 @@
+# デザイン・画像（ご要望通り）
+*.psd
+*.ai
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# OS・エディタ
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Sass関連
+.sass-cache/
+*.css.map

@@ -1,0 +1,117 @@
+@use "../global" as *;
+
+.p-sp-menu-toggle {
+    width: rclamp(30, 82, 375, 1023);
+    height: rclamp(30, 82, 375, 1023);
+    background: $white-color;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-inline: 0;
+    cursor: pointer;
+
+    &.js-show {
+        .c-sp-menu-toggle__line {
+            &:nth-of-type(1) {
+                rotate: 45deg;
+                translate: 0 3.5px;
+            }
+        
+            &:nth-of-type(2) {
+                display: none;
+            }
+        
+            &:nth-of-type(3){
+                rotate: -45deg;
+                translate: 0 -7.5px;
+            }
+        } 
+       }
+
+}
+
+.c-sp-menu-toggle__line{
+    width: rclamp(30, 82, 375, 1023);
+    height: 3px;
+    border-radius: 15px;
+    background: $main-text-color;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.p-sp-menu {
+    background: #ECF6F9; 
+    padding-block: rclamp(60, 164, 375, 1023);
+    padding-inline: rclamp(20, 55, 375, 1023);
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(40, 109, 375, 1023);
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    transform: translateX(100%); 
+    transition: transform 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        transform 0.4s ease, 
+        opacity 0.4s ease, 
+        visibility 0s linear 0.4s;
+
+    &.js-show{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+
+        transition: 
+            transform 0.4s ease, 
+            opacity 0.4s ease, 
+            visibility 0s linear 0s;
+    }
+}
+
+.p-sp-menu__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rclamp(40, 109, 375, 1023);
+}
+
+.p-sp-menu__item{
+    font-size: rclamp(14, 38, 375, 1023);
+    font-weight: 500;
+    letter-spacing: 0.56px;
+}
+
+.p-sp-menu__tel{
+    display: flex;
+    gap: rclamp(8, 22, 375, 1023);
+    justify-content: center;
+}
+
+.p-sp-menu__tel-icon{
+    width: rclamp(31, 85, 375, 1023);
+    height: rclamp(41, 112, 375, 1023);
+}
+
+.p-sp-menu__tel--textBox{
+    display: flex;
+    flex-direction: column;
+    gap: rclamp(4, 11, 375, 1023);
+}
+
+.p-sp-menu__tel-number{
+    font-size: rclamp(24, 65, 375, 1023);
+}
+
+.p-sp-menu__tel-time{
+    font-size: rclamp(12, 33, 375, 1023);
+}
+
+.p-sp-menu__cta{
+  margin-inline: auto;
+}

@@ -1,0 +1,62 @@
+@use "../global" as *;
+
+.c-btn {
+  background: $main-blue-color;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  i {
+    color: $white-color;
+  }
+}
+
+.c-btn--text {
+  color: $white-color;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.c-btn--sm {
+  padding-block: rclamp(12, 33, 375, 1023);
+  padding-inline: rclamp(32, 87, 375, 1023);
+  gap: rclamp(10, 27, 375, 1023);
+  width: rclamp(220, 600, 375, 1023);
+
+  .c-btn--text {
+    font-size: rclamp(16, 44, 375, 1023);
+  }
+}
+
+.c-btn--large__sp {
+  padding: rclamp(20, 55, 375, 1023);
+  gap: rclamp(12, 33, 375, 1023);
+
+  .c-header-contact__btn--box {
+    gap: rclamp(12, 33, 375, 1023);
+  }
+
+  i {
+    font-size: rclamp(22, 60, 375, 1023);
+  }
+
+  .c-btn--text {
+    font-size: rclamp(18, 49, 375, 1023);
+    letter-spacing: 0.9px;
+  }
+}
+
+.c-btn--lg {
+  @include mq(tb-middle) {
+    width: rclamp(250, 469, 1024, 1920);
+    padding-bottom: rclamp(14, 27, 1024, 1920);
+    padding-inline: rclamp(23, 43, 1024, 1920);
+    gap: rclamp(16, 21, 375, 1023);
+
+    .c-btn--text {
+      font-size: rclamp(14, 27, 1024, 1920);
+    }
+  }
+}

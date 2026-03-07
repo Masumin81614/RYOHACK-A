@@ -1,0 +1,39 @@
+// HTMLにあるクラス名「.p-hero__swiper」を正確に指定します
+const cardSwiper = new Swiper(".p-hero__swiper", {
+  speed: 1000,
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true, // フェードが重ならないように必須
+  },
+  loop: true,
+  allowTouchMove: true,
+
+  autoplay: {
+    delay: 4500,
+    disableOnInteraction: false,
+  },
+
+  // フェードの時は slidesPerView は必ず 1 です
+  slidesPerView: 1,
+
+  // ページネーション（コンテナの外にある場合はこれでOK）
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  // ナビゲーション
+  navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+});
+
+const swiper = new Swiper(".p-teachers-swiper-container", {
+  slidesPerView: 2,
+  scrollbar: {
+    el: ".swiper-scrollbar", //.swiper-scrollbarをスクロールバーに指定
+    hide: false, // スクロールバーが常に表示される
+    draggable: true, // スクロールバーをドラッグ可能にする
+  },
+});

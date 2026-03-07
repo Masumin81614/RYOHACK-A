@@ -1,0 +1,8 @@
+@use "../global" as *;
+
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    line-height: 1.5;
+    color: $main-text-color;
+    overflow-x: hidden;
+}

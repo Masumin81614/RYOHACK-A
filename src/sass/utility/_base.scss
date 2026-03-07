@@ -1,0 +1,21 @@
+@use "../global" as *;
+
+.u-yellow-text {
+    color: $accent-yellow-color;
+}
+
+.u-hidden-sp {
+    display: none;
+
+    @include mq(tb-middle) {
+        display: block;
+    }
+}
+
+.u-hidden-pc {
+    display: block;
+
+    @include mq(tb-middle) {
+        display: none;
+    }
+}
