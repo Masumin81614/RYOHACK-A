@@ -1,0 +1,201 @@
+@use "../global" as *;
+
+.p-contact__form--contents {
+  margin-top: rclamp(40, 109, 375, 1023);
+}
+
+.hidden-fields-container {
+  display: none;
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(24, 65, 375, 1023);
+}
+
+.contact__field--box {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(40, 109, 375, 1023);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(10, 27, 375, 1023);
+}
+
+.form-field__label {
+  font-size: rclamp(15, 41, 375, 1023);
+  font-weight: 500;
+  line-height: 180%; /* 27px */
+  letter-spacing: 0.75px;
+}
+
+.form-field__tag {
+  color: $accent-pink-color;
+}
+
+.form__name--box {
+  p {
+    display: flex;
+    flex-direction: row;
+    gap: rclamp(15, 41, 375, 1023);
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+}
+
+.form-field__head {
+  p {
+    display: flex;
+  }
+}
+
+.form-text {
+  background: $brown-background;
+  padding: rclamp(16, 44, 375, 1023);
+  border: transparent;
+  border-radius: 8px;
+  width: 100%;
+  font-size: rclamp(14, 38, 375, 1023);
+
+  &:focus {
+    border: 1px solid $main-blue-color;
+  }
+}
+
+.wpcf7-select {
+  &:focus {
+    border: 1px solid $main-blue-color;
+  }
+}
+
+.wpcf7-form-control-wrap:has(.wpcf7-select) {
+  position: relative;
+  display: block;
+  padding: rclamp(16, 44, 375, 1023);
+  background: $brown-background;
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: rclamp(16, 44, 375, 1023);
+    width: rclamp(11, 30, 375, 1023);
+    height: rclamp(11, 30, 375, 1023);
+    border-bottom: 2px solid $main-text-color;
+    border-right: 2px solid $main-text-color;
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+}
+
+.form-textarea {
+  background: $brown-background;
+  border-radius: 8px;
+  padding: rclamp(16, 44, 375, 1023);
+  width: 100%;
+}
+
+.contact__privacy {
+  margin-top: rclamp(32, 87, 375, 1023);
+
+  .wpcf7-list-item label {
+    display: flex;
+    justify-content: center;
+    font-size: rclamp(15, 41, 375, 1023);
+    font-weight: 500;
+    line-height: 180%; /* 27px */
+    letter-spacing: 0.75px;
+  }
+}
+
+.contact__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rclamp(10, 27, 375, 1023);
+  background: $main-blue-color;
+  border: none;
+  padding-block: rclamp(12, 33, 375, 1023);
+  padding-inline: rclamp(32, 87, 375, 1023);
+  width: rclamp(220, 600, 375, 1023);
+  border-radius: 10px;
+  margin-inline: auto;
+  margin-top: rclamp(16, 44, 375, 1023);
+
+  p {
+    color: $white-color;
+    font-size: rclamp(16, 44, 375, 1023);
+  }
+}
+
+.contact__button--svg {
+  p {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* =======================================
+   チェックボックス全体のレイアウト（スマホ2列 / PC4列）
+======================================= */
+.wpcf7-checkbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* スマホ時は2列 */
+  gap: rclamp(16, 24, 375, 1023) rclamp(12, 16, 375, 1023); /* 縦と横の隙間 */
+
+  @include mq(tb-middle) {
+    /* 1024px以上で4列にする場合 */
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* CF7が勝手につける余白をリセット */
+.wpcf7-list-item {
+  margin: 0 !important;
+}
+
+/* ラベルのレイアウト（チェックボックスと文字を横並びに） */
+.wpcf7-list-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* チェックボックスと文字の隙間 */
+  cursor: pointer;
+}
+
+.wpcf7-list-item-label {
+  font-size: rclamp(14, 16, 375, 1023);
+  line-height: 1.4;
+}
+
+.wpcf7-checkbox input[type="checkbox"],
+.form-checkbox__input[type="checkbox"] {
+  width: rclamp(20, 55, 375, 1023);
+  height: rclamp(20, 55, 375, 1023);
+  flex-shrink: 0;
+  border: 1px solid #b4adad;
+  border-radius: 4px; /* ほんの少し角丸にする */
+  background-color: $brown-background;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  /* チェックが入った時のスタイル */
+  &:checked {
+    background-color: $white-color;
+    border-color: $main-blue-color;
+
+    /* 白いチェックマーク（SVG）を背景画像として表示 */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="13" viewBox="0 0 17 13" fill="none"><path d="M5.7 12.025L0 6.325L1.425 4.9L5.7 9.175L14.875 0L16.3 1.425L5.7 12.025Z" fill="%2366B1C5"/></svg>');
+    background-size: 75%; /* チェックマークの大きさ */
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

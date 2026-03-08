@@ -1,0 +1,53 @@
+@use "../global" as *;
+
+.l-footer {
+  background: $light-green-color;
+}
+
+.p-footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: rclamp(40, 109, 375, 1023);
+}
+
+.p-site-branding {
+  width: rclamp(225, 614, 375, 1023);
+  height: auto;
+  margin-inline: auto;
+}
+
+.p-footer-nav {
+  margin-top: rclamp(40, 109, 375, 1023);
+}
+
+.p-footer-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(40, 109, 375, 1023);
+  align-items: center;
+
+  li {
+    font-size: rclamp(14, 38, 375, 1023);
+  }
+}
+
+.p-footer__line {
+  width: 100%;
+  height: 1px;
+  background: $main-text-color;
+  margin-block: rclamp(32, 87, 375, 1023);
+}
+
+.p-footer__sns {
+  display: flex;
+  flex-direction: row;
+  gap: rclamp(16, 44, 375, 1023);
+  justify-content: center;
+}
+
+.p-footer-copy {
+  font-size: rclamp(12, 33, 375, 1023);
+  text-align: center;
+  margin-top: rclamp(16, 44, 375, 1023);
+}

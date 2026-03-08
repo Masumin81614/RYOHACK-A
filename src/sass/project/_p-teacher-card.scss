@@ -67,17 +67,18 @@
 .p-teachers-slider__controls {
   position: relative;
   display: flex;
-}
-.p-teachers-slider__btn {
-  position: absolute;
-  right: rclamp(23, 63, 375, 1023);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .p-teachers-slider__btn {
-  top: rclamp(24, 65, 375, 1023);
   display: flex;
   flex-direction: row;
   gap: rclamp(22, 60, 375, 1023);
+  position: static;
+  right: auto;
+  top: auto;
 }
 
 .p-teachers-slider__nav {
@@ -93,14 +94,20 @@
 }
 
 .p-teachers-slider__scrollbar {
-  width: rclamp(150, 409, 375, 1023);
-  height: rclamp(8, 22, 375, 1023);
-  border-radius: 0 10px 10px 0;
-  background: rgba(180, 173, 173, 0.5);
+  &.swiper-scrollbar {
+    width: rclamp(150, 409, 375, 1023);
+    height: rclamp(8, 22, 375, 1023);
+    border-radius: 0 10px 10px 0;
+    background: rgba(180, 173, 173, 0.5);
+    position: relative !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
 
-  &.swiper-scrollbar-drag {
-    background-color: $main-blue-color;
-    border-radius: 10px 0 0 10px;
+    &.swiper-scrollbar-drag {
+      background-color: $main-blue-color;
+      border-radius: 10px 0 0 10px;
+    }
   }
 }
 

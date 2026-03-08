@@ -24,7 +24,8 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
 });
 
 const swiper = new Swiper(".js-teachers-slider", {
-  slidesPerView: 2,
+  slidesPerView: 1,
+
   scrollbar: {
     el: ".js-teachers-scrollbar", //.swiper-scrollbarをスクロールバーに指定
     hide: false, // スクロールバーが常に表示される

@@ -64,10 +64,13 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".js-accordion").forEach(function (accordion) {
     accordion.querySelectorAll(".js-accordion-toggle").forEach(function (btn) {
       btn.addEventListener("click", function (e) {
-        e.preventDefault(); // ★ここも念のため追加
+        e.preventDefault(); // ★画面がジャンプするのを防ぐ必須コード
+
         const item = btn.closest(".p-faq-item");
         const panel = item.querySelector(".js-accordion-panel");
         const expanded = btn.getAttribute("aria-expanded") === "true";
+
+        // 状態の切り替え
         btn.setAttribute("aria-expanded", String(!expanded));
         panel.setAttribute("aria-hidden", String(expanded));
         item.classList.toggle("is-open", !expanded);

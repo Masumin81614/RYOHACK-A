@@ -49,12 +49,12 @@
         </nav>
 
         <div class="p-header-contact c-global-nav--pc">
-          <div class="p-header-contact__tel">
-            <div class="p-header-contact__tel--box">
-              <span class="p-header-contact__tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /> </span>
-              <a href="tel:0120123456" class="p-header-contact__tel-number">0120-12-3456</a>
+          <div class="c-contact__tel">
+            <div class="c-contact__tel--box">
+              <span class="c-contact__tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /> </span>
+              <a href="tel:0120123456" class="c-contact__tel-number">0120-12-3456</a>
             </div>
-            <span class="p-header-contact__tel-time">受付時間：平日 9:00〜19:00</span>
+            <span class="c-contact__tel-time">受付時間：平日 9:00〜19:00</span>
           </div>
           <a href="#contact" class="c-btn c-btn--primary c-btn--sm p-header-contact__btn">
             <div class="c-header-contact__btn--box">
@@ -83,11 +83,11 @@
           <li class="p-sp-menu__item"><a href="#faq">よくある質問</a></li>
         </ul>
 
-        <div class="p-sp-menu__tel">
-          <span class="p-sp-menu__tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
-          <div class="p-sp-menu__tel--textBox">
+        <div class="c-contact__tel">
+          <span class="c-tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
+          <div class="c-sp-menu__tel--textBox">
             <a href="tel:0120123456" class="p-sp-menu__tel-number c-tel-number">0120-12-3456</a>
-            <p class="p-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
+            <p class="c-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
           </div>
         </div>
 
@@ -715,109 +715,71 @@
       </section>
 
       <!-- お問い合わせ（CF7 + Multi-Step を意識したDOM） -->
-      <section id="contact" class="p-section p-section--contact">
+      <section id="contact" class="p-contact">
         <div class="l-inner">
-          <div class="p-section-header">
-            <p class="p-section-header__eyebrow">Contact</p>
-            <h2 class="p-section-header__title">お問い合わせ</h2>
-          </div>
-          <!-- 実際のWordPressでは、この<div class="wpcf7">〜</div>部分を
-             CF7のショートコードで自動出力させる想定 -->
-          <div class="wpcf7 js" id="wpcf7-f6-p7-o1" lang="ja" dir="ltr" data-wpcf7-id="6">
-            <div class="screen-reader-response">
-              <p role="status" aria-live="polite" aria-atomic="true"></p>
-              <ul></ul>
+          <div class="p-p-contact__header">
+            <div class="c-head p-contact__head">
+              <div class="c-heading">
+                <h2 class="c-header__eyebrow">Contact</h2>
+                <span class="c-header__title">お問い合わせ</span>
+              </div>
             </div>
-            <form action="/contact-form/#wpcf7-f6-p7-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
-              <fieldset class="hidden-fields-container">
-                <input type="hidden" name="_wpcf7" value="6" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ja" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p7-o1" /><input
-                  type="hidden"
-                  name="_wpcf7_container_post"
-                  value="7"
-                /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-              </fieldset>
-              <div class="contact__fields">
-                <div class="contact__field">
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <p><label for="your-name" class="form-field__label">生徒さまのお名前</label><span class="form-field__tag">*</span></p>
-                    </div>
-                    <div class="form-field__item form__name--box">
-                      <p>
-                        <span class="wpcf7-form-control-wrap" data-name="your-family-name"
-                          ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" autocomplete="name" aria-required="true" aria-invalid="false" placeholder="姓" value="" type="text" name="your-family-name" /></span
-                        ><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" autocomplete="name" aria-invalid="false" placeholder="名" value="" type="text" name="your-name" /></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="contact__field">
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <p>
-                        <label for="your-email" class="form-field__label">メールアドレス</label><br />
-                        <span class="form-field__tag">*</span>
-                      </p>
-                    </div>
-                    <div class="form-field__item">
-                      <p>
-                        <span class="wpcf7-form-control-wrap" data-name="your-email"
-                          ><input
-                            size="40"
-                            maxlength="400"
-                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
-                            autocomplete="email"
-                            aria-required="true"
-                            aria-invalid="false"
-                            placeholder="xxx@example.com"
-                            value=""
-                            type="email"
-                            name="your-email"
-                        /></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="contact__field">
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <p>
-                        <label for="your-email" class="form-field__label">ご連絡の取れる電話番号</label><br />
-                        <span class="form-field__tag">*</span>
-                      </p>
-                    </div>
-                    <div class="form-field__item">
-                      <p>
-                        <span class="wpcf7-form-control-wrap" data-name="your-email"
-                          ><input
-                            size="40"
-                            maxlength="400"
-                            class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
-                            autocomplete="email"
-                            aria-required="true"
-                            aria-invalid="false"
-                            placeholder="xxx@example.com"
-                            value=""
-                            type="email"
-                            name="your-email"
-                        /></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="contact__field--box">
+          </div>
+          <div class="p-contact__form--contents">
+            <!-- 実際のWordPressでは、この<div class="wpcf7">〜</div>部分を
+                 CF7のショートコードで自動出力させる想定 -->
+            <div class="wpcf7 js" id="wpcf7-f6-p7-o1" lang="ja" dir="ltr" data-wpcf7-id="6">
+              <div class="screen-reader-response">
+                <p role="status" aria-live="polite" aria-atomic="true"></p>
+                <ul></ul>
+              </div>
+              <form action="/contact-form/#wpcf7-f6-p7-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
+                <fieldset class="hidden-fields-container">
+                  <input type="hidden" name="_wpcf7" value="6" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ja" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p7-o1" /><input
+                    type="hidden"
+                    name="_wpcf7_container_post"
+                    value="7"
+                  /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                </fieldset>
+                <div class="contact__fields">
                   <div class="contact__field">
                     <div class="form-field">
                       <div class="form-field__head">
                         <p>
-                          <label for="your-email" class="form-field__label">郵便番号</label><br />
-                          <span class="form-field__tag">*</span>
+                          <label for="your-name" class="form-field__label">生徒さまのお名前<span class="form-field__tag">*</span></label>
+                        </p>
+                      </div>
+                      <div class="form-field__item form__name--box">
+                        <p>
+                          <span class="wpcf7-form-control-wrap" data-name="your-family-name"
+                            ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" autocomplete="name" aria-required="true" aria-invalid="false" placeholder="姓" value="" type="text" name="your-family-name" /></span
+                          ><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" autocomplete="name" aria-invalid="false" placeholder="名" value="" type="text" name="your-name" /></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <p>
+                          <label for="your-email" class="form-field__label">メールアドレス<span class="form-field__tag">*</span></label
+                          ><br />
                         </p>
                       </div>
                       <div class="form-field__item">
                         <p>
-                          <span class="wpcf7-form-control-wrap" data-name="post-number"
-                            ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" aria-required="true" aria-invalid="false" placeholder="0000000" value="" type="text" name="post-number"
+                          <span class="wpcf7-form-control-wrap" data-name="your-email"
+                            ><input
+                              size="40"
+                              maxlength="400"
+                              class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
+                              autocomplete="email"
+                              aria-required="true"
+                              aria-invalid="false"
+                              placeholder="xxx@example.com"
+                              value=""
+                              type="email"
+                              name="your-email"
                           /></span>
                         </p>
                       </div>
@@ -826,158 +788,213 @@
                   <div class="contact__field">
                     <div class="form-field">
                       <div class="form-field__head">
-                        <p><label for="your-email" class="form-field__label">都道府県</label></p>
+                        <p>
+                          <label for="your-email" class="form-field__label">ご連絡の取れる電話番号<span class="form-field__tag">*</span></label
+                          ><br />
+                        </p>
                       </div>
                       <div class="form-field__item">
                         <p>
-                          <span class="wpcf7-form-control-wrap" data-name="select-pref"
-                            ><select class="wpcf7-form-control wpcf7-select" id="select-pref" aria-invalid="false" name="select-pref">
-                              <option value="">–</option>
-                              <option value="北海道">北海道</option>
-                              <option value="青森県">青森県</option>
-                              <option value="岩手県">岩手県</option>
-                              <option value="宮城県">宮城県</option>
-                              <option value="秋田県">秋田県</option>
-                              <option value="山形県">山形県</option>
-                              <option value="福島県">福島県</option>
-                              <option value="茨城県">茨城県</option>
-                              <option value="栃木県">栃木県</option>
-                              <option value="群馬県">群馬県</option>
-                              <option value="埼玉県">埼玉県</option>
-                              <option value="千葉県">千葉県</option>
-                              <option value="東京都">東京都</option>
-                              <option value="神奈川県">神奈川県</option>
-                              <option value="新潟県">新潟県</option>
-                              <option value="富山県">富山県</option>
-                              <option value="石川県">石川県</option>
-                              <option value="福井県">福井県</option>
-                              <option value="山梨県">山梨県</option>
-                              <option value="長野県">長野県</option>
-                              <option value="岐阜県">岐阜県</option>
-                              <option value="静岡県">静岡県</option>
-                              <option value="愛知県">愛知県</option>
-                              <option value="三重県">三重県</option>
-                              <option value="滋賀県">滋賀県</option>
-                              <option value="京都府">京都府</option>
-                              <option value="大阪府">大阪府</option>
-                              <option value="兵庫県">兵庫県</option>
-                              <option value="奈良県">奈良県</option>
-                              <option value="和歌山県">和歌山県</option>
-                              <option value="鳥取県">鳥取県</option>
-                              <option value="島根県">島根県</option>
-                              <option value="岡山県">岡山県</option>
-                              <option value="広島県">広島県</option>
-                              <option value="山口県">山口県</option>
-                              <option value="徳島県">徳島県</option>
-                              <option value="香川県">香川県</option>
-                              <option value="愛媛県">愛媛県</option>
-                              <option value="高知県">高知県</option>
-                              <option value="福岡県">福岡県</option>
-                              <option value="佐賀県">佐賀県</option>
-                              <option value="長崎県">長崎県</option>
-                              <option value="熊本県">熊本県</option>
-                              <option value="大分県">大分県</option>
-                              <option value="宮崎県">宮崎県</option>
-                              <option value="鹿児島県">鹿児島県</option>
-                              <option value="沖縄県">沖縄県</option>
+                          <span class="wpcf7-form-control-wrap" data-name="your-email"
+                            ><input
+                              size="40"
+                              maxlength="400"
+                              class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
+                              autocomplete="email"
+                              aria-required="true"
+                              aria-invalid="false"
+                              placeholder="xxx@example.com"
+                              value=""
+                              type="email"
+                              name="your-email"
+                          /></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field--box">
+                    <div class="contact__field">
+                      <div class="form-field">
+                        <div class="form-field__head">
+                          <p>
+                            <label for="your-email" class="form-field__label">郵便番号<span class="form-field__tag">*</span></label
+                            ><br />
+                          </p>
+                        </div>
+                        <div class="form-field__item">
+                          <p>
+                            <span class="wpcf7-form-control-wrap" data-name="post-number"
+                              ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" aria-required="true" aria-invalid="false" placeholder="0000000" value="" type="text" name="post-number"
+                            /></span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="contact__field">
+                      <div class="form-field">
+                        <div class="form-field__head">
+                          <p><label for="your-email" class="form-field__label">都道府県</label></p>
+                        </div>
+                        <div class="form-field__item">
+                          <p>
+                            <span class="wpcf7-form-control-wrap" data-name="select-pref"
+                              ><select class="wpcf7-form-control wpcf7-select" id="select-pref" aria-invalid="false" name="select-pref">
+                                <option value="">–</option>
+                                <option value="北海道">北海道</option>
+                                <option value="青森県">青森県</option>
+                                <option value="岩手県">岩手県</option>
+                                <option value="宮城県">宮城県</option>
+                                <option value="秋田県">秋田県</option>
+                                <option value="山形県">山形県</option>
+                                <option value="福島県">福島県</option>
+                                <option value="茨城県">茨城県</option>
+                                <option value="栃木県">栃木県</option>
+                                <option value="群馬県">群馬県</option>
+                                <option value="埼玉県">埼玉県</option>
+                                <option value="千葉県">千葉県</option>
+                                <option value="東京都">東京都</option>
+                                <option value="神奈川県">神奈川県</option>
+                                <option value="新潟県">新潟県</option>
+                                <option value="富山県">富山県</option>
+                                <option value="石川県">石川県</option>
+                                <option value="福井県">福井県</option>
+                                <option value="山梨県">山梨県</option>
+                                <option value="長野県">長野県</option>
+                                <option value="岐阜県">岐阜県</option>
+                                <option value="静岡県">静岡県</option>
+                                <option value="愛知県">愛知県</option>
+                                <option value="三重県">三重県</option>
+                                <option value="滋賀県">滋賀県</option>
+                                <option value="京都府">京都府</option>
+                                <option value="大阪府">大阪府</option>
+                                <option value="兵庫県">兵庫県</option>
+                                <option value="奈良県">奈良県</option>
+                                <option value="和歌山県">和歌山県</option>
+                                <option value="鳥取県">鳥取県</option>
+                                <option value="島根県">島根県</option>
+                                <option value="岡山県">岡山県</option>
+                                <option value="広島県">広島県</option>
+                                <option value="山口県">山口県</option>
+                                <option value="徳島県">徳島県</option>
+                                <option value="香川県">香川県</option>
+                                <option value="愛媛県">愛媛県</option>
+                                <option value="高知県">高知県</option>
+                                <option value="福岡県">福岡県</option>
+                                <option value="佐賀県">佐賀県</option>
+                                <option value="長崎県">長崎県</option>
+                                <option value="熊本県">熊本県</option>
+                                <option value="大分県">大分県</option>
+                                <option value="宮崎県">宮崎県</option>
+                                <option value="鹿児島県">鹿児島県</option>
+                                <option value="沖縄県">沖縄県</option>
+                              </select></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <p><label for="your-email" class="form-field__label">住所</label></p>
+                      </div>
+                      <div class="form-field__item">
+                        <p>
+                          <span class="wpcf7-form-control-wrap" data-name="your-address"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" aria-invalid="false" placeholder="千代田区〇〇1-1-1" value="" type="text" name="your-address" /></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <p><label for="your-email" class="form-field__label">ご希望の校舎</label></p>
+                      </div>
+                      <div class="form-field__item">
+                        <p>
+                          <span class="wpcf7-form-control-wrap" data-name="your-color"
+                            ><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="your-color">
+                              <option value="">選択してください</option>
+                              <option value="新宿校">新宿校</option>
+                              <option value="松戸校">松戸校</option>
+                              <option value="宇部新川校">宇部新川校</option>
                             </select></span
                           >
                         </p>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="contact__field">
-                  <div class="form-field">
-                    <div class="form-field__head">
-                      <p><label for="your-email" class="form-field__label">住所</label></p>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <div class="form-field__label">
+                          <p>ご用件<span class="form-field__tag">*</span></p>
+                        </div>
+                      </div>
+                      <div class="form-field__item">
+                        <p>
+                          <span class="wpcf7-form-control-wrap" data-name="your-help"
+                            ><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required form-checkbox"
+                              ><span class="wpcf7-list-item first"
+                                ><label><input type="checkbox" name="your-help[]" value="資料請求" /><span class="wpcf7-list-item-label">資料請求</span></label></span
+                              ><span class="wpcf7-list-item"
+                                ><label><input type="checkbox" name="your-help[]" value="無料体験お申し込み" /><span class="wpcf7-list-item-label">無料体験お申し込み</span></label></span
+                              ><span class="wpcf7-list-item"
+                                ><label><input type="checkbox" name="your-help[]" value="コースお申し込み" /><span class="wpcf7-list-item-label">コースお申し込み</span></label></span
+                              ><span class="wpcf7-list-item last"
+                                ><label><input type="checkbox" name="your-help[]" value="その他" /><span class="wpcf7-list-item-label">その他</span></label></span
+                              ></span
+                            ></span
+                          >
+                        </p>
+                      </div>
                     </div>
-                    <div class="form-field__item">
-                      <p>
-                        <span class="wpcf7-form-control-wrap" data-name="your-address"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" aria-invalid="false" placeholder="千代田区〇〇1-1-1" value="" type="text" name="your-address" /></span>
-                      </p>
+                  </div>
+                  <div class="contact__field">
+                    <div class="form-field">
+                      <div class="form-field__head">
+                        <p><label for="your-message" class="form-field__label">お問い合わせ内容</label></p>
+                      </div>
+                      <div class="form-field__item">
+                        <p>
+                          <span class="wpcf7-form-control-wrap" data-name="your-text"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea form-textarea" aria-invalid="false" placeholder="ご自由にご記入ください。" name="your-text"></textarea></span>
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="contact__field">
-                <div class="form-field">
-                  <div class="form-field__head">
-                    <p><label for="your-email" class="form-field__label">ご希望の校舎</label></p>
-                  </div>
-                  <div class="form-field__item">
+                <div class="contact__privacy">
+                  <div class="form-checkbox">
                     <p>
-                      <span class="wpcf7-form-control-wrap" data-name="your-color"
-                        ><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="your-color">
-                          <option value="">選択してください</option>
-                          <option value="新宿校">新宿校</option>
-                          <option value="松戸校">松戸校</option>
-                          <option value="宇部新川校">宇部新川校</option>
-                        </select></span
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="contact__field">
-                <div class="form-field">
-                  <div class="form-field__head">
-                    <div class="form-field__label">
-                      <p>ご用件</p>
-                    </div>
-                    <p><span class="form-field__tag">*</span></p>
-                  </div>
-                  <div class="form-field__item">
-                    <p>
-                      <span class="wpcf7-form-control-wrap" data-name="your-help"
-                        ><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required form-checkbox"
-                          ><span class="wpcf7-list-item first"
-                            ><label><input type="checkbox" name="your-help[]" value="資料請求" /><span class="wpcf7-list-item-label">資料請求</span></label></span
+                      <span class="wpcf7-form-control-wrap" data-name="acceptance-check"
+                        ><span class="wpcf7-form-control wpcf7-acceptance optional"
                           ><span class="wpcf7-list-item"
-                            ><label><input type="checkbox" name="your-help[]" value="無料体験お申し込み" /><span class="wpcf7-list-item-label">無料体験お申し込み</span></label></span
-                          ><span class="wpcf7-list-item"
-                            ><label><input type="checkbox" name="your-help[]" value="コースお申し込み" /><span class="wpcf7-list-item-label">コースお申し込み</span></label></span
-                          ><span class="wpcf7-list-item last"
-                            ><label><input type="checkbox" name="your-help[]" value="その他" /><span class="wpcf7-list-item-label">その他</span></label></span
+                            ><label
+                              ><input type="checkbox" name="acceptance-check" value="1" class="form-checkbox__input" aria-invalid="false" /><span class="wpcf7-list-item-label"><a href="" target="_blank">利用規約</a>に同意します</span></label
+                            ></span
                           ></span
                         ></span
                       >
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="contact__field">
-                <div class="form-field">
-                  <div class="form-field__head">
-                    <p><label for="your-message" class="form-field__label">お問い合わせ内容</label></p>
-                  </div>
-                  <div class="form-field__item">
+                <div class="contact__button">
+                  <p><input class="wpcf7-form-control wpcf7-submit has-spinner submit-btn" type="submit" value="入力内容を送信する" /><span class="wpcf7-spinner"></span></p>
+                  <div class="contact__button--svg">
                     <p>
-                      <span class="wpcf7-form-control-wrap" data-name="your-text"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea form-textarea" aria-invalid="false" placeholder="ご自由にご記入ください。" name="your-text"></textarea></span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="9" fill="white"></circle>
+                        <path d="M12 9L7.5 11.5981L7.5 6.40192L12 9Z" fill="#66B1C5"></path>
+                      </svg>
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="contact__privacy">
-                <div class="form-checkbox">
-                  <p>
-                    <span class="wpcf7-form-control-wrap" data-name="acceptance-check"
-                      ><span class="wpcf7-form-control wpcf7-acceptance optional"
-                        ><span class="wpcf7-list-item"
-                          ><label
-                            ><input type="checkbox" name="acceptance-check" value="1" class="form-checkbox__input" aria-invalid="false" /><span class="wpcf7-list-item-label"><a href="" target="_blank">利用規約</a>に同意します</span></label
-                          ></span
-                        ></span
-                      ></span
-                    >
-                  </p>
-                </div>
-              </div>
-              <div class="contact__button">
-                <p><input class="wpcf7-form-control wpcf7-submit has-spinner submit-btn" type="submit" value="入力内容を送信する" /><span class="wpcf7-spinner"></span></p>
-              </div>
-              <div class="wpcf7-response-output" aria-hidden="true"></div>
-            </form>
+
+                <div class="wpcf7-response-output" aria-hidden="true"></div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -986,15 +1003,19 @@
     <!-- ==================================================
     l-footer
   ================================================== -->
-    <footer class="l-footer">
+    <footer class="l-footer p-footer">
       <div class="l-inner l-footer__inner">
         <div class="p-footer-info">
           <div class="p-site-branding">
-            <span class="p-site-branding__logo" aria-hidden="true"></span>
-            <span class="p-site-branding__name">わかば個別指導塾</span>
+            <img src="./img/img_logo.webp" alt="わかば個別指導塾ロゴ" class="p-branding__link--image" width="450" height="72" loading="lazy" />
           </div>
-          <p class="p-footer-info__address">〒000-0000 東京都〇〇区〇〇1-2-3 ○○ビル3F</p>
-          <p class="p-footer-info__tel">TEL：<a href="tel:0120123456">0120-12-3456</a>（平日 9:00〜19:00）</p>
+          <div class="c-contact__tel">
+            <span class="c-tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
+            <div class="c-sp-menu__tel--textBox">
+              <a href="tel:0120123456" class="p-sp-menu__tel-number c-tel-number">0120-12-3456</a>
+              <p class="c-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
+            </div>
+          </div>
         </div>
 
         <div class="p-footer-nav">
@@ -1008,7 +1029,18 @@
           </ul>
         </div>
 
-        <p class="p-footer-copy">&copy; わかば個別指導塾 All Rights Reserved.</p>
+        <div class="p-footer__bottom">
+          <div class="p-footer__line"></div>
+          <ul class="p-footer__sns">
+            <li class="p-footer__sns-item">
+              <img src="./img/instagram-icon.svg" loading="lazy" />
+            </li>
+            <li class="p-footer__sns-item">
+              <img src="./img/facebook-icon.svg" loading="lazy" />
+            </li>
+          </ul>
+          <p class="p-footer-copy">&copy; 2025 わかば個別指導塾</p>
+        </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>

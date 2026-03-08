@@ -1,0 +1,51 @@
+@use "../global" as *;
+
+button {
+  background: none;
+}
+:where(dialog) {
+  width: unset;
+  max-width: unset;
+  height: unset;
+  max-height: unset;
+  padding: unset;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  overflow: unset;
+}
+// body:has(dialog[open]) {
+//   overflow: hidden;
+// }
+
+/* モーダルの基本スタイル */
+dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  position: fixed !important;
+  inset: 0 !important;
+  margin: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.js-show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &.js-show::backdrop {
+    opacity: 1;
+  }
+}

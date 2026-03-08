@@ -79,6 +79,8 @@ button.p-faq-item__button {
   flex: 1;
   min-width: 0;
   white-space: normal;
+  text-wrap: wrap;
+  color: $main-text-color;
 }
 
 .p-faq-item__toggle {
@@ -112,7 +114,6 @@ button.p-faq-item__button {
 
   .p-faq-item.is-open & {
     &::after {
-      // 縦棒を回転させながら消して、マイナスにする
       transform: translate(-50%, -50%) rotate(90deg);
       opacity: 0;
     }

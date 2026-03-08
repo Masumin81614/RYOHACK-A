@@ -1,7 +1,42 @@
 @use "../global" as *;
 
 .c-tel-number {
-    font-family: $font-en;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+  font-family: $font-en;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: $main-text-color;
+}
+
+.c-contact__tel {
+  display: flex;
+  flex-direction: row;
+  gap: rclamp(8, 22, 375, 1023);
+  justify-content: center;
+}
+
+.c-tel-icon {
+  width: rclamp(31, 85, 375, 1023);
+  height: rclamp(41, 112, 375, 1023);
+}
+
+.c-contact__tel-icon {
+  width: rclamp(31, 85, 375, 1023);
+  height: rclamp(41, 112, 375, 1023);
+}
+
+.c-sp-menu__tel--textBox {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(4, 11, 375, 1023);
+}
+
+.c-tel-number {
+  font-size: rclamp(24, 65, 375, 1023);
+}
+
+.c-sp-menu__tel-time {
+  font-size: rclamp(12, 33, 375, 1023);
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.6px;
 }

@@ -1,0 +1,58 @@
+@use "../global" as *;
+
+/* ==================================================
+   フォーム要素のリセット
+================================================== */
+
+input,
+button,
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background: transparent;
+  border: none;
+
+  border-radius: 0;
+
+  font: inherit;
+  color: inherit;
+
+  margin: 0;
+  padding: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+
+.wpcf7-select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.wpcf7-select option {
+  text-align: left;
+}
