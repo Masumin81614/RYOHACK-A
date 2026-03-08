@@ -91,3 +91,11 @@
 .p-sp-menu__cta {
   margin-inline: auto;
 }
+
+.c-sp-menu-toggle {
+  display: block;
+
+  @include mq(tb-middle) {
+    display: none;
+  }
+}

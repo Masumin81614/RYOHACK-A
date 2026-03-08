@@ -65,11 +65,26 @@
   &:focus {
     border: 1px solid $main-blue-color;
   }
+
+  &::placeholder {
+    color: $sub-text-color;
+    opacity: 1;
+  }
 }
 
 .wpcf7-select {
+  color: $sub-text-color;
+
   &:focus {
     border: 1px solid $main-blue-color;
+  }
+
+  option {
+    color: $main-text-color;
+  }
+
+  &.is-selected {
+    color: $main-text-color;
   }
 }
 

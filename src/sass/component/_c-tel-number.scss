@@ -12,26 +12,38 @@
   flex-direction: row;
   gap: rclamp(8, 22, 375, 1023);
   justify-content: center;
+
+  @include mq(tb-middle) {
+    gap: rclamp(3, 5, 1024, 1920);
+  }
 }
 
 .c-tel-icon {
   width: rclamp(31, 85, 375, 1023);
   height: rclamp(41, 112, 375, 1023);
-}
 
-.c-contact__tel-icon {
-  width: rclamp(31, 85, 375, 1023);
-  height: rclamp(41, 112, 375, 1023);
+  @include mq(tb-middle) {
+    width: rclamp(16, 29, 1024, 1920);
+    height: rclamp(19, 36, 1024, 1920);
+  }
 }
 
 .c-sp-menu__tel--textBox {
   display: flex;
   flex-direction: column;
   gap: rclamp(4, 11, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(3, 5, 1024, 1920);
+  }
 }
 
 .c-tel-number {
   font-size: rclamp(24, 65, 375, 1023);
+
+  @include mq(tb-middle) {
+    font-size: rclamp(17, 32, 1024, 1920);
+  }
 }
 
 .c-sp-menu__tel-time {
@@ -39,4 +51,8 @@
   font-weight: 500;
   line-height: 160%;
   letter-spacing: 0.6px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(9, 16, 1024, 1920);
+  }
 }

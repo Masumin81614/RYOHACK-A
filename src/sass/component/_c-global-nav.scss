@@ -1,11 +1,9 @@
 @use "../global" as *;
 
-.c-global-nav {}
+.c-global-nav--pc {
+  display: none;
 
-.c-global-nav--pc{
-    display: none;
-
-    @include mq(tb-middle) {
-        display: block;
-    }
+  @include mq(tb-middle) {
+    display: block;
+  }
 }

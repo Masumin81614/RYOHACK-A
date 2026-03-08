@@ -1,6 +1,6 @@
 @use "../global" as *;
 
-.l-header{
+.l-header {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -11,15 +11,54 @@
   background: $white-color;
 }
 
-.l-header__inner{
-    width: 100%;
-    padding-block: rclamp(16, 44, 375, 1023);
-    padding-inline: rclamp(20, 55, 375, 1023);
-    display: flex;
-    justify-content: space-between;
+.l-header__inner {
+  width: 100%;
+  padding-block: rclamp(16, 44, 375, 1023);
+  padding-inline: rclamp(20, 55, 375, 1023);
+  display: flex;
+  justify-content: space-between;
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(7, 13, 1024, 1920);
+    padding-inline: rclamp(28, 53, 1024, 1920);
+  }
 }
 
-.p-header-branding__link--image{
-    width: rclamp(187, 510, 375, 1023);
-    display: block;
+.p-header-branding__link--image {
+  width: rclamp(187, 510, 375, 1023);
+  display: block;
+
+  @include mq(tb-middle) {
+    width: rclamp(160, 300, 1024, 1920);
+  }
+}
+
+.p-header-nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: rclamp(23, 43, 1024, 1920);
+  align-items: center;
+
+  @include mq(tb-middle) {
+    gap: rclamp(23, 43, 1024, 1920);
+  }
+}
+
+.p-header-contact {
+  display: flex;
+  flex-direction: row;
+
+  @include mq(tb-middle) {
+    gap: rclamp(17, 32, 1024, 1920);
+  }
+}
+
+.p-pc-menu__cta {
+  @include mq(tb-middle) {
+    flex: 1;
+  }
+}
+
+.p-header-nav__item {
+  font-size: rclamp(10, 19, 1024, 1920);
 }

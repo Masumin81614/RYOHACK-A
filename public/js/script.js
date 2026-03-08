@@ -1,5 +1,3 @@
-// public/js/script.js
-
 document.addEventListener("DOMContentLoaded", function () {
   // --- 1. Tabの切り替え処理 ---
   const tabs = document.querySelectorAll(".p-courses-tabs__item");
@@ -49,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // 背景クリックで閉じる（ここはそのままでOK）
+  // 背景クリックで閉じる
   const allDialogs = document.querySelectorAll("dialog");
   allDialogs.forEach((dialog) => {
     dialog.addEventListener("click", (event) => {
@@ -76,5 +74,25 @@ document.addEventListener("DOMContentLoaded", function () {
         item.classList.toggle("is-open", !expanded);
       });
     });
+  });
+
+  // --- 4. セレクトボックスのプレースホルダー色変更 ---
+  const selects = document.querySelectorAll(".wpcf7-select");
+
+  selects.forEach(function (select) {
+    // 状態をチェックしてクラスを付け外しする関数
+    function updateColor() {
+      if (select.value === "") {
+        select.classList.remove("is-selected"); // 未選択なら薄いまま
+      } else {
+        select.classList.add("is-selected"); // 何か選ばれたら濃くする
+      }
+    }
+
+    // ① ページ読み込み時に1回チェック
+    updateColor();
+
+    // ② 選択が変わった時にチェック
+    select.addEventListener("change", updateColor);
   });
 });

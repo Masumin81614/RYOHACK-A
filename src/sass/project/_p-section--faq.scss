@@ -7,7 +7,16 @@
 .p-faq-item {
   display: flex;
   flex-direction: column;
-  gap: rclamp(24, 65, 375, 1023);
+  margin-top: rclamp(27, 74, 375, 1023);
+
+  &.is-open {
+    .p-faq-item__body {
+      grid-template-rows: 1fr;
+    }
+    .p-faq-item__answer {
+      padding-top: rclamp(24, 65, 375, 1023);
+    }
+  }
 }
 
 .p-faq__head {
@@ -48,6 +57,7 @@ button.p-faq-item__button {
   width: 100%;
   position: relative;
   padding: rclamp(16, 44, 375, 1023);
+  border-radius: 10px;
 }
 
 .p-faq-label {
@@ -120,10 +130,24 @@ button.p-faq-item__button {
   }
 }
 
+.p-faq-item__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  overflow: hidden;
+
+  > div {
+    min-height: 0;
+  }
+}
+
 .p-faq-item__answer {
   display: flex;
   gap: rclamp(12, 33, 375, 1023);
   padding-inline: rclamp(12, 33, 375, 1023);
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: padding 0.3s ease;
 }
 
 .p-faq-item__text {

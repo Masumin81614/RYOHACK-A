@@ -10,8 +10,14 @@
 
 .p-courses-tabs__inner {
   width: min(calc(880px + 20px * 2), 100%);
-  padding-inline: 20px;
   margin-inline: auto;
+}
+
+.p-course__head--image {
+  img {
+    width: rclamp(73, 199, 375, 1023);
+    height: auto;
+  }
 }
 
 .p-courses-tabs__list {
@@ -82,6 +88,7 @@
 .p-courses__heading {
   text-align: center;
   font-size: rclamp(18, 49, 375, 1023);
+  font-weight: 700;
 }
 
 // modal
@@ -153,6 +160,7 @@
   text-align: center;
   font-size: rclamp(18, 49, 375, 1023);
   letter-spacing: 0.9px;
+  font-weight: 700;
 }
 
 .p-modal__heading--sub {
@@ -184,7 +192,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-block: rclamp(12, 33, 375, 1023);
+  padding-block: rclamp(10, 27, 375, 1023);
   padding-inline: rclamp(20, 55, 375, 1023);
   border-radius: 4px;
 }
@@ -197,5 +205,8 @@
 }
 
 .modal__open-btn--box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: rclamp(10, 27, 375, 1023);
 }

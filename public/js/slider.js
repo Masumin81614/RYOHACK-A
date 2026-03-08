@@ -24,7 +24,15 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
 });
 
 const swiper = new Swiper(".js-teachers-slider", {
-  slidesPerView: 1,
+  slidesPerView: 1.2,
+  spaceBetween: 24,
+
+  breakpoints: {
+    1024: {
+      slidesPerView: 3.2, // PCでは2枚半見せる
+      spaceBetween: 40, // PC用の余白
+    },
+  },
 
   scrollbar: {
     el: ".js-teachers-scrollbar", //.swiper-scrollbarをスクロールバーに指定

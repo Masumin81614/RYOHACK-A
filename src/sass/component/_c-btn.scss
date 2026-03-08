@@ -13,6 +13,13 @@
   }
 }
 
+.c-contact__btn--box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: rclamp(12, 33, 375, 1023);
+}
+
 .c-btn--text {
   color: $white-color;
   line-height: 1.6;
@@ -25,8 +32,19 @@
   gap: rclamp(10, 27, 375, 1023);
   width: rclamp(220, 600, 375, 1023);
 
+  @include mq(tb-middle) {
+    max-width: rclamp(156, 293, 1024, 1920);
+    padding-block: rclamp(9, 16, 1024, 1920);
+    padding-inline: rclamp(23, 43, 1024, 1920);
+    height: auto;
+  }
+
   .c-btn--text {
     font-size: rclamp(16, 44, 375, 1023);
+
+    @include mq(tb-middle) {
+      font-size: rclamp(11, 21, 1024, 1920);
+    }
   }
 }
 
