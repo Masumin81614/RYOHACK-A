@@ -162,7 +162,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination js-hero-pagination"></div>
               </div>
             </div>
             <div class="p-hero__cta">
@@ -464,7 +464,7 @@
       <section id="courses" class="p-section p-courses">
         <div class="l-inner">
           <div class="p-section--courses__header">
-            <div class="c-head p-reason__head">
+            <div class="c-head p-courses__head">
               <div class="c-heading">
                 <h2 class="c-header__eyebrow">COURSE</h2>
                 <span class="c-header__title">コース案内</span>
@@ -493,9 +493,9 @@
                         <h2 class="p-courses__heading">苦手徹底強化コース <br class="u-hidden-pc" />(週120分×1)</h2>
                         <p class="p-courses__text">教科を問わず、毎週テーマを決めて苦手な分野を徹底的に強化します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。</p>
                       </div>
-                      <button data-dialog="modal1" class="c-btn c-btn--sm p-courses-tab__btn modal__open-btn">
-                        <span class="c-header-contact__btn--box">
-                          <span class="c-header-contact__btn--text">詳しくみる</span>
+                      <button type="button" data-dialog="modal1" class="c-btn c-btn--sm p-courses-tab__btn modal__open-btn">
+                        <span class="modal__open-btn--box">
+                          <span class="c-btn--text">詳しくみる</span>
                           <i class="fa-solid fa-circle-play"></i>
                         </span>
                       </button>
@@ -513,9 +513,9 @@
                         <h2 class="p-courses__heading">高校受験コース <br class="u-hidden-pc" />（週180分×4）</h2>
                         <p class="p-courses__text">志望校合格に向けて必要なことにターゲットを絞り、受験対策します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。</p>
                       </div>
-                      <button data-dialog="modal2" class="c-btn c-btn--sm p-courses-tab__btn modal__open-btn">
-                        <span class="c-header-contact__btn--box">
-                          <span class="c-header-contact__btn--text">詳しくみる</span>
+                      <button type="button" data-dialog="modal2" class="c-btn c-btn--sm p-courses-tab__btn modal__open-btn">
+                        <span class="modal__open-btn--box">
+                          <span class="c-btn--text">詳しくみる</span>
                           <i class="fa-solid fa-circle-play"></i>
                         </span>
                       </button>
@@ -528,45 +528,122 @@
         </div>
       </section>
       <dialog id="modal1" aria-labelledby="modal-head1" aria-describedby="modal-text1" class="modal__content">
-        <button class="modal__close-btn">&times;</button>
+        <button type="button" class="modal__close-btn">&times;</button>
         <div class="modal__inner">
           <div class="modal__body">
-            <h3 id="modal-head1">モーダル1タイトル</h3>
-            <div id="modal__text1">モーダル1テキスト</div>
+            <div class="p-modal__contents">
+              <div class="p-modal__content">
+                <div class="p-modal__head">
+                  <h3 class="p-modal__heading">自由選択コース</h3>
+                  <p class="p-modal__heading--sub">
+                    1週間に60分、自分に必要な教科や <br class="u-hidden-pc" />
+                    内容を集中サポート！
+                  </p>
+                </div>
+                <div class="p-modal__boxes">
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">個別指導</span>
+                    <p class="modal__box--text">
+                      60分×週1回 <br />
+                      月額 9,800円(税込)
+                    </p>
+                  </div>
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">グループ指導</span>
+                    <p class="modal__box--text">60分×週1回 <br />月額 9,800円(税込)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-modal__content">
+                <div class="p-modal__head">
+                  <h3 class="p-modal__heading">苦手徹底強化コース</h3>
+                  <p class="p-modal__heading--sub">週1回120分で、苦手な教科を完全攻略！</p>
+                </div>
+                <div class="p-modal__boxes">
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">個別指導</span>
+                    <p class="modal__box--text">120分×週1回<br />月額 24,800円(税込)</p>
+                  </div>
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">グループ指導</span>
+                    <p class="modal__box--text">120分×週1回<br />月額 24,800円(税込)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </dialog>
 
       <dialog id="modal2" aria-labelledby="modal-head2" aria-describedby="modal-text2" class="modal__content">
-        <button class="modal__close-btn">&times;</button>
+        <button type="button" class="modal__close-btn">&times;</button>
         <div class="modal__inner">
           <div class="modal__body">
-            <h3 id="modal-head2">モーダル2タイトル</h3>
-            <div id="modal__text2">モーダル2テキスト</div>
+            <div class="p-modal__contents">
+              <div class="p-modal__content">
+                <div class="p-modal__head">
+                  <h3 id="p-modal__heading">内申点アップコース</h3>
+                  <p class="p-modal__heading--sub">テスト2週間前からの徹底対策で、成績アップ！</p>
+                </div>
+                <div class="p-modal__boxes">
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">個別指導</span>
+                    <p class="modal__box--text">120分×週3回<br />月額 38,000円(税込)</p>
+                  </div>
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">グループ指導</span>
+                    <p class="modal__box--text">120分×週3回<br />月額 28,000(税込)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-modal__content">
+                <div class="p-modal__head">
+                  <h3 class="p-modal__heading">高校受験コース</h3>
+                  <p class="p-modal__heading--sub">受験本番を突破する実践力を鍛えます！</p>
+                </div>
+                <div class="p-modal__boxes">
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">個別指導</span>
+                    <p class="modal__box--text">150分×週4回<br />月額58,000円(税込)</p>
+                  </div>
+                  <div class="p-modal__box">
+                    <span class="modal__box--head">グループ指導</span>
+                    <p class="modal__box--text">150分×週4回<br />月額 42,000￥(税込)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </dialog>
 
       <!-- FAQ（アコーディオン） -->
-      <section id="faq" class="p-section p-section--faq">
+      <section id="faq" class="p-section--faq">
         <div class="l-inner">
-          <div class="p-section-header">
-            <p class="p-section-header__eyebrow">FAQ</p>
-            <h2 class="p-section-header__title">よくある質問</h2>
+          <div class="p-section--faq__header">
+            <div class="c-head p-faq__head">
+              <div class="c-heading">
+                <h2 class="c-header__eyebrow">FAQ</h2>
+                <span class="c-header__title">よくある質問</span>
+              </div>
+              <div class="p-faq__head--image">
+                <img src="./img/img_faq.webp" alt="" width="" height="" loading="lazy" />
+              </div>
+            </div>
           </div>
 
-          <div class="p-faq js-accordion">
+          <div class="p-faq__box js-accordion">
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
-                  <span class="p-faq-item__q-label">Q.</span>
+                  <span class="p-faq-label q-label">Q</span>
                   <span class="p-faq-item__question"> 授業はどのような形式で進められますか？</span>
-                  <span class="p-faq-item__icon" aria-hidden="true"></span>
+                  <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
-                  <span class="p-faq-item__a-label">A.</span>
+                  <span class="p-faq-label a-label">A</span>
                   <p class="p-faq-item__text">授業は1対1または少人数制で、生徒一人ひとりに合わせた個別指導を行います。生徒が理解できるまで丁寧にサポートし、苦手克服から得意分野の伸長までしっかり対応します。また、各学校の授業進度に合わせた学習を心がけています。</p>
                 </div>
               </div>
@@ -575,14 +652,14 @@
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
-                  <span class="p-faq-item__q-label">Q.</span>
+                  <span class="p-faq-label q-label">Q</span>
                   <span class="p-faq-item__question">勉強が苦手な子でもついていけますか？</span>
-                  <span class="p-faq-item__icon" aria-hidden="true"></span>
+                  <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
-                  <span class="p-faq-item__a-label">A.</span>
+                  <span class="p-faq-label a-label">A</span>
                   <p class="p-faq-item__text">もちろん大丈夫です！勉強に苦手意識を持つお子さま一人ひとりに寄り添い、小さな達成感を積み重ねて学ぶ楽しさを実感できるようサポートします。「まずはわかる喜びを感じてもらうこと」を大切に指導しています。</p>
                 </div>
               </div>
@@ -591,14 +668,14 @@
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
-                  <span class="p-faq-item__q-label">Q.</span>
+                  <span class="p-faq-label q-label">Q</span>
                   <span class="p-faq-item__question">コースの変更などはできますか？</span>
-                  <span class="p-faq-item__icon" aria-hidden="true"></span>
+                  <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
-                  <span class="p-faq-item__a-label">A.</span>
+                  <span class="p-faq-label a-label">A</span>
                   <p class="p-faq-item__text"> はい。月単位でコースの変更は可能です。</p>
                 </div>
               </div>
@@ -606,14 +683,14 @@
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
-                  <span class="p-faq-item__q-label">Q.</span>
+                  <span class="p-faq-label q-label">Q</span>
                   <span class="p-faq-item__question"> 授業以外に何かサポートはありますか？</span>
-                  <span class="p-faq-item__icon" aria-hidden="true"></span>
+                  <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
-                  <span class="p-faq-item__a-label">A.</span>
+                  <span class="p-faq-label a-label">A</span>
                   <p class="p-faq-item__text">授業の振り返りを行う「学習カウンセリング」や「進路相談」、日々の勉強習慣をサポートする「自習スペース」も提供しています。また、定期的な保護者面談を通じて、お子さまの成長を一緒に見守ります。</p>
                 </div>
               </div>
@@ -621,14 +698,14 @@
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
-                  <span class="p-faq-item__q-label">Q.</span>
+                  <span class="p-faq-label q-label">Q</span>
                   <span class="p-faq-item__question">塾の雰囲気に子供が慣れるか心配です。</span>
-                  <span class="p-faq-item__icon" aria-hidden="true"></span>
+                  <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
-                  <span class="p-faq-item__a-label">A.</span>
+                  <span class="p-faq-label a-label">A</span>
                   <p class="p-faq-item__text">無料体験学習を実施しておりますので、まずは教室にお越しいただき、ご確認後入塾していただくことができます。お気軽にご相談ください。</p>
                 </div>
               </div>

@@ -18,22 +18,22 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
 
   // ページネーション（コンテナの外にある場合はこれでOK）
   pagination: {
-    el: ".swiper-pagination",
+    el: ".js-hero-pagination",
     clickable: true,
+  },
+});
+
+const swiper = new Swiper(".js-teachers-slider", {
+  slidesPerView: 2,
+  scrollbar: {
+    el: ".js-teachers-scrollbar", //.swiper-scrollbarをスクロールバーに指定
+    hide: false, // スクロールバーが常に表示される
+    draggable: true, // スクロールバーをドラッグ可能にする
   },
 
   // ナビゲーション
   navigation: {
-    prevEl: ".swiper-button-prev",
-    nextEl: ".swiper-button-next",
-  },
-});
-
-const swiper = new Swiper(".p-teachers-swiper-container", {
-  slidesPerView: 2,
-  scrollbar: {
-    el: ".swiper-scrollbar", //.swiper-scrollbarをスクロールバーに指定
-    hide: false, // スクロールバーが常に表示される
-    draggable: true, // スクロールバーをドラッグ可能にする
+    prevEl: ".js-teachers-prev",
+    nextEl: ".js-teachers-next",
   },
 });

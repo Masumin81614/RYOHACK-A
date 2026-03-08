@@ -99,42 +99,51 @@ button {
   border: unset;
   overflow: unset;
 }
-body:has(dialog[open]) {
-  overflow: hidden;
-}
+// body:has(dialog[open]) {
+//   overflow: hidden;
+// }
 
-.modal__open-btn {
-  padding: 4px 20px;
-  border: 1px solid #000;
-}
-
-/* モーダルのスタイル ============ */
+/* モーダルの基本スタイル */
 dialog {
-  &::backdrop {
-    opacity: 0;
-    transition: background 0.3s ease-in-out;
-  }
+  border: none;
+  padding: 0;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  position: fixed !important;
+  inset: 0 !important;
+  margin: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &.js-show {
-    &.modal__content {
-      opacity: 1;
-    }
-    &::backdrop {
-      opacity: 1;
-      /* 背景画像 */
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-    }
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &.js-show::backdrop {
+    opacity: 1;
   }
 }
 
 .modal__content {
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  /* モーダル枠組みのスタイル */
   width: min(600px, 95%);
-  max-height: 80vh;
+  max-height: 70vh;
   background: #fff;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  background: $white-color;
 }
 
 .modal__inner {
@@ -145,61 +154,6 @@ dialog {
 
 .modal__body {
   height: fit-content;
-  /* modal内のスタイル */
-  h3 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  p {
-    font-size: 20px;
-  }
-}
-
-/* モーダルのスタイル ============ */
-dialog {
-  &::backdrop {
-    opacity: 0;
-    transition: background 0.3s ease-in-out;
-  }
-  &.js-show {
-    &.modal__content {
-      opacity: 1;
-    }
-    &::backdrop {
-      opacity: 1;
-      /* 背景画像 */
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-    }
-  }
-}
-
-.modal__content {
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  /* モーダル枠組みのスタイル */
-  width: min(600px, 95%);
-  max-height: 80vh;
-  background: #fff;
-}
-
-.modal__inner {
-  overflow-y: scroll;
-  height: 100%;
-  position: relative;
-}
-
-.modal__body {
-  height: fit-content;
-  /* modal内のスタイル */
-  h3 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  p {
-    font-size: 20px;
-  }
 }
 
 //閉じるボタンのスタイル =========
@@ -209,4 +163,88 @@ dialog {
   top: 20px;
   right: 20px;
   font-size: 30px;
+  width: rclamp(40, 109, 375, 1023);
+  height: rclamp(40, 109, 375, 1023);
+  background: $main-text-color;
+  color: $white-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  font-size: rclamp(20, 55, 375, 1023);
+}
+
+// モーダルスタイル
+.modal__body {
+  padding-block: rclamp(40, 109, 375, 1023);
+  padding-inline: rclamp(16, 44, 375, 1023);
+}
+
+.p-modal__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rclamp(60, 164, 375, 1023);
+}
+
+.p-modal__content {
+  margin-top: rclamp(16, 44, 375, 1023);
+  width: 100%;
+}
+
+.p-modal__head {
+  padding-inline: rclamp(16, 44, 375, 1023);
+}
+
+.p-modal__heading {
+  text-align: center;
+  font-size: rclamp(18, 49, 375, 1023);
+  letter-spacing: 0.9px;
+}
+
+.p-modal__heading--sub {
+  font-size: rclamp(15, 41, 375, 1023);
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.75px;
+  margin-top: rclamp(4, 11, 375, 1023);
+}
+
+.p-modal__boxes {
+  display: flex;
+  flex-direction: row;
+  gap: rclamp(8, 22, 375, 1023);
+  justify-content: center;
+  width: 100%;
+  margin-top: rclamp(16, 44, 375, 1023);
+}
+
+.p-modal__box {
+  width: 100%;
+}
+
+.modal__box--head {
+  background: $main-blue-color;
+  color: $white-color;
+  font-size: rclamp(15, 41, 375, 1023);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-block: rclamp(12, 33, 375, 1023);
+  padding-inline: rclamp(20, 55, 375, 1023);
+  border-radius: 4px;
+}
+
+.modal__box--text {
+  margin-top: rclamp(8, 22, 375, 1023);
+  font-size: rclamp(15, 41, 375, 1023);
+  line-height: 160%;
+  letter-spacing: 0.75px;
+}
+
+.modal__open-btn--box {
+  gap: rclamp(10, 27, 375, 1023);
 }
