@@ -1,45 +1,89 @@
 @use "../global" as *;
 
 .p-hero {
-    background: url(../img/bg_fv.webp) no-repeat top center / cover;
+  background: url(../img/bg_fv.webp) no-repeat top center / cover;
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-top: 0;
+      padding-right: 0;
+    }
+  }
 }
 
+.p-hero__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(40, 109, 375, 1023);
 
-.p-hero__inner{
-    display: flex;
-    flex-direction: column;
-    gap: rclamp(40, 109, 375, 1023);
+  @include mq(tb-middle) {
+    flex-direction: row;
+    gap: 0;
+    position: relative;
+    justify-content: flex-end;
+  }
 }
 
-.p-hero__content{
-    display: flex;
-    flex-direction: column;
-    gap: rclamp(16, 44, 375, 1023);
+.p-hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    position: absolute;
+    top: rclamp(110, 207, 1024, 1920);
+    right: rclamp(37, -69, 1024, 1920);
+  }
 }
 
 .p-hero__title {
-    font-size: rclamp(40, 109, 375, 1023);
-    font-weight: 700;
-    letter-spacing: 1.2px;
+  font-size: rclamp(40, 109, 375, 1023);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(36, 67, 1024, 1920);
+  }
 }
 
-.p-hero__text{
-    font-size: rclamp(18, 49, 375, 1023);
-    font-weight: 700;
-    letter-spacing: 0.9px;
+.p-hero__text {
+  font-size: rclamp(18, 49, 375, 1023);
+  font-weight: 700;
+  letter-spacing: 0.9px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(17, 32, 1024, 1920);
+  }
+}
+
+.p-hero__image {
+  @include mq(tb-middle) {
+    width: rclamp(711, 1333, 1024, 1920);
+    height: auto;
+  }
 }
 
 .p-hero__cta {
-    display: flex;
-    flex-direction: column;
-    gap: rclamp(4, 11, 375, 1023);
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(4, 11, 375, 1023);
+
+  @include mq(tb-middle) {
+    position: absolute;
+    bottom: rclamp(84, 157, 1024, 1920);
+    left: rclamp(37, 69, 1024, 1920);
+  }
 }
 .p-hero__cta--lead {
-    font-size: rclamp(18, 49, 375, 1023);
-    font-weight: 700;
-    line-height: 160%;
-    letter-spacing: 0.9px;
-    text-align: center;
+  font-size: rclamp(18, 49, 375, 1023);
+  font-weight: 700;
+  line-height: 160%;
+  letter-spacing: 0.9px;
+  text-align: center;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(14, 27, 1024, 1920);
+  }
 }
 
 // Slider
@@ -88,6 +132,5 @@
 
 /* activeな部分 */
 .swiper-pagination-bullets.swiper-pagination-horizontal .swiper-pagination-bullet-active {
-  background: $main-blue-color;;
+  background: $main-blue-color;
 }
-
