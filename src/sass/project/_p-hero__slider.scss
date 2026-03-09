@@ -2,16 +2,18 @@
 
 .p-hero {
   background: url(../img/bg_fv.webp) no-repeat top center / cover;
+  position: relative;
 
   .l-inner {
     @include mq(tb-middle) {
       padding-top: 0;
       padding-right: 0;
+      padding-bottom: rclamp(53, 99, 1024, 1920);
     }
   }
 }
 
-.p-hero__inner {
+.p-hero__slider--inner {
   display: flex;
   flex-direction: column;
   gap: rclamp(40, 109, 375, 1023);
@@ -19,8 +21,8 @@
   @include mq(tb-middle) {
     flex-direction: row;
     gap: 0;
-    position: relative;
     justify-content: flex-end;
+    width: 100%;
   }
 }
 
@@ -32,7 +34,7 @@
   @include mq(tb-middle) {
     position: absolute;
     top: rclamp(110, 207, 1024, 1920);
-    right: rclamp(37, -69, 1024, 1920);
+    left: rclamp(2, 6, 1024, 1440);
   }
 }
 
@@ -43,6 +45,7 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(36, 67, 1024, 1920);
+    letter-spacing: 1.5px;
   }
 }
 
@@ -58,7 +61,7 @@
 
 .p-hero__image {
   @include mq(tb-middle) {
-    width: rclamp(711, 1333, 1024, 1920);
+    max-width: rclamp(711, 1333, 1024, 1920);
     height: auto;
   }
 }
@@ -116,6 +119,10 @@
 /* 位置の設定 (枠組み) */
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   top: auto;
+
+  @include mq(tb-middle) {
+    bottom: 0 !important;
+  }
 }
 
 /* それぞれのページネーション */
@@ -128,6 +135,10 @@
   background: transparent;
   border: 1px solid $main-blue-color;
   margin-inline: calc(11px / 2);
+
+  @include mq(tb-middle) {
+    width: rclamp(7, 13, 1024, 1920) !important;
+  }
 }
 
 /* activeな部分 */

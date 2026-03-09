@@ -6,15 +6,23 @@
 
 .p-mission__lead {
   font-size: rclamp(15, 41, 375, 1023);
-}
 
-.p-mission-list {
-  margin-top: rclamp(20, 55, 375, 1023);
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 .p-mission-list {
   display: flex;
   flex-direction: column;
+  margin-top: rclamp(20, 55, 375, 1023);
+  gap: rclamp(48, 131, 375, 1023);
+
+  @include mq(tb-middle) {
+    flex-direction: row;
+    margin-top: rclamp(43, 80, 1024, 1920);
+    gap: 0;
+  }
 }
 
 .p-mission-item {
@@ -22,6 +30,21 @@
   flex-direction: column;
   gap: rclamp(8, 22, 375, 1023);
   padding-inline: rclamp(12, 33, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: 0;
+    padding-inline: rclamp(17, 32, 1024, 1920);
+    flex: 1;
+  }
+
+  &:not(:first-child) {
+    border-top: 1px dashed $sub-text-color;
+
+    @include mq(tb-middle) {
+      border-top: none;
+      border-left: 1px dashed $sub-text-color;
+    }
+  }
 }
 
 .p-mission-item__image {
@@ -31,24 +54,47 @@
   display: flex;
   justify-content: center;
 
+  @include mq(tb-middle) {
+    padding-inline: rclamp(36, 67, 1024, 1920);
+    padding-block: rclamp(11, 20, 1024, 1920);
+    align-items: center;
+    height: rclamp(105, 197, 1024, 1920);
+  }
+
   img {
     height: auto;
   }
 
   .mission__image--1 {
     width: rclamp(140, 382, 375, 1023);
+
+    @include mq(tb-middle) {
+      width: rclamp(185, 347, 1024, 1920);
+    }
   }
 
   .mission__image--2 {
     width: rclamp(107, 292, 375, 1023);
+
+    @include mq(tb-middle) {
+      width: rclamp(76, 143, 1024, 1920);
+    }
   }
 
   .mission__image--3 {
     width: rclamp(69, 188, 375, 1023);
+
+    @include mq(tb-middle) {
+      width: rclamp(53, 100, 1024, 1920);
+    }
   }
 
   .mission__image--4 {
     width: rclamp(150, 409, 375, 1023);
+
+    @include mq(tb-middle) {
+      width: rclamp(107, 200, 1024, 1920);
+    }
   }
 }
 
@@ -63,4 +109,16 @@
   font-size: rclamp(18, 49, 375, 1023);
   letter-spacing: 0.9px;
   line-height: 1.5;
+  font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(16, 29, 1024, 1920);
+  }
+}
+
+.p-mission-item__text {
+  font-size: rclamp(15, 41, 375, 1023);
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 }

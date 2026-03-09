@@ -2,18 +2,33 @@
 
 .p-section--cta-1 {
   background: url(../img/bg_cta1-sp.webp) no-repeat center / cover;
+
+  @include mq(tb-middle) {
+    background: url(../img/bg_cta1.webp) no-repeat center / cover;
+  }
 }
 
 .p-section--cta__inner {
   display: flex;
   flex-direction: column;
   gap: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(23, 43, 1024, 1920);
+    padding-inline: rclamp(170, 333, 1024, 1920);
+    align-items: center;
+  }
 }
 
 .p-section--cta__heading {
   display: flex;
   flex-direction: column;
   gap: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(17, 32, 1024, 1920);
+    align-items: center;
+  }
 }
 
 .p-section--cta__title {
@@ -23,10 +38,24 @@
   letter-spacing: 1.3px;
   text-align: center;
   font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(25, 47, 1024, 1920);
+    letter-spacing: 1.75px;
+    white-space: nowrap;
+  }
 }
 
 .p-section--cta__lead {
   color: $white-color;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    padding-inline: rclamp(23, 43, 1024, 1920);
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    line-height: 180%;
+  }
 }
 
 .p-section--cta-2 {

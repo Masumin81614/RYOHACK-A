@@ -1,0 +1,10 @@
+@use "../global" as *;
+
+.p-change-flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(tb-middle) {
+    flex-direction: column-reverse;
+  }
+}
