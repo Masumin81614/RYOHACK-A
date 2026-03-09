@@ -12,6 +12,7 @@
   @include mq(tb-middle) {
     flex-direction: row;
     gap: rclamp(103, 193, 1024, 1920);
+    align-items: flex-start;
   }
 }
 
@@ -24,6 +25,8 @@
   @include mq(tb-middle) {
     gap: rclamp(18, 35, 1024, 1920);
     align-items: flex-start;
+    position: sticky;
+    top: 5px;
   }
 
   .c-heading {
@@ -50,12 +53,6 @@
 
   @include mq(tb-middle) {
     gap: rclamp(28, 53, 1024, 1920);
-  }
-}
-
-.p-reason-list__scroll {
-  @include mq(tb-middle) {
-    overflow-y: scroll;
   }
 }
 

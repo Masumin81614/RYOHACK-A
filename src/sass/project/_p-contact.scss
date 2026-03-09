@@ -1,7 +1,19 @@
 @use "../global" as *;
 
+.p-contact {
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(284, 533, 1024, 1920);
+    }
+  }
+}
+
 .p-contact__form--contents {
   margin-top: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(43, 80, 1024, 1920);
+  }
 }
 
 .hidden-fields-container {
@@ -12,18 +24,38 @@
   display: flex;
   flex-direction: column;
   gap: rclamp(24, 65, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(17, 32, 1024, 1920);
+  }
 }
 
 .contact__field--box {
   display: flex;
   flex-direction: column;
   gap: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    flex-direction: row;
+    gap: rclamp(28, 53, 1024, 1920);
+  }
+}
+
+.contact__field:has(.wpcf7-select) {
+  @include mq(tb-middle) {
+    width: 100%;
+    flex: 1;
+  }
 }
 
 .form-field {
   display: flex;
   flex-direction: column;
   gap: rclamp(10, 27, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(6, 11, 1024, 1920);
+  }
 }
 
 .form-field__label {
@@ -31,6 +63,10 @@
   font-weight: 500;
   line-height: 180%; /* 27px */
   letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 .form-field__tag {
@@ -61,6 +97,11 @@
   border-radius: 8px;
   width: 100%;
   font-size: rclamp(14, 38, 375, 1023);
+
+  @include mq(tb-middle) {
+    padding: rclamp(11, 21, 1024, 1920);
+    font-size: rclamp(10, 19, 1024, 1920);
+  }
 
   &:focus {
     border: 1px solid $main-blue-color;
@@ -95,6 +136,10 @@
   background: $brown-background;
   border-radius: 8px;
 
+  @include mq(tb-middle) {
+    padding: rclamp(11, 21, 1024, 1920);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -106,6 +151,11 @@
     border-right: 2px solid $main-text-color;
     transform: translateY(-70%) rotate(45deg);
     pointer-events: none;
+
+    @include mq(tb-middle) {
+      width: rclamp(5, 9, 1024, 1920);
+      height: rclamp(5, 9, 1024, 1920);
+    }
   }
 }
 
@@ -114,10 +164,18 @@
   border-radius: 8px;
   padding: rclamp(16, 44, 375, 1023);
   width: 100%;
+
+  @include mq(tb-middle) {
+    padding: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 .contact__privacy {
   margin-top: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(17, 32, 1024, 1920);
+  }
 
   .wpcf7-list-item label {
     display: flex;
@@ -126,6 +184,11 @@
     font-weight: 500;
     line-height: 180%; /* 27px */
     letter-spacing: 0.75px;
+
+    @include mq(tb-middle) {
+      justify-content: flex-start;
+      font-size: rclamp(11, 21, 1024, 1920);
+    }
   }
 }
 
@@ -143,9 +206,21 @@
   margin-inline: auto;
   margin-top: rclamp(16, 44, 375, 1023);
 
+  @include mq(tb-middle) {
+    max-width: rclamp(156, 293, 1024, 1920);
+    padding-block: rclamp(9, 16, 1024, 1920);
+    padding-inline: rclamp(23, 43, 1024, 1920);
+    margin-top: rclamp(23, 43, 1024, 1920);
+    gap: rclamp(7, 13, 1024, 1920);
+  }
+
   p {
     color: $white-color;
     font-size: rclamp(16, 44, 375, 1023);
+
+    @include mq(tb-middle) {
+      font-size: rclamp(11, 21, 1024, 1920);
+    }
   }
 }
 
@@ -166,8 +241,9 @@
   gap: rclamp(16, 24, 375, 1023) rclamp(12, 16, 375, 1023); /* 縦と横の隙間 */
 
   @include mq(tb-middle) {
-    /* 1024px以上で4列にする場合 */
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    gap: rclamp(28, 53, 1024, 1920);
   }
 }
 
@@ -182,11 +258,19 @@
   align-items: center;
   gap: 8px; /* チェックボックスと文字の隙間 */
   cursor: pointer;
+
+  @include mq(tb-middle) {
+    gap: rclamp(9, 16, 1024, 1920);
+  }
 }
 
 .wpcf7-list-item-label {
   font-size: rclamp(14, 16, 375, 1023);
   line-height: 1.4;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(10, 19, 1024, 1920);
+  }
 }
 
 .wpcf7-checkbox input[type="checkbox"],
@@ -201,6 +285,11 @@
   transition:
     background-color 0.2s,
     border-color 0.2s;
+
+  @include mq(tb-middle) {
+    width: rclamp(14, 27, 1024, 1920);
+    height: rclamp(14, 27, 1024, 1920);
+  }
 
   /* チェックが入った時のスタイル */
   &:checked {

@@ -4,6 +4,18 @@
   background: $light-green-color;
 }
 
+.p-courses__inner {
+  @include mq(tb-middle) {
+    position: relative;
+  }
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(199, 373, 1024, 1920);
+    }
+  }
+}
+
 .p-courses-tabs {
   margin-top: rclamp(40, 109, 375, 1023);
 }
@@ -11,12 +23,34 @@
 .p-courses-tabs__inner {
   width: min(calc(880px + 20px * 2), 100%);
   margin-inline: auto;
+
+  @include mq(tb-middle) {
+    margin-inline: 0;
+  }
+}
+
+.p-courses__head {
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include mq(tb-middle) {
+    justify-content: center;
+  }
 }
 
 .p-course__head--image {
+  @include mq(tb-middle) {
+    position: absolute;
+    bottom: rclamp(85, 160, 1024, 1920);
+    left: rclamp(84, 157, 1024, 1920);
+  }
   img {
     width: rclamp(73, 199, 375, 1023);
     height: auto;
+
+    @include mq(tb-middle) {
+      width: rclamp(115, 216, 1024, 1920);
+    }
   }
 }
 
@@ -34,6 +68,14 @@
   font-size: rclamp(16, 44, 375, 1023);
   font-weight: 400;
   line-height: normal;
+
+  @include mq(tb-middle) {
+    display: flex;
+    justify-content: center;
+    padding-block: rclamp(14, 27, 1024, 1920);
+    padding-inline: rclamp(7, 13, 1024, 1920);
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 
   &[aria-selected="true"] {
     background: $white-color;
@@ -74,6 +116,12 @@
   gap: rclamp(32, 87, 375, 1023);
   padding-block: rclamp(32, 87, 375, 1023);
   justify-content: center;
+
+  @include mq(tb-middle) {
+    gap: rclamp(23, 43, 1024, 1920);
+    padding-block: rclamp(28, 53, 1024, 1920);
+    flex-direction: column;
+  }
 }
 
 .p-courses__box {
@@ -83,16 +131,38 @@
   display: flex;
   flex-direction: column;
   gap: rclamp(12, 33, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(9, 16, 1024, 1920);
+    padding-inline: rclamp(105, 197, 1024, 1920);
+  }
 }
 
 .p-courses__heading {
   text-align: center;
   font-size: rclamp(18, 49, 375, 1023);
   font-weight: 700;
+
+  @include mq(tb-middle) {
+    text-align: left;
+    font-size: rclamp(16, 29, 1024, 1920);
+  }
+}
+
+.p-courses__text {
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
+}
+
+.p-courses-tab__btn {
+  @include mq(tb-middle) {
+    max-width: rclamp(156, 293, 1024, 1920);
+    margin-inline: auto;
+  }
 }
 
 // modal
-
 .modal__content {
   width: min(600px, 95%);
   max-height: 70vh;

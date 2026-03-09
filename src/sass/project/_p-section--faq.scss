@@ -2,19 +2,31 @@
 
 .p-section--faq {
   background: $brown-background;
+
+  @include mq(tb-middle) {
+    position: relative;
+  }
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(199, 373, 1024, 1920);
+    }
+  }
 }
 
 .p-faq-item {
   display: flex;
   flex-direction: column;
-  margin-top: rclamp(27, 74, 375, 1023);
+  gap: rclamp(24, 65, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: 0;
+    gap: rclamp(17, 32, 1024, 1920);
+  }
 
   &.is-open {
     .p-faq-item__body {
       grid-template-rows: 1fr;
-    }
-    .p-faq-item__answer {
-      padding-top: rclamp(24, 65, 375, 1023);
     }
   }
 }
@@ -23,6 +35,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @include mq(tb-middle) {
+    justify-content: center;
+  }
 
   &.c-head {
     align-items: flex-start;
@@ -35,12 +51,24 @@
 .p-faq__head--image {
   width: rclamp(77, 210, 375, 1023);
   height: auto;
+
+  @include mq(tb-middle) {
+    width: rclamp(97, 183, 1024, 1920);
+    position: absolute;
+    bottom: rclamp(36, 68, 1024, 1920);
+    right: rclamp(58, 109, 1024, 1920);
+  }
 }
 
 .p-faq__box {
   display: flex;
   flex-direction: column;
   gap: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(23, 43, 1024, 1920);
+    margin-top: rclamp(43, 80, 1024, 1920);
+  }
 }
 
 button.p-faq-item__button {
@@ -58,6 +86,11 @@ button.p-faq-item__button {
   position: relative;
   padding: rclamp(16, 44, 375, 1023);
   border-radius: 10px;
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(11, 21, 1024, 1920);
+    padding-inline: rclamp(17, 32, 1024, 1920);
+  }
 }
 
 .p-faq-label {
@@ -74,6 +107,12 @@ button.p-faq-item__button {
   flex-shrink: 0;
   color: $white-color;
   border-radius: 50%;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    width: rclamp(26, 48, 1024, 1920);
+    height: rclamp(26, 48, 1024, 1920);
+  }
 }
 
 .q-label {
@@ -91,6 +130,12 @@ button.p-faq-item__button {
   white-space: normal;
   text-wrap: wrap;
   color: $main-text-color;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    line-height: 180%;
+    letter-spacing: 0.8px;
+  }
 }
 
 .p-faq-item__toggle {
@@ -100,6 +145,11 @@ button.p-faq-item__button {
   height: rclamp(16, 24, 375, 1023);
   display: block;
   align-self: center;
+
+  @include mq(tb-middle) {
+    width: rclamp(11, 21, 1024, 1920);
+    height: rclamp(11, 21, 1024, 1920);
+  }
 
   &::before,
   &::after {
@@ -154,4 +204,9 @@ button.p-faq-item__button {
   font-size: rclamp(15, 41, 375, 1023);
   line-height: 160%; /* 24px */
   letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    letter-spacing: 0.8px;
+  }
 }

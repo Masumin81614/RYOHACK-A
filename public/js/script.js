@@ -96,3 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
     select.addEventListener("change", updateColor);
   });
 });
+
+// parallax
+// gsap.utils.toArray(".js-parallax3").forEach((wrap) => {
+//   const y = wrap.getAttribute("data-y") || -200;
+//   gsap.to(wrap, {
+//     y: y,
+//     scrollTrigger: {
+//       trigger: wrap,
+//       start: "top bottom",
+//       end: "bottom top",
+//       scrub: 0.5,
+//     },
+//   });
+// });

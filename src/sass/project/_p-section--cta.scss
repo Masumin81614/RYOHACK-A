@@ -60,6 +60,12 @@
 
 .p-section--cta-2 {
   background: url(../img/bg_cta2-sp.webp) no-repeat center / cover;
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(199, 373, 1024, 1920);
+    }
+  }
 }
 
 .p-section--cta-2__box {
@@ -70,6 +76,12 @@
   align-items: center;
   gap: rclamp(20, 55, 375, 1023);
   padding-block: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(85, 160, 1024, 1920);
+    gap: rclamp(23, 43, 1024, 1920);
+    padding-block: rclamp(28, 53, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__title {
@@ -77,12 +89,22 @@
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 1.3px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(25, 47, 1024, 1920);
+    letter-spacing: 1.75px;
+  }
 }
 
 .p-section--cta-2__actions {
   display: flex;
   flex-direction: column;
   gap: rclamp(30, 82, 375, 1023);
+
+  @include mq(tb-middle) {
+    flex-direction: row;
+    gap: rclamp(28, 53, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__action {
@@ -96,6 +118,10 @@
   font-weight: 500;
   line-height: 180%;
   letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__telBox {
@@ -116,6 +142,10 @@
   font-weight: 700;
   letter-spacing: 1.75px;
   color: $main-blue-color;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(25, 47, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__lead2 {
@@ -123,6 +153,10 @@
   font-weight: 500;
   line-height: 160%; /* 19.2px */
   letter-spacing: 0.6px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(9, 16, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__btn--lead {
@@ -130,4 +164,8 @@
   font-weight: 700;
   line-height: 160%; /* 28.8px */
   letter-spacing: 0.9px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(14, 27, 1024, 1920);
+  }
 }

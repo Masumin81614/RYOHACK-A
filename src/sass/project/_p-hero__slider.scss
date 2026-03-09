@@ -7,7 +7,7 @@
   .l-inner {
     @include mq(tb-middle) {
       padding-top: 0;
-      padding-right: 0;
+      padding-inline: 0;
       padding-bottom: rclamp(53, 99, 1024, 1920);
     }
   }
@@ -34,7 +34,8 @@
   @include mq(tb-middle) {
     position: absolute;
     top: rclamp(110, 207, 1024, 1920);
-    left: rclamp(2, 6, 1024, 1440);
+    left: rclamp(28, 53, 1024, 1440);
+    z-index: 10;
   }
 }
 

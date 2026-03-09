@@ -2,6 +2,12 @@
 
 .l-footer {
   background: $light-green-color;
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(142, 267, 1024, 1920);
+    }
+  }
 }
 
 .p-footer-info {
@@ -9,16 +15,31 @@
   flex-direction: column;
   justify-content: center;
   gap: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+  }
 }
 
 .p-site-branding {
   width: rclamp(225, 614, 375, 1023);
   height: auto;
   margin-inline: auto;
+
+  @include mq(tb-middle) {
+    width: rclamp(160, 300, 1024, 1920);
+    margin-inline: 0;
+  }
 }
 
 .p-footer-nav {
   margin-top: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(14, 27, 1024, 1920);
+  }
 }
 
 .p-footer-nav__list {
@@ -27,8 +48,16 @@
   gap: rclamp(40, 109, 375, 1023);
   align-items: center;
 
+  @include mq(tb-middle) {
+    flex-direction: row;
+    gap: rclamp(17, 32, 1024, 1920);
+  }
+
   li {
     font-size: rclamp(14, 38, 375, 1023);
+    @include mq(tb-middle) {
+      font-size: rclamp(10, 19, 1024, 1920);
+    }
   }
 }
 
@@ -37,6 +66,21 @@
   height: 1px;
   background: $main-text-color;
   margin-block: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-block: rclamp(23, 43, 1024, 1920);
+  }
+}
+
+.p-footer__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .p-footer__sns {
@@ -44,10 +88,17 @@
   flex-direction: row;
   gap: rclamp(16, 44, 375, 1023);
   justify-content: center;
+
+  @include mq(tb-middle) {
+    gap: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 .p-footer-copy {
   font-size: rclamp(12, 33, 375, 1023);
   text-align: center;
-  margin-top: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    font-size: rclamp(9, 16, 1024, 1920);
+  }
 }

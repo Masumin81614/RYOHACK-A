@@ -10,10 +10,20 @@
   gap: rclamp(60, 164, 375, 1023);
   padding-block: rclamp(80, 218, 375, 1023);
   padding-left: rclamp(20, 55, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(43, 80, 1024, 1920);
+    padding-inline: rclamp(71, 133, 1024, 1920);
+    padding-block: rclamp(85, 160, 1024, 1920);
+  }
 }
 
 .p-teachers-slider {
   width: rclamp(320, 873, 375, 1023);
+
+  @include mq(tb-middle) {
+    width: 100%;
+  }
 }
 
 .p-teacher-card {
@@ -46,18 +56,32 @@
   padding-block: rclamp(4, 11, 375, 1023);
   padding-inline: rclamp(9, 25, 375, 1023);
   font-size: rclamp(14, 38, 375, 1023);
+
+  @include mq(tb-middle) {
+    font-size: rclamp(10, 19, 1024, 1920);
+    padding-block: rclamp(3, 5, 1024, 1920);
+    padding-inline: rclamp(6, 11, 1024, 1920);
+  }
 }
 
 .p-teacher-card__name {
   font-size: rclamp(18, 49, 375, 1023);
   letter-spacing: 0.9px;
   font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(16, 29, 1024, 1920);
+  }
 }
 
 .p-teacher-card__text {
   font-size: rclamp(15, 41, 375, 1023);
   line-height: 160%;
   letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
 }
 
 // ===================================
@@ -71,6 +95,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(43, 80, 1024, 1920);
+  }
 }
 
 .p-teachers-slider__btn {
@@ -80,6 +108,10 @@
   position: static;
   right: auto;
   top: auto;
+
+  @include mq(tb-middle) {
+    gap: rclamp(16, 29, 1024, 1920);
+  }
 }
 
 .p-teachers-slider__nav {
@@ -88,6 +120,11 @@
   border-radius: 50%;
   background-color: $main-text-color;
   border: 1px solid #274b66;
+
+  @include mq(tb-middle) {
+    width: rclamp(28, 52, 1024, 1920);
+    height: rclamp(28, 52, 1024, 1920);
+  }
 
   i {
     color: $white-color;
@@ -104,6 +141,11 @@
     left: 0 !important;
     bottom: 0 !important;
     margin: 0 !important;
+
+    @include mq(tb-middle) {
+      width: rclamp(213, 400, 1024, 1920);
+      height: rclamp(6, 11, 1024, 1920);
+    }
 
     &.swiper-scrollbar-drag {
       background-color: $main-blue-color;
