@@ -1,10 +1,10 @@
 @use "../global" as *;
 
 .p-section--cta-1 {
-  background: url(../img/bg_cta1-sp.webp) no-repeat center / cover;
+  background: url(../img/bg_cta1-sp.webp) no-repeat center 0% / cover;
 
   @include mq(tb-middle) {
-    background: url(../img/bg_cta1.webp) no-repeat center / cover;
+    background: url(../img/bg_cta1.webp) no-repeat center 0% / cover;
   }
 }
 
@@ -59,7 +59,11 @@
 }
 
 .p-section--cta-2 {
-  background: url(../img/bg_cta2-sp.webp) no-repeat center / cover;
+  background: url(../img/bg_cta2-sp.webp) no-repeat center 0% / cover;
+
+  @include mq(tb-middle) {
+    background: url(../img/bg_cta2.webp) no-repeat center 0% / cover;
+  }
 
   .l-inner {
     @include mq(tb-middle) {

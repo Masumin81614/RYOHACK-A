@@ -120,15 +120,20 @@ fadeElements.forEach((el) => {
 });
 
 // parallax
-// gsap.utils.toArray(".js-parallax3").forEach((wrap) => {
-//   const y = wrap.getAttribute("data-y") || -200;
-//   gsap.to(wrap, {
-//     y: y,
-//     scrollTrigger: {
-//       trigger: wrap,
-//       start: "top bottom",
-//       end: "bottom top",
-//       scrub: 0.5,
-//     },
-//   });
-// });
+gsap.registerPlugin(ScrollTrigger);
+
+const parallaxCtas = document.querySelectorAll(".p-section--cta-1, .p-section--cta-2");
+
+// 探してきた要素を1つずつパララックスさせる
+parallaxCtas.forEach((cta) => {
+  gsap.to(cta, {
+    backgroundPosition: "50% 100%",
+    ease: "none",
+    scrollTrigger: {
+      trigger: cta,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: true,
+    },
+  });
+});
