@@ -21,6 +21,50 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
     el: ".js-hero-pagination",
     clickable: true,
   },
+  on: {
+    init: function () {
+      // 1枚目のスライドの中にある画像とタイトルを取得
+      const activeSlide = this.slides[this.activeIndex];
+      const heroImage = activeSlide.querySelector(".p-hero__image");
+      const heroContent = activeSlide.querySelector(".p-hero__content");
+
+      // ボタンはスライダーの外にいるので全体から取得
+      const heroCta = document.querySelector(".p-hero__cta");
+
+      // GSAPのタイムライン（連続アニメーション）を作成
+      const tl = gsap.timeline();
+
+      // ① 画像：透明からふわっと下から上に（30px）
+      tl.from(heroImage, {
+        autoAlpha: 0, // opacity: 0 と visibility: hidden を兼ねた便利機能
+        y: 30,
+        duration: 1,
+        ease: "power2.out",
+      })
+        // ② タイトル：画像の完了0.5秒前に「食い気味」でスタート
+        .from(
+          heroContent,
+          {
+            autoAlpha: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          "-=0.5",
+        )
+        // ③ ボタン：タイトルの完了0.4秒前に「食い気味」でスタート
+        .from(
+          heroCta,
+          {
+            autoAlpha: 0,
+            y: 20,
+            duration: 0.8,
+            ease: "power2.out",
+          },
+          "-=0.4",
+        );
+    },
+  },
 });
 
 const swiper = new Swiper(".js-teachers-slider", {

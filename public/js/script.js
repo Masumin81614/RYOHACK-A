@@ -97,6 +97,28 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const fadeElements = document.querySelectorAll(".js-fadein");
+
+const fadeObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-active");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    root: null,
+    rootMargin: "0px 0px -20% 0px",
+    threshold: 0,
+  },
+);
+
+fadeElements.forEach((el) => {
+  fadeObserver.observe(el);
+});
+
 // parallax
 // gsap.utils.toArray(".js-parallax3").forEach((wrap) => {
 //   const y = wrap.getAttribute("data-y") || -200;
