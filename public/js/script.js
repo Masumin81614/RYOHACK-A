@@ -119,21 +119,43 @@ fadeElements.forEach((el) => {
   fadeObserver.observe(el);
 });
 
-// parallax
+// =========================================================
+// 背景パララックス（CTAセクション）
+// =========================================================
 gsap.registerPlugin(ScrollTrigger);
 
-const parallaxCtas = document.querySelectorAll(".p-section--cta-1, .p-section--cta-2");
-
-// 探してきた要素を1つずつパララックスさせる
-parallaxCtas.forEach((cta) => {
-  gsap.to(cta, {
-    backgroundPosition: "50% 100%",
-    ease: "none",
+gsap.utils.toArray(".js-parallax3").forEach((wrap) => {
+  const y = wrap.getAttribute("data-y") || -200;
+  gsap.to(wrap, {
+    y: y,
     scrollTrigger: {
-      trigger: cta,
+      trigger: wrap.parentElement, // 親要素（CTAのセクション自体）が画面に入ったら動かす
       start: "top bottom",
       end: "bottom top",
-      scrub: true,
+      scrub: 0.5,
     },
+  });
+});
+
+// =========================================================
+// スムーススクロール
+// =========================================================
+
+const smoothScrollTriggers = document.querySelectorAll('a[href^="#"]');
+
+smoothScrollTriggers.forEach(function (trigger) {
+  trigger.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const href = trigger.getAttribute("href");
+
+    const targetElement = href === "#" ? document.body : document.querySelector(href);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   });
 });

@@ -1,10 +1,42 @@
 @use "../global" as *;
 
-.p-section--cta-1 {
-  background: url(../img/bg_cta1-sp.webp) no-repeat center 0% / cover;
+.p-section--cta-1,
+.p-section--cta-2 {
+  position: relative;
+  overflow: hidden;
+  background: none;
+}
 
-  @include mq(tb-middle) {
-    background: url(../img/bg_cta1.webp) no-repeat center 0% / cover;
+.p-section--cta__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 200px);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  img {
+    width: 100%;
+    height: calc(100% + 200px);
+    object-fit: cover;
+    object-position: center 0%;
+
+    position: absolute;
+    top: -100px;
+    left: 0;
+  }
+}
+
+.p-section--cta-1 {
+  .p-section--cta__bg {
+    background: url(../img/bg_cta1-sp.webp);
+
+    @include mq(tb-middle) {
+      background: url(../img/bg_cta1.webp);
+    }
   }
 }
 
@@ -59,10 +91,12 @@
 }
 
 .p-section--cta-2 {
-  background: url(../img/bg_cta2-sp.webp) no-repeat center 0% / cover;
+  .p-section--cta__bg {
+    background: url(../img/bg_cta2-sp.webp);
 
-  @include mq(tb-middle) {
-    background: url(../img/bg_cta2.webp) no-repeat center 0% / cover;
+    @include mq(tb-middle) {
+      background: url(../img/bg_cta2.webp);
+    }
   }
 
   .l-inner {
