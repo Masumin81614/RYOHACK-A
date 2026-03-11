@@ -47,7 +47,7 @@
 
   @include mq(tb-middle) {
     gap: rclamp(23, 43, 1024, 1920);
-    padding-inline: rclamp(170, 333, 1024, 1920);
+    padding-inline: rclamp(213, 400, 1024, 1920);
     align-items: center;
   }
 }
