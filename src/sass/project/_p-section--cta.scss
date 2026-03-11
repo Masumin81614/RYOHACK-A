@@ -58,7 +58,7 @@
   gap: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(19, 36, 1024, 1920);
     align-items: center;
   }
 }
@@ -73,7 +73,7 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(25, 47, 1024, 1920);
-    letter-spacing: 1.75px;
+    letter-spacing: 1px;
     white-space: nowrap;
   }
 }
@@ -83,8 +83,8 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
-    padding-inline: rclamp(23, 43, 1024, 1920);
-    letter-spacing: 0.8px;
+    padding-inline: rclamp(61, 115, 1024, 1920);
+    letter-spacing: 1px;
     font-weight: 500;
     line-height: 180%;
   }

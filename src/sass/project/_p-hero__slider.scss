@@ -36,6 +36,7 @@
     top: rclamp(110, 207, 1024, 1920);
     left: rclamp(28, 53, 1024, 1440);
     z-index: 10;
+    gap: rclamp(17, 32, 1024, 1920);
   }
 }
 
@@ -46,6 +47,7 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(36, 67, 1024, 1920);
+    line-height: 150%;
     letter-spacing: 1.5px;
   }
 }
@@ -62,8 +64,8 @@
 
 .p-hero__image {
   @include mq(tb-middle) {
-    max-width: rclamp(711, 1333, 1024, 1920);
-    height: auto;
+    max-width: 1000px;
+    max-height: 650px;
   }
 }
 
@@ -76,6 +78,7 @@
     position: absolute;
     bottom: rclamp(84, 157, 1024, 1920);
     left: rclamp(37, 69, 1024, 1920);
+    gap: 4px;
   }
 }
 .p-hero__cta--lead {
@@ -122,7 +125,8 @@
   top: auto;
 
   @include mq(tb-middle) {
-    bottom: 0 !important;
+    bottom: rclamp(-6, -11, 1024, 1920) !important;
+    left: 65%;
   }
 }
 
