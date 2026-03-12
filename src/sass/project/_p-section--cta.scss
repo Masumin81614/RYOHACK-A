@@ -135,7 +135,7 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(25, 47, 1024, 1920);
-    letter-spacing: 1.75px;
+    letter-spacing: 1.1px;
   }
 }
 
@@ -154,6 +154,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .p-section--cta__btn {
+    padding-block: rclamp(15, 28, 1024, 1920);
+  }
+
+  @include mq(tb-middle) {
+    gap: 4px;
+  }
 }
 
 .p-section--cta-2__lead {
@@ -172,11 +180,20 @@
   flex-direction: row;
   align-items: center;
   gap: rclamp(8, 22, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(10, 19, 1024, 1920);
+  }
 }
 
 .p-section--cta-2__telIcon {
   width: rclamp(22, 60, 375, 1023);
   height: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    width: rclamp(16, 29, 1024, 1920);
+    height: auto;
+  }
 }
 
 .p-section--cta-2__tel {

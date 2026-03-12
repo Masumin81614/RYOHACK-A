@@ -6,6 +6,7 @@
   .l-inner {
     @include mq(tb-middle) {
       padding-inline: rclamp(142, 267, 1024, 1920);
+      padding-block: rclamp(43, 80, 1024, 1920);
     }
   }
 }
@@ -20,6 +21,12 @@
     flex-direction: row;
     gap: 0;
     justify-content: space-between;
+  }
+
+  .c-tel-icon {
+    @include mq(tb-middle) {
+      width: rclamp(22, 41, 1024, 1920);
+    }
   }
 }
 

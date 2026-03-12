@@ -39,6 +39,10 @@
     flex-direction: row;
     gap: rclamp(28, 53, 1024, 1920);
   }
+
+  .contact__field {
+    flex: 1;
+  }
 }
 
 .contact__field:has(.wpcf7-select) {
@@ -167,6 +171,7 @@
 
   @include mq(tb-middle) {
     padding: rclamp(11, 21, 1024, 1920);
+    max-height: 240px;
   }
 }
 
@@ -174,7 +179,7 @@
   margin-top: rclamp(32, 87, 375, 1023);
 
   @include mq(tb-middle) {
-    margin-top: rclamp(17, 32, 1024, 1920);
+    margin-top: rclamp(11, 21, 1024, 1920);
   }
 
   .wpcf7-list-item label {
@@ -188,6 +193,7 @@
     @include mq(tb-middle) {
       justify-content: flex-start;
       font-size: rclamp(11, 21, 1024, 1920);
+      letter-spacing: 2.2px;
     }
   }
 }
@@ -270,6 +276,8 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(10, 19, 1024, 1920);
+    line-height: 180%; /* 28.8px */
+    letter-spacing: 0.8px;
   }
 }
 

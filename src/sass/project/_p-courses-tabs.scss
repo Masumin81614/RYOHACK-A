@@ -12,12 +12,17 @@
   .l-inner {
     @include mq(tb-middle) {
       padding-inline: rclamp(199, 373, 1024, 1920);
+      padding-top: rclamp(92, 173, 1024, 1920);
     }
   }
 }
 
 .p-courses-tabs {
   margin-top: rclamp(40, 109, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(43, 81, 1024, 1920);
+  }
 }
 
 .p-courses-tabs__inner {
@@ -43,14 +48,14 @@
   @include mq(tb-middle) {
     position: absolute;
     bottom: rclamp(85, 160, 1024, 1920);
-    left: rclamp(84, 157, 1024, 1920);
+    left: rclamp(114, 215, 1024, 1920);
   }
   img {
     width: rclamp(73, 199, 375, 1023);
     height: auto;
 
     @include mq(tb-middle) {
-      width: rclamp(115, 216, 1024, 1920);
+      width: rclamp(87, 163, 1024, 1920);
     }
   }
 }
@@ -119,8 +124,8 @@
   justify-content: center;
 
   @include mq(tb-middle) {
-    gap: rclamp(23, 43, 1024, 1920);
-    padding-block: rclamp(28, 53, 1024, 1920);
+    gap: 27px;
+    padding-block: rclamp(32, 60, 1024, 1920);
     flex-direction: column;
   }
 }
@@ -134,7 +139,7 @@
   gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(9, 16, 1024, 1920);
+    gap: 12px;
     padding-inline: rclamp(105, 197, 1024, 1920);
   }
 }
@@ -147,12 +152,16 @@
   @include mq(tb-middle) {
     text-align: left;
     font-size: rclamp(16, 29, 1024, 1920);
+    line-height: 150%; /* 33px */
+    letter-spacing: 1.1px;
   }
 }
 
 .p-courses__text {
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.8px;
   }
 }
 
@@ -173,12 +182,21 @@
   overflow: hidden;
   border-radius: 30px;
   background: $white-color;
+
+  @include mq(tb-middle) {
+    width: min(1000px, 95%);
+    max-height: calc(80vh - 40px);
+  }
 }
 
 .modal__inner {
   overflow-y: scroll;
   height: 100%;
   position: relative;
+
+  @include mq(tb-middle) {
+    width: 100%;
+  }
 }
 
 .modal__body {
@@ -202,12 +220,23 @@
   border-radius: 50%;
   border: none;
   font-size: rclamp(20, 55, 375, 1023);
+
+  @include mq(tb-middle) {
+    width: rclamp(28, 53, 1024, 1920);
+    height: rclamp(28, 53, 1024, 1920);
+    font-size: 1rem;
+  }
 }
 
 // モーダルスタイル
 .modal__body {
   padding-block: rclamp(40, 109, 375, 1023);
   padding-inline: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(28, 53, 1024, 1920);
+    padding-inline: rclamp(85, 160, 1024, 1920);
+  }
 }
 
 .p-modal__contents {
@@ -216,6 +245,10 @@
   justify-content: center;
   align-items: center;
   gap: rclamp(60, 164, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(28, 53, 1024, 1920);
+  }
 }
 
 .p-modal__content {
@@ -225,6 +258,13 @@
 
 .p-modal__head {
   padding-inline: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    display: flex;
+    gap: rclamp(14, 27, 1024, 1920);
+    align-items: center;
+    padding-inline: 0;
+  }
 }
 
 .p-modal__heading {
@@ -232,6 +272,10 @@
   font-size: rclamp(18, 49, 375, 1023);
   letter-spacing: 0.9px;
   font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(16, 29, 1024, 1920);
+  }
 }
 
 .p-modal__heading--sub {
@@ -240,6 +284,10 @@
   line-height: 180%;
   letter-spacing: 0.75px;
   margin-top: rclamp(4, 11, 375, 1023);
+
+  @include mq(tb-middle) {
+    font-size: 1rem;
+  }
 }
 
 .p-modal__boxes {
@@ -249,6 +297,11 @@
   justify-content: center;
   width: 100%;
   margin-top: rclamp(16, 44, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(16, 29, 1024, 1920);
+    gap: rclamp(17, 32, 1024, 1920);
+  }
 }
 
 .p-modal__box {
@@ -266,6 +319,11 @@
   padding-block: rclamp(10, 27, 375, 1023);
   padding-inline: rclamp(20, 55, 375, 1023);
   border-radius: 4px;
+
+  @include mq(tb-middle) {
+    font-size: 1rem;
+    padding-block: 8px;
+  }
 }
 
 .modal__box--text {
@@ -273,6 +331,10 @@
   font-size: rclamp(15, 41, 375, 1023);
   line-height: 160%;
   letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: 1rem;
+  }
 }
 
 .modal__open-btn--box {
@@ -280,4 +342,7 @@
   flex-direction: row;
   align-items: center;
   gap: rclamp(10, 27, 375, 1023);
+
+  @include mq(tb-middle) {
+  }
 }

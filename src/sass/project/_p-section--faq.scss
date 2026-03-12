@@ -21,10 +21,13 @@
 
   @include mq(tb-middle) {
     margin-top: 0;
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: 0;
   }
 
   &.is-open {
+    @include mq(tb-middle) {
+      gap: rclamp(17, 32, 1024, 1920);
+    }
     .p-faq-item__body {
       grid-template-rows: 1fr;
     }
@@ -44,7 +47,12 @@
     align-items: flex-start;
   }
   .c-heading {
-    text-align: left;
+    text-align: center;
+  }
+
+  .c-header__title {
+    line-height: 170%; /* 52.5px */
+    letter-spacing: 1.75px;
   }
 }
 
@@ -55,7 +63,7 @@
   @include mq(tb-middle) {
     width: rclamp(97, 183, 1024, 1920);
     position: absolute;
-    bottom: rclamp(36, 68, 1024, 1920);
+    bottom: rclamp(41, 77, 1024, 1920);
     right: rclamp(58, 109, 1024, 1920);
   }
 }
@@ -66,7 +74,7 @@
   gap: rclamp(32, 87, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(23, 43, 1024, 1920);
+    gap: 32px;
     margin-top: rclamp(43, 80, 1024, 1920);
   }
 }
@@ -90,6 +98,7 @@ button.p-faq-item__button {
   @include mq(tb-middle) {
     padding-block: rclamp(11, 21, 1024, 1920);
     padding-inline: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(17, 32, 1024, 1920);
   }
 }
 
@@ -133,8 +142,8 @@ button.p-faq-item__button {
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
-    line-height: 180%;
-    letter-spacing: 0.8px;
+    line-height: 2.5;
+    letter-spacing: 1.2px;
   }
 }
 
@@ -198,6 +207,11 @@ button.p-faq-item__button {
   padding-top: 0;
   padding-bottom: 0;
   transition: padding 0.3s ease;
+
+  @include mq(tb-middle) {
+    padding-inline: rclamp(18, 35, 1024, 1920);
+    gap: rclamp(18, 33, 1024, 1920);
+  }
 }
 
 .p-faq-item__text {
@@ -207,6 +221,6 @@ button.p-faq-item__button {
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
-    letter-spacing: 0.8px;
+    letter-spacing: 1.1px;
   }
 }

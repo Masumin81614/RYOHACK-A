@@ -14,6 +14,8 @@
 
 .p-mission__lead {
   font-size: rclamp(15, 41, 375, 1023);
+  line-height: 1.8;
+  letter-spacing: 0.75px;
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
@@ -27,7 +29,7 @@
   display: flex;
   flex-direction: column;
   margin-top: rclamp(20, 55, 375, 1023);
-  gap: rclamp(48, 131, 375, 1023);
+  gap: rclamp(53, 145, 375, 1023);
 
   @include mq(tb-middle) {
     flex-direction: row;
@@ -75,12 +77,8 @@
 }
 
 .p-mission-item__image {
-  padding-inline: rclamp(50, 136, 375, 1023);
-  padding-top: rclamp(46, 125, 375, 1023);
-  padding-bottom: rclamp(15, 41, 375, 1023);
   display: flex;
   justify-content: center;
-  height: rclamp(223, 417, 1024, 1920);
 
   @include mq(tb-middle) {
     padding-block: 0;
@@ -90,11 +88,14 @@
   }
 
   img {
+    width: 100%;
     height: auto;
   }
 
   .mission__image--1 {
-    width: rclamp(185, 347, 375, 1023);
+    padding-top: rclamp(47, 128, 375, 1023);
+    padding-inline: rclamp(87, 237, 375, 1023);
+    padding-bottom: rclamp(23, 63, 375, 1023);
 
     @include mq(tb-middle) {
       width: 100%;
@@ -104,7 +105,9 @@
   }
 
   .mission__image--2 {
-    width: rclamp(107, 292, 375, 1023);
+    padding-top: rclamp(33, 90, 1024, 1920);
+    padding-inline: rclamp(105, 314, 375, 1023);
+    padding-bottom: rclamp(21, 57, 375, 1023);
 
     @include mq(tb-middle) {
       width: rclamp(76, 143, 1024, 1920);
@@ -159,9 +162,12 @@
 
 .p-mission-item__text {
   font-size: rclamp(15, 41, 375, 1023);
+  line-height: 160%;
+  letter-spacing: 0.75px;
+
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
-    line-height: 160%;
+
     letter-spacing: 0.8px;
   }
 }
