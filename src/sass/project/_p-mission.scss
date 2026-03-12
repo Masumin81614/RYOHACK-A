@@ -2,14 +2,6 @@
 
 .p-mission {
   background: $brown-background;
-
-  .l-inner {
-    @include mq(tb-middle) {
-      padding-top: rclamp(90, 169, 1024, 1920);
-      padding-bottom: rclamp(82, 153, 1024, 1920);
-      padding-inline: rclamp(107, 200, 1024, 1920);
-    }
-  }
 }
 
 .p-mission__lead {
