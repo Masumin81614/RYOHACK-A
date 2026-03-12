@@ -38,6 +38,11 @@
       background: url(../img/bg_cta1.webp);
     }
   }
+  .l-inner {
+    padding-top: rclamp(85, 165, 1024, 1920);
+    padding-bottom: rclamp(87, 163, 1024, 1920);
+    padding-inline: rclamp(103, 193, 1024, 1920);
+  }
 }
 
 .p-section--cta__inner {
@@ -58,7 +63,7 @@
   gap: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(19, 36, 1024, 1920);
+    gap: rclamp(16, 31, 1024, 1920);
     align-items: center;
   }
 }
@@ -83,7 +88,7 @@
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
-    padding-inline: rclamp(61, 115, 1024, 1920);
+    padding-inline: rclamp(30, 56, 1024, 1920);
     letter-spacing: 1px;
     font-weight: 500;
     line-height: 180%;

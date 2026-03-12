@@ -13,6 +13,7 @@
     flex-direction: row;
     gap: rclamp(103, 193, 1024, 1920);
     align-items: flex-start;
+    justify-content: space-between;
   }
 }
 
@@ -52,7 +53,9 @@
   gap: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(28, 53, 1024, 1920);
+    gap: 40px;
+  }
+  @include mq(pc-small) {
   }
 }
 
@@ -64,7 +67,8 @@
   position: relative;
 
   @include mq(tb-middle) {
-    padding: rclamp(23, 43, 1024, 1920);
+    padding-inline: rclamp(21, 40, 1024, 1920);
+    padding-block: rclamp(18, 35, 1024, 1920);
     max-width: rclamp(545, 1021, 1024, 1920);
   }
 }
@@ -126,7 +130,7 @@
   gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(9, 16, 1024, 1920);
+    gap: 14px;
     justify-content: center;
   }
 }
@@ -139,6 +143,7 @@
   @include mq(tb-middle) {
     font-size: rclamp(16, 29, 1024, 1920);
     letter-spacing: 1.1px;
+    line-height: 1.5;
   }
 }
 
@@ -154,7 +159,10 @@
 }
 
 .p-reason-item__image {
-  @include mq(tb-middle) {
-    width: 100%;
+  flex-shrink: 0;
+  img {
+    @include mq(tb-middle) {
+      width: rclamp(218, 408, 1024, 1920);
+    }
   }
 }
