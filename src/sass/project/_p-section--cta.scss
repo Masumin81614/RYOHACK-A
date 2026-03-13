@@ -32,39 +32,41 @@
 
 .p-section--cta-1 {
   .p-section--cta__bg {
-    background: url(../img/bg_cta1-sp.webp);
+    background-image: url(../img/bg_cta1-sp.webp);
 
     @include mq(tb-middle) {
-      background: url(../img/bg_cta1.webp);
+      background-image: url(../img/bg_cta1.webp);
     }
   }
   .l-inner {
-    padding-top: rclamp(85, 165, 1024, 1920);
-    padding-bottom: rclamp(87, 163, 1024, 1920);
-    padding-inline: rclamp(103, 193, 1024, 1920);
+    @include mq(tb-middle) {
+      padding-top: rclamp(85, 165, 1024, 1920);
+      padding-bottom: rclamp(87, 163, 1024, 1920);
+      padding-inline: rclamp(103, 193, 1024, 1920);
+    }
   }
 }
 
 .p-section--cta__inner {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rclamp(32, 87, 375, 1023);
 
   @include mq(tb-middle) {
     gap: rclamp(23, 43, 1024, 1920);
     padding-inline: rclamp(213, 400, 1024, 1920);
-    align-items: center;
   }
 }
 
 .p-section--cta__heading {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
     gap: rclamp(16, 31, 1024, 1920);
-    align-items: center;
   }
 }
 
@@ -85,22 +87,25 @@
 
 .p-section--cta__lead {
   color: $white-color;
+  font-size: rclamp(15, 41, 375, 1023);
+  font-weight: 500;
+  line-height: 180%;
+  letter-spacing: 0.75px;
+  text-align: center;
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 21, 1024, 1920);
     padding-inline: rclamp(30, 56, 1024, 1920);
     letter-spacing: 1px;
-    font-weight: 500;
-    line-height: 180%;
   }
 }
 
 .p-section--cta-2 {
   .p-section--cta__bg {
-    background: url(../img/bg_cta2-sp.webp);
+    background-image: url(../img/bg_cta2-sp.webp);
 
     @include mq(tb-middle) {
-      background: url(../img/bg_cta2.webp);
+      background-image: url(../img/bg_cta2.webp);
     }
   }
 
@@ -121,7 +126,6 @@
   padding-block: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    padding-block: rclamp(85, 160, 1024, 1920);
     gap: rclamp(23, 43, 1024, 1920);
     padding-block: rclamp(28, 53, 1024, 1920);
   }
@@ -132,6 +136,7 @@
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 1.3px;
+  text-align: center;
 
   @include mq(tb-middle) {
     font-size: rclamp(25, 47, 1024, 1920);
@@ -155,12 +160,12 @@
   flex-direction: column;
   align-items: center;
 
-  .p-section--cta__btn {
-    padding-block: rclamp(15, 28, 1024, 1920);
-  }
-
   @include mq(tb-middle) {
     gap: 4px;
+
+    .p-section--cta__btn {
+      padding-block: rclamp(15, 28, 1024, 1920);
+    }
   }
 }
 
