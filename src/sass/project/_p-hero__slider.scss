@@ -81,6 +81,7 @@
 
   @include mq(tb-middle) {
     position: absolute;
+    width: rclamp(250, 469, 1024, 1920);
     bottom: rclamp(84, 157, 1024, 1920);
     left: rclamp(37, 69, 1024, 1920);
     gap: 4px;
