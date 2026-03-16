@@ -84,6 +84,7 @@
 .c-btn-lg {
   padding: rclamp(20, 55, 375, 1023);
   gap: rclamp(12, 33, 375, 1023);
+  width: rclamp(303, 827, 375, 1023);
 
   i {
     font-size: rclamp(22, 60, 375, 1023);
