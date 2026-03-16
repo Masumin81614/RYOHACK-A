@@ -82,9 +82,14 @@
   @include mq(tb-middle) {
     position: absolute;
     width: rclamp(250, 469, 1024, 1920);
-    bottom: rclamp(84, 157, 1024, 1920);
+    bottom: rclamp(84, 117, 1024, 1440);
     left: rclamp(37, 69, 1024, 1920);
     gap: 4px;
+    margin-top: 0;
+  }
+
+  @include mq(pc-middle) {
+    bottom: 87px;
   }
 }
 .p-hero__cta--lead {
