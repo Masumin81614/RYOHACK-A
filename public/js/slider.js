@@ -68,13 +68,13 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
 });
 
 const swiper = new Swiper(".js-teachers-slider", {
-  slidesPerView: 1.2,
-  spaceBetween: 24,
+  slidesPerView: "auto",
+  spaceBetween: 20,
 
   breakpoints: {
     1024: {
       slidesPerView: 3.2, // PCでは2枚半見せる
-      spaceBetween: 35, // PC用の余白
+      spaceBetween: 40, // PC用の余白
     },
   },
 
