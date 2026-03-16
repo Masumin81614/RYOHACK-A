@@ -84,17 +84,7 @@
 .c-btn-lg {
   padding: rclamp(20, 55, 375, 1023);
   gap: rclamp(12, 33, 375, 1023);
-
-  @include mq(tb-middle) {
-    width: rclamp(250, 469, 1024, 1920);
-    padding-bottom: rclamp(14, 27, 1024, 1920);
-    padding-inline: rclamp(23, 43, 1024, 1920);
-    gap: rclamp(16, 21, 375, 1023);
-
-    .c-btn--text {
-      font-size: rclamp(14, 27, 1024, 1920);
-    }
-  }
+  width: rclamp(303, 827, 375, 1023);
 
   i {
     font-size: rclamp(22, 60, 375, 1023);
@@ -103,5 +93,16 @@
   .c-btn--text {
     font-size: rclamp(18, 49, 375, 1023);
     letter-spacing: 0.9px;
+
+    @include mq(tb-middle) {
+      font-size: rclamp(14, 27, 1024, 1920);
+    }
+  }
+
+  @include mq(tb-middle) {
+    width: rclamp(250, 469, 1024, 1920);
+    padding-block: rclamp(14, 27, 1024, 1920);
+    padding-inline: rclamp(23, 43, 1024, 1920);
+    gap: rclamp(16, 21, 375, 1023);
   }
 }

@@ -177,5 +177,5 @@
 
 .swiper-scrollbar-drag {
   background: $main-blue-color;
-  width: rclamp(107, 200, 1024, 1920);
+  width: rclamp(60, 120, 1024, 1920) !important;
 }
