@@ -74,7 +74,7 @@ const swiper = new Swiper(".js-teachers-slider", {
   breakpoints: {
     1024: {
       slidesPerView: 3.2, // PCでは2枚半見せる
-      spaceBetween: 40, // PC用の余白
+      spaceBetween: 35, // PC用の余白
     },
   },
 

@@ -33,7 +33,6 @@
 
   @include mq(tb-middle) {
     gap: rclamp(16, 29, 1024, 1920);
-    width: 352px !important;
   }
 }
 
