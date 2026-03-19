@@ -1,0 +1,212 @@
+@use "../global" as *;
+
+.p-section--faq {
+  background: $brown-background;
+
+  @include mq(tb-middle) {
+    position: relative;
+  }
+
+  .l-inner {
+    @include mq(tb-middle) {
+      padding-inline: rclamp(199, 373, 1024, 1920);
+    }
+  }
+}
+
+.p-faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(24, 65, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: 0;
+    gap: rclamp(17, 32, 1024, 1920);
+  }
+
+  &.is-open {
+    .p-faq-item__body {
+      grid-template-rows: 1fr;
+    }
+  }
+}
+
+.p-faq__head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include mq(tb-middle) {
+    justify-content: center;
+  }
+
+  &.c-head {
+    align-items: flex-start;
+  }
+  .c-heading {
+    text-align: left;
+  }
+}
+
+.p-faq__head--image {
+  width: rclamp(77, 210, 375, 1023);
+  height: auto;
+
+  @include mq(tb-middle) {
+    width: rclamp(97, 183, 1024, 1920);
+    position: absolute;
+    bottom: rclamp(36, 68, 1024, 1920);
+    right: rclamp(58, 109, 1024, 1920);
+  }
+}
+
+.p-faq__box {
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(23, 43, 1024, 1920);
+    margin-top: rclamp(43, 80, 1024, 1920);
+  }
+}
+
+button.p-faq-item__button {
+  border: none;
+  background: $white-color;
+  font-size: rclamp(15, 41, 375, 1023);
+  font-weight: 500;
+  line-height: 180%; /* 27px */
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: rclamp(12, 33, 375, 1023);
+  width: 100%;
+  position: relative;
+  padding: rclamp(16, 44, 375, 1023);
+  border-radius: 10px;
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(11, 21, 1024, 1920);
+    padding-inline: rclamp(17, 32, 1024, 1920);
+  }
+}
+
+.p-faq-label {
+  width: rclamp(36, 98, 375, 1023);
+  height: rclamp(36, 98, 375, 1023);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-en;
+  font-size: rclamp(16, 44, 375, 1023);
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.8px;
+  flex-shrink: 0;
+  color: $white-color;
+  border-radius: 50%;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    width: rclamp(26, 48, 1024, 1920);
+    height: rclamp(26, 48, 1024, 1920);
+  }
+}
+
+.q-label {
+  background: $main-blue-color;
+}
+
+.a-label {
+  background: $accent-yellow-color;
+}
+
+.p-faq-item__question {
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  text-wrap: wrap;
+  color: $main-text-color;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    line-height: 180%;
+    letter-spacing: 0.8px;
+  }
+}
+
+.p-faq-item__toggle {
+  position: relative;
+  flex-shrink: 0;
+  width: rclamp(16, 44, 375, 1023);
+  height: rclamp(16, 24, 375, 1023);
+  display: block;
+  align-self: center;
+
+  @include mq(tb-middle) {
+    width: rclamp(11, 21, 1024, 1920);
+    height: rclamp(11, 21, 1024, 1920);
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $main-blue-color;
+    transition: transform 0.3s ease;
+  }
+
+  &::before {
+    width: 100%;
+    height: 2px;
+  }
+
+  &::after {
+    width: 2px;
+    height: 100%;
+  }
+
+  .p-faq-item.is-open & {
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+  }
+}
+
+.p-faq-item__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+  overflow: hidden;
+
+  > div {
+    min-height: 0;
+  }
+}
+
+.p-faq-item__answer {
+  display: flex;
+  gap: rclamp(12, 33, 375, 1023);
+  padding-inline: rclamp(12, 33, 375, 1023);
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: padding 0.3s ease;
+}
+
+.p-faq-item__text {
+  font-size: rclamp(15, 41, 375, 1023);
+  line-height: 160%; /* 24px */
+  letter-spacing: 0.75px;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+    letter-spacing: 0.8px;
+  }
+}

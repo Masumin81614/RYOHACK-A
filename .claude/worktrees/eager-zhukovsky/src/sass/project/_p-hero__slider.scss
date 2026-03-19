@@ -5,8 +5,6 @@
   position: relative;
 
   .l-inner {
-    padding-block: rclamp(43, 80, 375, 1023);
-
     @include mq(tb-middle) {
       padding-top: 0;
       padding-inline: 0;
@@ -46,10 +44,10 @@
   font-size: rclamp(40, 109, 375, 1023);
   font-weight: 700;
   letter-spacing: 1.2px;
-  line-height: 150%;
 
   @include mq(tb-middle) {
     font-size: rclamp(36, 67, 1024, 1920);
+    line-height: 150%;
     letter-spacing: 1.5px;
   }
 }
@@ -66,8 +64,8 @@
 
 .p-hero__image {
   @include mq(tb-middle) {
-    max-width: rclamp(600, 1000, 1024, 1440);
-    max-height: rclamp(390, 650, 1024, 1440);
+    max-width: 1000px;
+    max-height: 650px;
   }
 }
 
@@ -75,21 +73,12 @@
   display: flex;
   flex-direction: column;
   gap: rclamp(4, 11, 375, 1023);
-  margin-top: rclamp(54, 147, 1024, 1920);
-  width: rclamp(303, 827, 375, 1023);
-  margin-inline: auto;
 
   @include mq(tb-middle) {
     position: absolute;
-    width: rclamp(250, 469, 1024, 1920);
-    bottom: rclamp(84, 117, 1024, 1440);
+    bottom: rclamp(84, 157, 1024, 1920);
     left: rclamp(37, 69, 1024, 1920);
     gap: 4px;
-    margin-top: 0;
-  }
-
-  @include mq(pc-middle) {
-    bottom: 87px;
   }
 }
 .p-hero__cta--lead {

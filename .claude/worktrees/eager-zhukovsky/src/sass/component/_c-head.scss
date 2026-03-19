@@ -1,0 +1,38 @@
+@use "../global" as *;
+
+.c-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rclamp(24, 65, 375, 1023);
+
+  @include mq(tb-middle) {
+    gap: rclamp(17, 32, 1024, 1920);
+  }
+}
+
+.c-heading {
+  text-align: center;
+}
+.c-header__eyebrow {
+  color: $main-blue-color;
+  font-family: $font-en;
+  letter-spacing: 0.8px;
+  font-size: rclamp(16, 44, 375, 1023);
+  font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(11, 21, 1024, 1920);
+  }
+}
+
+.c-header__title {
+  color: $main-text-color;
+  font-size: rclamp(26, 71, 375, 1023);
+  letter-spacing: 1.3px;
+  font-weight: 700;
+
+  @include mq(tb-middle) {
+    font-size: rclamp(25, 47, 1024, 1920);
+  }
+}

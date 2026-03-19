@@ -1,128 +1,17 @@
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex" />
-    <meta name="description" content="ページの説明120文字以内で記載" />
-    <title>わかば個別指導塾 │ 自身がつく、勉強が好きになる。 一人ひとりに寄り添う個別指導塾</title>
-
-    <!-- <meta property="og:title" content="Document">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/">
-    <meta property="og:image" content="https://example.com/img/ogp.png">
-    <meta property="og:site_name" content="わかば個別指導塾 │ 自身がつく、勉強が好きになる。 一人ひとりに寄り添う個別指導塾">
-    <meta property="og:description" content="わかば個別指導塾は、一人ひとりに寄り添い、自信を育てる個別指導塾です。オリジナルの学習方法で苦手を克服し、学ぶ楽しさを実感。プロフェッショナルな講師陣が、生徒の目標に合わせた指導を行います。アットホームな環境で、勉強が好きになる体験をしませんか？">
-    <meta name="twitter:card" content="summary_large_image"> -->
-
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/style.min.css?ver=1.0.1" />
-  </head>
-
-  <body>
-    <!-- ==================================================
-    l-header
-  ================================================== -->
-    <header class="l-header">
-      <div class="l-header__inner">
-        <h1 class="p-header-branding">
-          <a href="#top" class="p-header-branding__link">
-            <img src="./img/img_logo.webp" alt="わかば個別指導塾ロゴ" class="p-header-branding__link--image" width="450" height="72" loading="lazy" />
-          </a>
-        </h1>
-        <div class="c-global-nav--pc">
-          <div class="p-header-contact">
-            <nav class="p-header-nav p-header-nav--pc">
-              <ul class="p-header-nav__list">
-                <li class="p-header-nav__item"><a href="#mission" class="c-link">指導方針</a></li>
-                <li class="p-header-nav__item"><a href="#reason" class="c-link">選ばれる理由</a></li>
-                <li class="p-header-nav__item"><a href="#teachers" class="c-link">講師紹介</a></li>
-                <li class="p-header-nav__item"><a href="#courses" class="c-link">コース案内</a></li>
-                <li class="p-header-nav__item"><a href="#faq" class="c-link">よくある質問</a></li>
-              </ul>
-            </nav>
-            <div class="c-contact__tel">
-              <span class="c-tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
-              <div class="c-sp-menu__tel--textBox">
-                <a href="tel:0120123456" class="p-sp-menu__tel-number c-tel-number">0120-12-3456</a>
-                <p class="c-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
-              </div>
-            </div>
-            <div class="p-pc-menu__cta">
-              <a href="#contact" class="c-btn c-btn-sm p-section--cta__btn">
-                <div class="c-contact__btn--box">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="currentColor" />
-                    <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="currentColor" />
-                  </svg>
-                  <span class="c-btn--text">お問い合わせ</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <circle cx="11" cy="11" r="11" fill="currentColor" />
-
-                    <path class="c-btn__arrow" d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
-                  </svg>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- SPハンバーガー -->
-        <button class="c-sp-menu-toggle js-sp-menu-toggle p-sp-menu-toggle" type="button" aria-expanded="false" aria-controls="sp-menu">
-          <span class="c-sp-menu-toggle__line"></span>
-          <span class="c-sp-menu-toggle__line"></span>
-          <span class="c-sp-menu-toggle__line"></span>
-        </button>
-      </div>
-
-      <!-- SPメニュー -->
-      <nav id="sp-menu" class="p-sp-menu js-sp-menu u-header-margin" aria-hidden="true">
-        <ul class="p-sp-menu__nav">
-          <li class="p-sp-menu__item"><a href="#mission" class="c-link">指導方針</a></li>
-          <li class="p-sp-menu__item"><a href="#reason" class="c-link">選ばれる理由</a></li>
-          <li class="p-sp-menu__item"><a href="#teachers" class="c-link">講師紹介</a></li>
-          <li class="p-sp-menu__item"><a href="#courses" class="c-link">コース案内</a></li>
-          <li class="p-sp-menu__item"><a href="#faq" class="c-link">よくある質問</a></li>
-        </ul>
-
-        <div class="c-contact__tel">
-          <div class="c-contact__tel--box">
-            <span class="c-tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
-            <a href="tel:0120123456" class="p-sp-menu__tel-number c-tel-number">0120-12-3456</a>
-          </div>
-          <p class="c-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
-        </div>
-
-        <div class="p-sp-menu__cta">
-          <a href="#contact" class="c-btn c-btn-sm">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-              <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="currentColor" />
-              <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="currentColor" />
-            </svg>
-            <span class="c-btn--text">お問い合わせ</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <circle cx="11" cy="11" r="11" fill="currentColor" />
-              <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
-            </svg>
-          </a>
-        </div>
-      </nav>
-    </header>
+<?php
+/**
+ * Template Name: ryohack-a LP
+ */
+get_header();
+?>
 
     <!-- ==================================================
     l-main
-  ================================================== -->
+    ================================================== -->
     <main id="top" class="l-main">
       <!-- ===============================================
       メインビジュアル（Swiperスライダー）
-    =============================================== -->
+      =============================================== -->
       <section class="p-hero">
         <div class="l-inner">
           <div class="p-hero__inner">
@@ -141,7 +30,7 @@
                           <p class="p-hero__text">一人ひとりに寄り添う個別指導塾</p>
                         </div>
                         <div class="p-hero__image">
-                          <img src="./img/img_fv1.webp" alt=" 授業を受ける生徒の写真" width="2000" height="1300" />
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_fv1.webp" alt="授業を受ける生徒の写真" width="2000" height="1300" />
                         </div>
                       </div>
                     </div>
@@ -156,7 +45,7 @@
                           <p class="p-hero__text">一人ひとりに寄り添う個別指導塾</p>
                         </div>
                         <div class="p-hero__image">
-                          <img src="./img/img_fv2.webp" alt=" 授業を受ける生徒の写真" width="2000" height="1300" />
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_fv2.webp" alt="授業を受ける生徒の写真" width="2000" height="1300" />
                         </div>
                       </div>
                     </div>
@@ -171,7 +60,7 @@
                           <p class="p-hero__text">一人ひとりに寄り添う個別指導塾</p>
                         </div>
                         <div class="p-hero__image">
-                          <img src="./img/img_fv3.webp" alt=" 授業を受ける生徒の写真" width="2000" height="1300" />
+                          <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_fv3.webp" alt="授業を受ける生徒の写真" width="2000" height="1300" />
                         </div>
                       </div>
                     </div>
@@ -185,14 +74,13 @@
               <a href="#contact" class="c-btn c-btn-md">
                 <div class="c-contact__btn--box">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="currentColor" />
-                    <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="currentColor" />
+                    <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="white" />
+                    <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="white" />
                   </svg>
                   <span class="c-btn--text">お問い合わせはこちら</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <circle cx="11" cy="11" r="11" fill="currentColor" />
-
-                    <path class="c-btn__arrow" d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
+                    <circle cx="11" cy="11" r="11" fill="white" />
+                    <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
                   </svg>
                 </div>
               </a>
@@ -213,7 +101,7 @@
           </div>
           <div class="p-mission-list">
             <article class="p-mission-item js-fadein">
-              <div class="p-mission-item__image"><img src="./img/img_mission1.webp" alt="ノートと鉛筆のアイコン" width="500" height="333" loading="lazy" class="mission__image--1" /></div>
+              <div class="p-mission-item__image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_mission1.webp" alt="ノートと鉛筆のアイコン" width="500" height="333" loading="lazy" class="mission__image--1" /></div>
               <div class="p-mission-item__textBox">
                 <h3 class="p-mission-item__title">
                   自信をつける <br />
@@ -223,7 +111,7 @@
               </div>
             </article>
             <article class="p-mission-item js-fadein">
-              <div class="p-mission-item__image"><img src="./img/img_mission2.webp" alt="グラフと虫眼鏡のアイコン" width="500" height="333" loading="lazy" class="mission__image--2" /></div>
+              <div class="p-mission-item__image"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_mission2.webp" alt="グラフと虫眼鏡のアイコン" width="500" height="333" loading="lazy" class="mission__image--2" /></div>
               <div class="p-mission-item__textBox">
                 <h3 class="p-mission-item__title">
                   一人ひとりに合った<br />
@@ -234,7 +122,7 @@
             </article>
             <article class="p-mission-item js-fadein">
               <div class="p-mission-item__image">
-                <img src="./img/img_mission3.webp" alt="眼鏡の男性のアイコン" width="500" height="333" loading="lazy" class="mission__image--3" />
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_mission3.webp" alt="眼鏡の男性のアイコン" width="500" height="333" loading="lazy" class="mission__image--3" />
               </div>
               <div class="p-mission-item__textBox">
                 <h3 class="p-mission-item__title">
@@ -246,7 +134,7 @@
             </article>
             <article class="p-mission-item js-fadein">
               <div class="p-mission-item__image">
-                <img src="./img/img_mission4.webp" alt="握手するアイコン" width="500" height="333" loading="lazy" class="mission__image--4" />
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_mission4.webp" alt="握手するアイコン" width="500" height="333" loading="lazy" class="mission__image--4" />
               </div>
               <div class="p-mission-item__textBox">
                 <h3 class="p-mission-item__title">
@@ -260,7 +148,7 @@
         </div>
       </section>
 
-      <!-- CTA -->
+      <!-- CTA-1 -->
       <section class="p-section--cta p-section--cta-1">
         <div class="p-section--cta__bg js-parallax3"></div>
         <div class="l-inner">
@@ -273,14 +161,13 @@
               <a href="#contact" class="c-btn c-btn-lg p-section--cta__btn">
                 <div class="c-contact__btn--box">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                    <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="currentColor" />
-                    <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="currentColor" />
+                    <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="white" />
+                    <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="white" />
                   </svg>
                   <span class="c-btn--text">お問い合わせはこちら</span>
                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <circle cx="11" cy="11" r="11" fill="currentColor" />
-
-                    <path class="c-btn__arrow" d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
+                    <circle cx="11" cy="11" r="11" fill="white" />
+                    <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
                   </svg>
                 </div>
               </a>
@@ -299,7 +186,7 @@
                 <span class="c-header__title">選ばれる理由</span>
               </div>
               <div class="p-reason__head--image">
-                <img src="./img/img_reson-title.webp" alt="女性生徒のイラスト" width="170" height="344" loading="lazy" />
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_reson-title.webp" alt="女性生徒のイラスト" width="170" height="344" loading="lazy" />
               </div>
             </div>
             <div class="p-reason-list__scroll">
@@ -315,7 +202,7 @@
                       <p class="p-reason-item__text">「いつでも気軽に質問できる」「何度でも丁寧に教えてくれる」「勉強以外の話も気軽にできる」――そんな親しみやすさが、多くの生徒に選ばれる理由です。</p>
                     </div>
                     <div class="p-reason-item__image">
-                      <img src="./img/img_reason1.webp" alt="女性の講師が生徒に笑顔で教えてる" width="612" height="456" loading="lazy" />
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_reason1.webp" alt="女性の講師が生徒に笑顔で教えてる" width="612" height="456" loading="lazy" />
                     </div>
                   </div>
                 </article>
@@ -330,7 +217,7 @@
                       <p class="p-reason-item__text">「講義→問題演習→解説」を繰り返します。「講義」で聞いたことが「わかった気」で終わってないかを確かめ、理解が不十分であれば何度でも説明をします。</p>
                     </div>
                     <div class="p-reason-item__image">
-                      <img src="./img/img_reason2.webp" alt="女性の講師が寄り添って教えてる" width="612" height="456" loading="lazy" />
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_reason2.webp" alt="女性の講師が寄り添って教えてる" width="612" height="456" loading="lazy" />
                     </div>
                   </div>
                 </article>
@@ -345,7 +232,7 @@
                       <p class="p-reason-item__text">学校の授業内容や定期テストの傾向を把握し、それぞれの生徒に合った学習プランを提供しています。一人ひとりのレベルに寄り添った丁寧な指導で、無理なく学力を伸ばします。</p>
                     </div>
                     <div class="p-reason-item__image">
-                      <img src="./img/img_reason3.webp" alt="ノートと鉛筆" width="612" height="456" loading="lazy" />
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_reason3.webp" alt="ノートと鉛筆" width="612" height="456" loading="lazy" />
                     </div>
                   </div>
                 </article>
@@ -360,7 +247,7 @@
                       <p class="p-reason-item__text">授業時間外も安心して学べる環境を提供しています。開校中のすべての時間、自習室を自由にご利用いただけます。自習中も講師が見守っており、学習の進捗や宿題の状況を把握します。</p>
                     </div>
                     <div class="p-reason-item__image">
-                      <img src="./img/img_reason4.webp" alt="仕切られた机が勉強している学生たち" width="612" height="456" loading="lazy" />
+                      <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_reason4.webp" alt="仕切られた机が勉強している学生たち" width="612" height="456" loading="lazy" />
                     </div>
                   </div>
                 </article>
@@ -369,6 +256,7 @@
           </div>
         </div>
       </section>
+
       <!-- 講師紹介（Swiperスライダー） -->
       <section id="teachers" class="p-section p-teachers">
         <div class="p-teachers__inner">
@@ -385,7 +273,7 @@
                   <article class="p-teachers-slider__slide swiper-slide">
                     <div class="p-teacher-card">
                       <div class="p-teacher-card__photo">
-                        <img src="./img/img_teacher1.webp" alt="講師佐藤" width="704" height="520" loading="lazy" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_teacher1.webp" alt="講師佐藤" width="704" height="520" loading="lazy" />
                       </div>
                       <div class="p-teacher-card__body">
                         <div class="p-teacher-card__head">
@@ -402,7 +290,7 @@
                   <article class="p-teachers-slider__slide swiper-slide">
                     <div class="p-teacher-card">
                       <div class="p-teacher-card__photo">
-                        <img src="./img/img_teacher2.webp" alt="講師高橋" width="704" height="520" loading="lazy" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_teacher2.webp" alt="講師高橋" width="704" height="520" loading="lazy" />
                       </div>
                       <div class="p-teacher-card__body">
                         <div class="p-teacher-card__head">
@@ -419,7 +307,7 @@
                   <article class="p-teachers-slider__slide swiper-slide">
                     <div class="p-teacher-card">
                       <div class="p-teacher-card__photo">
-                        <img src="./img/img_teacher3.webp" alt="講師松本" width="704" height="520" loading="lazy" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_teacher3.webp" alt="講師松本" width="704" height="520" loading="lazy" />
                       </div>
                       <div class="p-teacher-card__body">
                         <div class="p-teacher-card__head">
@@ -436,7 +324,7 @@
                   <article class="p-teachers-slider__slide swiper-slide">
                     <div class="p-teacher-card">
                       <div class="p-teacher-card__photo">
-                        <img src="./img/img_teacher4.webp" alt="講師山田" width="704" height="520" loading="lazy" />
+                        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_teacher4.webp" alt="講師山田" width="704" height="520" loading="lazy" />
                       </div>
                       <div class="p-teacher-card__body">
                         <div class="p-teacher-card__head">
@@ -464,7 +352,7 @@
         </div>
       </section>
 
-      <!-- CTA -->
+      <!-- CTA-2 -->
       <section class="p-section c-section--cta p-section--cta-2">
         <div class="p-section--cta__bg js-parallax3"></div>
         <div class="l-inner l-inner--narrow">
@@ -477,7 +365,7 @@
               <div class="p-section--cta-2__action">
                 <p class="p-section--cta-2__lead">お電話でのお問い合わせ</p>
                 <a class="p-section--cta-2__telBox">
-                  <div class="p-section--cta-2__telIcon"><img src="./img/icon_tel-cta2.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></div>
+                  <div class="p-section--cta-2__telIcon"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/icon_tel-cta2.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></div>
                   <p class="p-section--cta-2__tel">0120-12-3456</p>
                 </a>
                 <p class="p-section--cta-2__lead2">受付時間：平日 9:00〜19:00</p>
@@ -487,14 +375,13 @@
                 <a href="#contact" class="c-btn c-btn-md p-section--cta__btn">
                   <div class="c-contact__btn--box">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-                      <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="currentColor" />
-                      <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="currentColor" />
+                      <path d="M23.2764 0H0.723656C0.324469 0 0 0.332837 0 0.743042V2.20436L12 10.453L24 2.20359V0.743042C24 0.332837 23.6755 0 23.2764 0Z" fill="white" />
+                      <path d="M0 5.24979V15.0296C0 16.6705 1.29567 17.9996 2.89598 17.9996H21.104C22.7044 17.9996 24 16.6705 24 15.0296V5.24902L12 13.4985L0 5.24979Z" fill="white" />
                     </svg>
                     <span class="c-btn--text">お問い合わせはこちら</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                      <circle cx="11" cy="11" r="11" fill="currentColor" />
-
-                      <path class="c-btn__arrow" d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
+                      <circle cx="11" cy="11" r="11" fill="white" />
+                      <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
                     </svg>
                   </div>
                 </a>
@@ -503,6 +390,7 @@
           </div>
         </div>
       </section>
+
       <!-- コース案内 -->
       <section id="courses" class="p-section p-courses">
         <div class="p-courses__inner">
@@ -513,7 +401,7 @@
                 <span class="c-header__title">コース案内</span>
               </div>
               <div class="p-course__head--image">
-                <img src="./img/img_course.webp" alt="女性生徒のイラスト" width="244" height="334" loading="lazy" />
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_course.webp" alt="女性生徒のイラスト" width="244" height="334" loading="lazy" />
               </div>
             </div>
 
@@ -542,7 +430,7 @@
                           <span class="modal__open-btn--box">
                             <span class="c-btn--text">詳しくみる</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                              <circle cx="11" cy="11" r="11" fill="currentColor" />
+                              <circle cx="11" cy="11" r="11" fill="white" />
                               <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
                             </svg>
                           </span>
@@ -561,11 +449,11 @@
                           <h2 class="p-courses__heading">高校受験コース <br class="u-hidden-pc" />（週180分×4）</h2>
                           <p class="p-courses__text">志望校合格に向けて必要なことにターゲットを絞り、受験対策します。各単元チェックテストで満点が取れるまで反復し基礎をしっかりと固めます。</p>
                         </div>
-                        <button type="button" data-dialog="modal2" class="c-btn c-btn--xs p-courses-tab__btn modal__open-btn">
+                        <button type="button" data-dialog="modal2" class="c-btn c-btn-sm p-courses-tab__btn modal__open-btn">
                           <span class="modal__open-btn--box">
                             <span class="c-btn--text">詳しくみる</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                              <circle cx="11" cy="11" r="11" fill="currentColor" />
+                              <circle cx="11" cy="11" r="11" fill="white" />
                               <path d="M14.667 11.0002L9.16699 14.1756L9.16699 7.82474L14.667 11.0002Z" fill="#66B1C5" />
                             </svg>
                           </span>
@@ -579,6 +467,8 @@
           </div>
         </div>
       </section>
+
+      <!-- モーダル：中学1・2年生 -->
       <dialog id="modal1" aria-labelledby="modal-head1" aria-describedby="modal-text1" class="modal__content">
         <button type="button" class="modal__close-btn">&times;</button>
         <div class="modal__inner">
@@ -595,10 +485,7 @@
                 <div class="p-modal__boxes">
                   <div class="p-modal__box">
                     <span class="modal__box--head">個別指導</span>
-                    <p class="modal__box--text">
-                      60分×週1回 <br />
-                      月額 9,800円(税込)
-                    </p>
+                    <p class="modal__box--text">60分×週1回 <br />月額 9,800円(税込)</p>
                   </div>
                   <div class="p-modal__box">
                     <span class="modal__box--head">グループ指導</span>
@@ -627,6 +514,7 @@
         </div>
       </dialog>
 
+      <!-- モーダル：中学3年生 -->
       <dialog id="modal2" aria-labelledby="modal-head2" aria-describedby="modal-text2" class="modal__content">
         <button type="button" class="modal__close-btn">&times;</button>
         <div class="modal__inner">
@@ -679,7 +567,7 @@
                 <span class="c-header__title">よくある質問</span>
               </div>
               <div class="p-faq__head--image">
-                <img src="./img/img_faq.webp" alt="" width="" height="" loading="lazy" />
+                <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/img_faq.webp" alt="" loading="lazy" />
               </div>
             </div>
           </div>
@@ -689,7 +577,7 @@
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
                   <span class="p-faq-label q-label">Q</span>
-                  <span class="p-faq-item__question"> 授業はどのような形式で進められますか？</span>
+                  <span class="p-faq-item__question">授業はどのような形式で進められますか？</span>
                   <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -728,15 +616,16 @@
               <div class="p-faq-item__body js-accordion-panel" aria-hidden="true">
                 <div class="p-faq-item__answer">
                   <span class="p-faq-label a-label">A</span>
-                  <p class="p-faq-item__text"> はい。月単位でコースの変更は可能です。</p>
+                  <p class="p-faq-item__text">はい。月単位でコースの変更は可能です。</p>
                 </div>
               </div>
             </article>
+
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
                   <span class="p-faq-label q-label">Q</span>
-                  <span class="p-faq-item__question"> 授業以外に何かサポートはありますか？</span>
+                  <span class="p-faq-item__question">授業以外に何かサポートはありますか？</span>
                   <span class="p-faq-item__toggle" aria-hidden="true"></span>
                 </button>
               </h3>
@@ -747,6 +636,7 @@
                 </div>
               </div>
             </article>
+
             <article class="p-faq-item">
               <h3 class="p-faq-item__head">
                 <button class="p-faq-item__button js-accordion-toggle" type="button" aria-expanded="false">
@@ -766,7 +656,7 @@
         </div>
       </section>
 
-      <!-- お問い合わせ（CF7 + Multi-Step を意識したDOM） -->
+      <!-- お問い合わせ（Contact Form 7） -->
       <section id="contact" class="p-contact">
         <div class="l-inner">
           <div class="p-p-contact__header">
@@ -778,328 +668,10 @@
             </div>
           </div>
           <div class="p-contact__form--contents">
-            <!-- 実際のWordPressでは、この<div class="wpcf7">〜</div>部分を
-                 CF7のショートコードで自動出力させる想定 -->
-            <div class="wpcf7 js" id="wpcf7-f6-p7-o1" lang="ja" dir="ltr" data-wpcf7-id="6">
-              <div class="screen-reader-response">
-                <p role="status" aria-live="polite" aria-atomic="true"></p>
-                <ul></ul>
-              </div>
-              <form action="/contact-form/#wpcf7-f6-p7-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
-                <fieldset class="hidden-fields-container">
-                  <input type="hidden" name="_wpcf7" value="6" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ja" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p7-o1" /><input
-                    type="hidden"
-                    name="_wpcf7_container_post"
-                    value="7"
-                  /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                </fieldset>
-                <div class="contact__fields">
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p>
-                          <label for="your-name" class="form-field__label">生徒さまのお名前<span class="form-field__tag">*</span></label>
-                        </p>
-                      </div>
-                      <div class="form-field__item form__name--box">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-family-name"
-                            ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" autocomplete="name" aria-required="true" aria-invalid="false" placeholder="姓" value="" type="text" name="your-family-name" /></span
-                          ><span class="wpcf7-form-control-wrap" data-name="your-name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" autocomplete="name" aria-invalid="false" placeholder="名" value="" type="text" name="your-name" /></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p>
-                          <label for="your-email" class="form-field__label">メールアドレス<span class="form-field__tag">*</span></label
-                          ><br />
-                        </p>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-email"
-                            ><input
-                              size="40"
-                              maxlength="400"
-                              class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
-                              autocomplete="email"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="xxx@example.com"
-                              value=""
-                              type="email"
-                              name="your-email"
-                          /></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p>
-                          <label for="your-email" class="form-field__label">ご連絡の取れる電話番号<span class="form-field__tag">*</span></label
-                          ><br />
-                        </p>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-email"
-                            ><input
-                              size="40"
-                              maxlength="400"
-                              class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email form-text"
-                              autocomplete="email"
-                              aria-required="true"
-                              aria-invalid="false"
-                              placeholder="xxx@example.com"
-                              value=""
-                              type="email"
-                              name="your-email"
-                          /></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field--box">
-                    <div class="contact__field">
-                      <div class="form-field">
-                        <div class="form-field__head">
-                          <p>
-                            <label for="your-email" class="form-field__label">郵便番号<span class="form-field__tag">*</span></label
-                            ><br />
-                          </p>
-                        </div>
-                        <div class="form-field__item">
-                          <p>
-                            <span class="wpcf7-form-control-wrap" data-name="post-number"
-                              ><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-text" aria-required="true" aria-invalid="false" placeholder="0000000" value="" type="text" name="post-number"
-                            /></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="contact__field">
-                      <div class="form-field">
-                        <div class="form-field__head">
-                          <p><label for="your-email" class="form-field__label">都道府県</label></p>
-                        </div>
-                        <div class="form-field__item">
-                          <p>
-                            <span class="wpcf7-form-control-wrap" data-name="select-pref"
-                              ><select class="wpcf7-form-control wpcf7-select" id="select-pref" aria-invalid="false" name="select-pref">
-                                <option value="">選択してください</option>
-                                <option value="北海道">北海道</option>
-                                <option value="青森県">青森県</option>
-                                <option value="岩手県">岩手県</option>
-                                <option value="宮城県">宮城県</option>
-                                <option value="秋田県">秋田県</option>
-                                <option value="山形県">山形県</option>
-                                <option value="福島県">福島県</option>
-                                <option value="茨城県">茨城県</option>
-                                <option value="栃木県">栃木県</option>
-                                <option value="群馬県">群馬県</option>
-                                <option value="埼玉県">埼玉県</option>
-                                <option value="千葉県">千葉県</option>
-                                <option value="東京都">東京都</option>
-                                <option value="神奈川県">神奈川県</option>
-                                <option value="新潟県">新潟県</option>
-                                <option value="富山県">富山県</option>
-                                <option value="石川県">石川県</option>
-                                <option value="福井県">福井県</option>
-                                <option value="山梨県">山梨県</option>
-                                <option value="長野県">長野県</option>
-                                <option value="岐阜県">岐阜県</option>
-                                <option value="静岡県">静岡県</option>
-                                <option value="愛知県">愛知県</option>
-                                <option value="三重県">三重県</option>
-                                <option value="滋賀県">滋賀県</option>
-                                <option value="京都府">京都府</option>
-                                <option value="大阪府">大阪府</option>
-                                <option value="兵庫県">兵庫県</option>
-                                <option value="奈良県">奈良県</option>
-                                <option value="和歌山県">和歌山県</option>
-                                <option value="鳥取県">鳥取県</option>
-                                <option value="島根県">島根県</option>
-                                <option value="岡山県">岡山県</option>
-                                <option value="広島県">広島県</option>
-                                <option value="山口県">山口県</option>
-                                <option value="徳島県">徳島県</option>
-                                <option value="香川県">香川県</option>
-                                <option value="愛媛県">愛媛県</option>
-                                <option value="高知県">高知県</option>
-                                <option value="福岡県">福岡県</option>
-                                <option value="佐賀県">佐賀県</option>
-                                <option value="長崎県">長崎県</option>
-                                <option value="熊本県">熊本県</option>
-                                <option value="大分県">大分県</option>
-                                <option value="宮崎県">宮崎県</option>
-                                <option value="鹿児島県">鹿児島県</option>
-                                <option value="沖縄県">沖縄県</option>
-                              </select></span
-                            >
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p><label for="your-email" class="form-field__label">住所</label></p>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-address"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text form-text" aria-invalid="false" placeholder="千代田区〇〇1-1-1" value="" type="text" name="your-address" /></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p><label for="your-email" class="form-field__label">ご希望の校舎</label></p>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-color"
-                            ><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="your-color">
-                              <option value="">選択してください</option>
-                              <option value="新宿校">新宿校</option>
-                              <option value="松戸校">松戸校</option>
-                              <option value="宇部新川校">宇部新川校</option>
-                            </select></span
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <div class="form-field__label">
-                          <p>ご用件<span class="form-field__tag">*</span></p>
-                        </div>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-help"
-                            ><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required form-checkbox"
-                              ><span class="wpcf7-list-item first"
-                                ><label><input type="checkbox" name="your-help[]" value="資料請求" /><span class="wpcf7-list-item-label">資料請求</span></label></span
-                              ><span class="wpcf7-list-item"
-                                ><label><input type="checkbox" name="your-help[]" value="無料体験お申し込み" /><span class="wpcf7-list-item-label">無料体験お申し込み</span></label></span
-                              ><span class="wpcf7-list-item"
-                                ><label><input type="checkbox" name="your-help[]" value="コースお申し込み" /><span class="wpcf7-list-item-label">コースお申し込み</span></label></span
-                              ><span class="wpcf7-list-item last"
-                                ><label><input type="checkbox" name="your-help[]" value="その他" /><span class="wpcf7-list-item-label">その他</span></label></span
-                              ></span
-                            ></span
-                          >
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact__field">
-                    <div class="form-field">
-                      <div class="form-field__head">
-                        <p><label for="your-message" class="form-field__label">お問い合わせ内容</label></p>
-                      </div>
-                      <div class="form-field__item">
-                        <p>
-                          <span class="wpcf7-form-control-wrap" data-name="your-text"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea form-textarea" aria-invalid="false" placeholder="ご自由にご記入ください。" name="your-text"></textarea></span>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="contact__privacy">
-                  <div class="form-checkbox">
-                    <p>
-                      <span class="wpcf7-form-control-wrap" data-name="acceptance-check"
-                        ><span class="wpcf7-form-control wpcf7-acceptance optional"
-                          ><span class="wpcf7-list-item"
-                            ><label
-                              ><input type="checkbox" name="acceptance-check" value="1" class="form-checkbox__input" aria-invalid="false" /><span class="wpcf7-list-item-label"><a href="" target="_blank">利用規約</a>に同意します</span></label
-                            ></span
-                          ></span
-                        ></span
-                      >
-                    </p>
-                  </div>
-                </div>
-                <div class="contact__button">
-                  <p><input class="wpcf7-form-control wpcf7-submit has-spinner submit-btn" type="submit" value="入力内容を送信する" /><span class="wpcf7-spinner"></span></p>
-                  <div class="contact__button--svg">
-                    <p>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <circle cx="9" cy="9" r="9" fill="currentColor"></circle>
-                        <path d="M12 9L7.5 11.5981L7.5 6.40192L12 9Z" fill="#66B1C5"></path>
-                      </svg>
-                    </p>
-                  </div>
-                </div>
-
-                <div class="wpcf7-response-output" aria-hidden="true"></div>
-              </form>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="1acf0ce" title="お問い合わせ"]'); ?>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- ==================================================
-    l-footer
-  ================================================== -->
-    <footer class="l-footer p-footer">
-      <div class="l-inner l-footer__inner">
-        <div class="p-footer-info">
-          <div class="p-site-branding">
-            <img src="./img/img_logo.webp" alt="わかば個別指導塾ロゴ" class="p-branding__link--image" width="450" height="72" loading="lazy" />
-          </div>
-          <div class="c-contact__tel">
-            <span class="c-tel-icon" aria-hidden="true"><img src="./img/icon_tel.webp" alt="電話アイコン" width="62" height="82" loading="lazy" /></span>
-            <div class="c-sp-menu__tel--textBox">
-              <a href="tel:0120123456" class="p-sp-menu__tel-number c-tel-number">0120-12-3456</a>
-              <p class="c-sp-menu__tel-time">受付時間：平日 9:00〜19:00</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="p-footer-nav">
-          <ul class="p-footer-nav__list">
-            <li><a href="#mission" class="c-link">指導方針</a></li>
-            <li><a href="#reason" class="c-link">選ばれる理由</a></li>
-            <li><a href="#teachers" class="c-link">講師紹介</a></li>
-            <li><a href="#courses" class="c-link">コース案内</a></li>
-            <li><a href="#faq" class="c-link">よくある質問</a></li>
-            <li><a href="#contact" class="c-link">お問い合わせ</a></li>
-          </ul>
-        </div>
-
-        <div class="p-footer__line"></div>
-        <div class="p-footer__bottom">
-          <ul class="p-footer__sns">
-            <li class="p-footer__sns-item">
-              <img src="./img/instagram-icon.svg" loading="lazy" />
-            </li>
-            <li class="p-footer__sns-item">
-              <img src="./img/facebook-icon.svg" loading="lazy" />
-            </li>
-          </ul>
-          <p class="p-footer-copy">&copy; 2025 わかば個別指導塾</p>
-        </div>
-      </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="./js/header.js" defer></script>
-    <script src="./js/script.js" defer></script>
-    <script src="./js/slider.js" defer></script>
-  </body>
-</html>
+<?php get_footer(); ?>

@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.u-header-margin {
+  margin-top: rclamp(64, 175, 375, 1023);
+
+  @include mq(tb-middle) {
+    margin-top: rclamp(57, 107, 1024, 1920);
+  }
+}

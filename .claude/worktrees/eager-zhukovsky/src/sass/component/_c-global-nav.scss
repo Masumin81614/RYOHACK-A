@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.c-global-nav--pc {
+  display: none;
+
+  @include mq(tb-middle) {
+    display: block;
+  }
+}
