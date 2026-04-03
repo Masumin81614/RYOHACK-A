@@ -12,17 +12,34 @@
   padding-left: rclamp(20, 55, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(43, 80, 1024, 1920);
-    padding-inline: rclamp(71, 133, 1024, 1920);
-    padding-block: rclamp(85, 160, 1024, 1920);
+    gap: rclamp(43, 80, 1024, 1440);
+    padding-inline: rclamp(71, 133, 1024, 1440);
+    padding-block: rclamp(85, 160, 1024, 1440);
+  }
+}
+
+.p-teachers__head {
+
+  &.c-head {
+    align-items: flex-start;
+
+  }
+  .c-heading {
+    align-items: flex-start;
   }
 }
 
 .p-teachers-slider {
+  margin-top: rclamp(40, 109, 375, 1023);
   width: rclamp(320, 873, 375, 1023);
+  display: flex;
+  flex-direction: column;
+  gap: rclamp(40, 60, 375, 1023);
 
   @include mq(tb-middle) {
-    width: 100%;
+    width: 100%; 
+    margin-top: rclamp(41, 58, 1024, 1440);
+    gap: rclamp(55, 77, 1024, 1440);
   }
 }
 
@@ -32,7 +49,7 @@
   gap: rclamp(16, 44, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(16, 29, 1024, 1920);
+    gap: rclamp(11, 16, 1024, 1440);
   }
 }
 
@@ -41,13 +58,38 @@
   flex-direction: row;
 }
 
+.p-teachers-slider__slide{
+  @include mq(tb-middle) {
+    width: min(100%, 352px) !important;
+    max-width: 352px;
+  }
+}
+
+.p-teacher-card__photo{
+  @include mq(tb-middle) {
+    max-width: 352px;
+    max-height: 260px;
+    flex-shrink: 0;
+    align-self: stretch;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+}
+
 .p-teacher-card__body {
   display: flex;
   flex-direction: column;
   gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(16, 31, 1024, 1920);
+    gap: rclamp(12, 17, 1024, 1440);
   }
 }
 
@@ -63,9 +105,10 @@
 
 .p-teacher-card__head--tags {
   display: flex;
+  gap: rclamp(8, 22, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(6, 11, 1024, 1920);
+    gap: rclamp(6, 8, 1024, 1440);
   }
 }
 
@@ -78,9 +121,10 @@
   font-size: rclamp(14, 38, 375, 1023);
 
   @include mq(tb-middle) {
-    font-size: rclamp(10, 19, 1024, 1920);
+    font-size: rclamp(10, 14, 1024, 1440);
     padding-block: 2px;
-    padding-inline: rclamp(6, 11, 1024, 1920);
+    padding-inline: rclamp(6, 9, 1024, 1440);
+    max-width: 46px;
   }
 }
 
@@ -90,7 +134,7 @@
   font-weight: 700;
 
   @include mq(tb-middle) {
-    font-size: rclamp(16, 29, 1024, 1920);
+    font-size: rclamp(16, 22, 1024, 1440);
   }
 }
 
@@ -100,8 +144,8 @@
   letter-spacing: 0.75px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
-    letter-spacing: 1.7px;
+    font-size: rclamp(11, 16, 1024, 1440);
+    letter-spacing: 0.8px;
   }
 }
 
@@ -110,16 +154,12 @@
 // ===================================
 
 .p-teachers-slider__controls {
-  margin-top: rclamp(70, 191, 375, 1023);
   position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  @include mq(tb-middle) {
-    margin-top: rclamp(52, 97, 1024, 1920);
-  }
 }
 
 .p-teachers-slider__btn {
@@ -131,7 +171,7 @@
   top: auto;
 
   @include mq(tb-middle) {
-    gap: rclamp(16, 29, 1024, 1920);
+    gap: rclamp(16, 22, 1024, 1440);
   }
 }
 
@@ -141,22 +181,36 @@
   border-radius: 50%;
   background-color: $main-text-color;
   border: 1px solid #274b66;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   @include mq(tb-middle) {
-    width: rclamp(28, 52, 1024, 1920);
-    height: rclamp(28, 52, 1024, 1920);
+    width: rclamp(28, 39, 1024, 1440);
+    height: rclamp(28, 39, 1024, 1440);
+    cursor: pointer;
   }
 
   i {
     color: $white-color;
   }
+  
+  &.swiper-button-disabled,
+  &.swiper-button-lock{
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
 }
 
 .p-teachers-slider__scrollbar {
   &.swiper-scrollbar {
     width: rclamp(150, 409, 375, 1023);
     height: rclamp(8, 22, 375, 1023);
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px;
     background: rgba(180, 173, 173, 0.5);
     position: relative !important;
     left: 0 !important;
@@ -164,18 +218,19 @@
     margin: 0 !important;
 
     @include mq(tb-middle) {
-      width: rclamp(320, 600, 1024, 1920);
-      height: rclamp(6, 11, 1024, 1920);
-    }
-
-    &.swiper-scrollbar-drag {
-      background-color: $main-blue-color;
-      border-radius: 10px 0 0 10px;
+      width: rclamp(320, 450, 1024, 1440);
+      height: rclamp(6, 11, 1024, 1440);
     }
   }
+
 }
 
 .swiper-scrollbar-drag {
   background: $main-blue-color;
-  width: rclamp(60, 120, 1024, 1920) !important;
+  width: rclamp(150, 109, 375, 1023);
+  border-radius: 10px;
+
+  @include mq(tb-middle) {
+    width: rclamp(107, 150, 1024, 1440) !important;
+  }
 }

@@ -5,7 +5,10 @@
   padding-block: rclamp(80, 218, 375, 1023);
 
   @include mq(tb-middle) {
-    padding-inline: rclamp(71, 133, 1024, 1920);
-    padding-block: rclamp(85, 160, 1024, 1920);
+    padding-inline: rclamp(71, 100, 1024, 1440);
+    padding-block: rclamp(85, 120, 1024, 1440);
+    max-width: 1440px;
+    margin-inline: auto;
   }
 }
+.l-main { padding-top: var(--header-h); }

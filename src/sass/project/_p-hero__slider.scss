@@ -2,16 +2,20 @@
 
 .p-hero {
   background: url(../img/bg_fv.webp) no-repeat top center / cover;
-  position: relative;
+
 
   .l-inner {
     padding-block: rclamp(43, 80, 375, 1023);
 
     @include mq(tb-middle) {
-      padding-top: 0;
-      padding-inline: 0;
-      padding-bottom: rclamp(53, 99, 1024, 1920);
+     padding: 0;
     }
+  }
+}
+
+.p-hero__inner{
+  @include mq(tb-middle) {
+    position: relative;
   }
 }
 
@@ -22,8 +26,9 @@
 
   @include mq(tb-middle) {
     flex-direction: row;
-    gap: 0;
+    gap: rclamp(24, 40, 1024, 1440);
     justify-content: flex-end;
+    align-items: flex-start;
     width: 100%;
   }
 }
@@ -35,10 +40,10 @@
 
   @include mq(tb-middle) {
     position: absolute;
-    top: rclamp(110, 207, 1024, 1920);
+    top: rclamp(110, 155, 1024, 1440);
     left: rclamp(28, 53, 1024, 1440);
     z-index: 10;
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(17, 24, 1024, 1440);
   }
 }
 
@@ -49,7 +54,7 @@
   line-height: 150%;
 
   @include mq(tb-middle) {
-    font-size: rclamp(36, 67, 1024, 1920);
+    font-size: rclamp(36, 50, 1024, 1440);
     letter-spacing: 1.5px;
   }
 }
@@ -60,14 +65,26 @@
   letter-spacing: 0.9px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(17, 32, 1024, 1920);
+    font-size: rclamp(17, 24, 1024, 1440);
   }
 }
 
 .p-hero__image {
   @include mq(tb-middle) {
-    max-width: rclamp(600, 1000, 1024, 1440);
-    max-height: rclamp(390, 650, 1024, 1440);
+  width: 100%;
+  max-width: 1000px;
+  max-height: 650px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 0 0 0 20px!important;
+  }
+
+  img {
+    @include mq(tb-middle) {
+      display:block; 
+      width:100%;
+      height:auto;
+    }
   }
 }
 
@@ -75,21 +92,18 @@
   display: flex;
   flex-direction: column;
   gap: rclamp(4, 11, 375, 1023);
-  margin-top: rclamp(54, 147, 1024, 1920);
+  margin-top: rclamp(54, 147, 1024, 1440);
   width: rclamp(303, 827, 375, 1023);
   margin-inline: auto;
 
   @include mq(tb-middle) {
     position: absolute;
-    width: rclamp(250, 469, 1024, 1920);
-    bottom: rclamp(84, 117, 1024, 1440);
-    left: rclamp(37, 69, 1024, 1920);
+    width: auto;
+    bottom: rclamp(82, 115, 1024, 1440);
+    left: rclamp(37, 52, 1024, 1440);
     gap: 4px;
     margin-top: 0;
-  }
-
-  @include mq(pc-middle) {
-    bottom: 87px;
+    z-index: 10;
   }
 }
 .p-hero__cta--lead {
@@ -100,7 +114,7 @@
   text-align: center;
 
   @include mq(tb-middle) {
-    font-size: rclamp(14, 27, 1024, 1920);
+    font-size: rclamp(14, 20, 1024, 1440);
   }
 }
 
@@ -109,7 +123,15 @@
 /* ================================
   Reset
 =============================== */
-.p-hero__swiper-container,
+.p-hero__swiper-container {
+  position: relative;
+
+  @include mq(tb-middle) {
+    /* ページネーションがクリップされないよう余白を確保 */
+    padding-bottom: rclamp(34, 48, 1024, 1440);
+  }
+}
+
 .p-hero__swiper,
 .p-hero__swiper-wrapper,
 .p-hero__slide {
@@ -128,16 +150,29 @@
   padding: 0;
 }
 
+.p-hero__swiper {
+
+  @include mq(tb-middle) {
+    padding-bottom: rclamp(17, 24, 1024, 1440);
+  }
+}
 /* =============================
    ページネーション (bullets)
 ============================= */
-/* 位置の設定 (枠組み) */
+/* 位置の設定 (枠組み) — 大画面でもスライド画像付近に固定 */
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   top: auto;
+  z-index: 15;
+  bottom: rclamp(-24, -65, 375, 1023) !important;
+  left: 50% !important;
+  right: auto !important;
+  width: max-content !important;
+  transform: translateX(-50%) !important;
 
   @include mq(tb-middle) {
-    bottom: rclamp(-6, -11, 1024, 1920) !important;
-    left: 65%;
+    bottom: rclamp(33, 33, 1024, 1440) !important;
+    left: 63% !important;
+    transform: none !important;
   }
 }
 
@@ -153,7 +188,7 @@
   margin-inline: calc(11px / 2);
 
   @include mq(tb-middle) {
-    width: rclamp(7, 13, 1024, 1920) !important;
+    width: rclamp(7, 10, 1024, 1440) !important;
   }
 }
 

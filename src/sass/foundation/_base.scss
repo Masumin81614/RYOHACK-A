@@ -6,3 +6,15 @@ body {
     color: $main-text-color;
     overflow-x: hidden;
 }
+
+/* ヘッダーロゴのCLS軽減（フォント・画像読み込み前後のガタつき抑制） */
+.p-header-branding__link--image {
+    height: auto;
+    aspect-ratio: 450 / 72;
+}
+
+:root {
+    --header-h: 0px;
+  }
+
+ 

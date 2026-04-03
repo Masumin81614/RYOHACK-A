@@ -7,7 +7,7 @@
 .p-reason__inner {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: rclamp(40, 109, 375, 1023);
   
 
   @include mq(tb-middle) {
@@ -23,7 +23,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: rclamp(100, 273, 375, 1023);
   align-self: flex-start;
 
   @include mq(tb-middle) {
@@ -42,16 +42,16 @@
 .p-reason__head--image {
   flex-shrink: 0; 
   position: absolute;
-  right: 16px;
-  bottom: -18px;
+  right: rclamp(16, 44, 375, 1023);
+  bottom: rclamp(-18, -49, 375, 1023);
 
   @include mq(tb-middle) {
     position: static;
   }
 
   img {
-    width: 56px;
-    height: 113px;
+    width: rclamp(56, 153, 375, 1023);
+    height: rclamp(113, 308, 375, 1023);
 
     @include mq(tb-middle) {
       width: rclamp(60, 85, 1024, 1440);
@@ -63,7 +63,7 @@
 .p-reason-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
     gap: rclamp(27, 38, 1024, 1440);
@@ -73,8 +73,8 @@
 
 .p-reason-item {
   background: $brown-background;
-  padding-block: 24px;
-  padding-inline: 16px;
+  padding-block: rclamp(24, 65, 375, 1023);
+  padding-inline: rclamp(16, 44, 375, 1023);
   border-radius: 20px;
   position: relative;
   min-height: 391px;
@@ -88,23 +88,23 @@
 }
 
 .p-reason-item__num {
-  width: 60px;
-  height: 60px;
+  width: rclamp(60, 164, 375, 1023);
+  height: rclamp(60, 164, 375, 1023);
   border-radius: 50%;
   background-color: $main-blue-color;
   color: $white-color;
   font-family: $font-en;
   font-weight: 700;
   line-height: 1;
-  font-size: 30px;
+  font-size: rclamp(30, 82, 375, 1023);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rclamp(10, 27, 375, 1023);
   position: absolute;
-  top: -17px;
-  right: 14px;
+  top: rclamp(-17, -46, 375, 1023);
+  right: rclamp(14, 38, 375, 1023);
   gap: 4px;
 
   @include mq(tb-middle) {
@@ -120,7 +120,7 @@
 }
 
 .p-reason-item__num--sub {
-  font-size: 6px;
+  font-size: rclamp(6, 16, 375, 1023);
   letter-spacing: 0.3px;
 
   @include mq(tb-middle) {
@@ -131,7 +131,7 @@
 .p-reason-item__box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: rclamp(16, 44, 375, 1023);
 
   @include mq(tb-middle) {
     flex-direction: row;
@@ -149,7 +149,7 @@
 .p-reason-item__textBox {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
     gap: rclamp(10, 12, 1024, 1440);
@@ -160,9 +160,10 @@
 }
 
 .p-reason-item__heading {
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: rclamp(18, 49, 375, 1023);
   letter-spacing: 0.9px;
+  font-weight: 700;
+  line-height: 1.5;
 
   @include mq(tb-middle) {
     font-size: rclamp(16, 22, 1024, 1440);
@@ -173,12 +174,12 @@
 
 .p-reason-item__text {
   font-size: 15px;
-  line-height: 24px;
-  letter-spacing: 0.75px;
+  letter-spacing: 0.98px;
+  line-height: 160%;
+  
 
   @include mq(tb-middle) {
     font-size: rclamp(11, 16, 1024, 1440);
-    line-height: 160%;
     letter-spacing: 0.8px;
   }
 }
@@ -201,8 +202,6 @@
     @include mq(tb-middle) {
       width: rclamp(218, 306, 1024, 1440);
       border-radius: 10px;
-      height: auto;
-      object-fit: initial;
     }
   }
 }

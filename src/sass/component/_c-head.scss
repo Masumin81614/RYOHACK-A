@@ -7,7 +7,7 @@
   gap: rclamp(24, 65, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(18, 26, 1024, 1440);
   }
 }
 
@@ -18,7 +18,7 @@
   gap: rclamp(2, 5, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: 0;
+    gap: rclamp(5, 7, 1024, 1440);
   }
 }
 .c-header__eyebrow {
@@ -29,7 +29,7 @@
   font-weight: 700;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
   }
 }
 
@@ -40,6 +40,6 @@
   font-weight: 700;
 
   @include mq(tb-middle) {
-    font-size: rclamp(25, 47, 1024, 1920);
+    font-size: rclamp(25, 35, 1024, 1440);
   }
 }

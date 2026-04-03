@@ -17,6 +17,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
 
   img {
     width: 100%;
@@ -38,11 +39,11 @@
       background-image: url(../img/bg_cta1.webp);
     }
   }
-  .l-inner {
+  .p-section--cta__btn {
+    padding-bottom: rclamp(16, 44, 375, 1023);
+
     @include mq(tb-middle) {
-      padding-top: rclamp(85, 165, 1024, 1920);
-      padding-bottom: rclamp(87, 163, 1024, 1920);
-      padding-inline: rclamp(103, 193, 1024, 1920);
+      padding-bottom: 0;
     }
   }
 }
@@ -52,21 +53,30 @@
   flex-direction: column;
   align-items: center;
   gap: rclamp(32, 87, 375, 1023);
+  justify-content: center;
 
   @include mq(tb-middle) {
-    gap: rclamp(23, 43, 1024, 1920);
-    padding-inline: rclamp(213, 400, 1024, 1920);
+    gap: rclamp(23, 32, 1024, 1440);
   }
+}
+
+.p-section--cta__actions{
+  width: 100%;
+
+   .p-section--cta__btn{
+    margin-inline: auto;
+   }
 }
 
 .p-section--cta__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rclamp(40, 109, 375, 1023);
+  gap: rclamp(20, 55, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(16, 31, 1024, 1920);
+    gap: rclamp(16, 24, 1024, 1440);
+    max-width: rclamp(469, 660, 1024, 1440);
   }
 }
 
@@ -79,7 +89,7 @@
   font-weight: 700;
 
   @include mq(tb-middle) {
-    font-size: rclamp(25, 47, 1024, 1920);
+    font-size: rclamp(25, 35, 1024, 1440);
     letter-spacing: 1px;
     white-space: nowrap;
   }
@@ -88,14 +98,14 @@
 .p-section--cta__lead {
   color: $white-color;
   font-size: rclamp(15, 41, 375, 1023);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 180%;
   letter-spacing: 0.75px;
   text-align: center;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
-    padding-inline: rclamp(30, 56, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
+    padding-inline: rclamp(32, 40, 1024, 1440);
     letter-spacing: 1px;
   }
 }
@@ -103,15 +113,10 @@
 .p-section--cta-2 {
   .p-section--cta__bg {
     background-image: url(../img/bg_cta2-sp.webp);
+    
 
     @include mq(tb-middle) {
       background-image: url(../img/bg_cta2.webp);
-    }
-  }
-
-  .l-inner {
-    @include mq(tb-middle) {
-      padding-inline: rclamp(199, 373, 1024, 1920);
     }
   }
 }
@@ -126,8 +131,10 @@
   padding-block: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(23, 43, 1024, 1920);
-    padding-block: rclamp(28, 53, 1024, 1920);
+    gap: rclamp(23, 32, 1024, 1440);
+    padding-block: rclamp(28, 40, 1024, 1440);
+    max-width: 880px;
+    margin-inline: auto;
   }
 }
 
@@ -139,7 +146,7 @@
   text-align: center;
 
   @include mq(tb-middle) {
-    font-size: rclamp(25, 47, 1024, 1920);
+    font-size: rclamp(25, 35, 1024, 1440);
     letter-spacing: 1.1px;
   }
 }
@@ -151,7 +158,7 @@
 
   @include mq(tb-middle) {
     flex-direction: row;
-    gap: rclamp(28, 53, 1024, 1920);
+    gap: rclamp(28, 40, 1024, 1440);
   }
 }
 
@@ -161,10 +168,10 @@
   align-items: center;
 
   @include mq(tb-middle) {
-    gap: 4px;
+    gap: 0;
 
     .p-section--cta__btn {
-      padding-block: rclamp(15, 28, 1024, 1920);
+      padding-block: rclamp(15, 20, 1024, 1440);
     }
   }
 }
@@ -176,7 +183,7 @@
   letter-spacing: 0.75px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
   }
 }
 
@@ -187,7 +194,7 @@
   gap: rclamp(8, 22, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(10, 19, 1024, 1920);
+    gap: rclamp(6, 8, 1024, 1440);
   }
 }
 
@@ -196,7 +203,7 @@
   height: rclamp(32, 87, 375, 1023);
 
   @include mq(tb-middle) {
-    width: rclamp(16, 29, 1024, 1920);
+    width: rclamp(16, 22, 1024, 1440);
     height: auto;
   }
 }
@@ -209,7 +216,7 @@
   color: $main-blue-color;
 
   @include mq(tb-middle) {
-    font-size: rclamp(25, 47, 1024, 1920);
+    font-size: rclamp(25, 35, 1024, 1440);
   }
 }
 
@@ -220,7 +227,7 @@
   letter-spacing: 0.6px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(9, 16, 1024, 1920);
+    font-size: rclamp(9, 12, 1024, 1440);
   }
 }
 
@@ -231,6 +238,6 @@
   letter-spacing: 0.9px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(14, 27, 1024, 1920);
+    font-size: rclamp(14, 20, 1024, 1440);
   }
 }

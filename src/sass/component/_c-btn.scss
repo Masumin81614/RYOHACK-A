@@ -6,10 +6,10 @@
   border-radius: 10px;
   align-items: center;
   justify-content: center;
-  border: none;
   border: 2px solid $main-blue-color;
+  cursor: pointer;
 
-  i {
+  svg {
     color: $white-color;
   }
 
@@ -21,16 +21,15 @@
     background-color: $white-color;
     border: 2px solid $main-blue-color;
 
-    i {
-      color: $main-blue-color;
-    }
-
     svg {
       color: $main-blue-color;
     }
 
     .c-btn__arrow {
       fill: $white-color;
+    }
+    .c-btn--text {
+      color: $main-blue-color;
     }
   }
 }
@@ -42,12 +41,10 @@
   gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(11, 20, 1024, 1920);
+    gap: rclamp(11, 10, 1024, 1440);
   }
 
-  svg {
-    color: $white-color;
-  }
+
 }
 
 .c-btn--text {
@@ -55,10 +52,19 @@
   line-height: 1.6;
   font-weight: 700;
   white-space: nowrap;
+  transition: color 0.3s ease;
+}
 
-  &:hover {
-    color: $main-blue-color;
-  }
+.c-btn-xs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-inline: 32px;
+  padding-block: 12px;
+  width: 100%;
+  max-width: 220px;
 }
 
 .c-btn-sm {
@@ -69,8 +75,9 @@
 
   @include mq(tb-middle) {
     width: 100%;
-    padding-block: rclamp(9, 16, 1024, 1920);
-    padding-inline: rclamp(23, 43, 1024, 1920);
+    max-width: 220px;
+    padding-block: rclamp(9, 12, 1024, 1440);
+    padding-inline: rclamp(23, 32, 1024, 1440);
     height: auto;
   }
 
@@ -78,7 +85,7 @@
     font-size: rclamp(16, 44, 375, 1023);
 
     @include mq(tb-middle) {
-      font-size: rclamp(11, 21, 1024, 1920);
+      font-size: rclamp(11, 16, 1024, 1440);
     }
   }
 }
@@ -88,9 +95,9 @@
   gap: rclamp(12, 33, 375, 1023);
 
   @include mq(tb-middle) {
-    width: rclamp(250, 469, 1024, 1920);
-    padding-block: rclamp(14, 27, 1024, 1920);
-    padding-inline: rclamp(23, 43, 1024, 1920);
+    padding-block: rclamp(14, 20, 1024, 1440);
+    padding-inline: rclamp(23, 32, 1024, 1440);
+    max-width:  352px;
   }
 
   .c-header-contact__btn--box {
@@ -106,7 +113,7 @@
     letter-spacing: 0.9px;
 
     @include mq(tb-middle) {
-      font-size: rclamp(14, 27, 1024, 1920);
+      font-size: rclamp(14, 20, 1024, 1440);
     }
   }
 }
@@ -114,7 +121,8 @@
 .c-btn-lg {
   padding: rclamp(20, 55, 375, 1023);
   gap: rclamp(12, 33, 375, 1023);
-  width: rclamp(303, 827, 375, 1023);
+  max-width: 319px;
+  width: 100%;
 
   i {
     font-size: rclamp(22, 60, 375, 1023);
@@ -125,14 +133,14 @@
     letter-spacing: 0.9px;
 
     @include mq(tb-middle) {
-      font-size: rclamp(14, 27, 1024, 1920);
+      font-size: rclamp(14, 20, 1024, 1440);
     }
   }
 
   @include mq(tb-middle) {
-    width: rclamp(250, 469, 1024, 1920);
-    padding-block: rclamp(14, 27, 1024, 1920);
-    padding-inline: rclamp(23, 43, 1024, 1920);
+    padding-block: rclamp(14, 20, 1024, 1440);
+    padding-inline: rclamp(23, 32, 1024, 1440);
     gap: rclamp(16, 21, 375, 1023);
+    max-width: 352px;
   }
 }

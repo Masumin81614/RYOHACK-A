@@ -34,14 +34,12 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
       // GSAPのタイムライン（連続アニメーション）を作成
       const tl = gsap.timeline();
 
-      // ① 画像：透明からふわっと下から上に（30px）
       tl.from(heroImage, {
         autoAlpha: 0, // opacity: 0 と visibility: hidden を兼ねた便利機能
         y: 30,
         duration: 1,
         ease: "power2.out",
       })
-        // ② タイトル：画像の完了0.5秒前に「食い気味」でスタート
         .from(
           heroContent,
           {
@@ -52,7 +50,7 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
           },
           "-=0.5",
         )
-        // ③ ボタン：タイトルの完了0.4秒前に「食い気味」でスタート
+
         .from(
           heroCta,
           {
@@ -68,7 +66,7 @@ const cardSwiper = new Swiper(".p-hero__swiper", {
 });
 
 const swiper = new Swiper(".js-teachers-slider", {
-  slidesPerView: "auto",
+  slidesPerView: "1.1",
   spaceBetween: 20,
 
   breakpoints: {

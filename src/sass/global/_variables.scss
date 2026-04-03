@@ -14,9 +14,11 @@ $light-green-color: #ecf6f9;
 $font-ja: "Noto Sans JP", sans-serif;
 $font-en: "Montserrat", sans-serif;
 
+// layout（デザインカンプ基準幅）
+$layout-max-width: 1440px;
+
 // breakpoint
 $breakpoints: (
-  //キー　　値
   //767px以下（スマホ）用の表示
   "sp-small": "screen and (max-width: 320px)",
   "sp-middle": "screen and (max-width: 375px)",
@@ -26,5 +28,6 @@ $breakpoints: (
   "tb-middle": "screen and (min-width: 1024px)",
   //PC用の表示
   "pc-small": "screen and (min-width: 1280px)",
-  "pc-middle": "screen and (min-width: 1920px)"
+  "pc-middle": "screen and (min-width: 1440px)",
+  "pc-large": "screen and (min-width: 1920px)"
 ) !default;

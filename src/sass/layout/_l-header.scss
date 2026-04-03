@@ -4,6 +4,17 @@
   width: 100%;
   height: auto;
   background: $white-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+
+  @include mq(tb-middle) {
+    width: auto;
+  
+  }
 }
 
 .l-header__inner {
@@ -12,10 +23,13 @@
   padding-inline: rclamp(20, 55, 375, 1023);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @include mq(tb-middle) {
-    padding-block: rclamp(7, 13, 1024, 1920);
-    padding-inline: rclamp(28, 53, 1024, 1920);
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-block: rclamp(7, 10, 1024, 1440);
+    padding-inline: rclamp(28, 40, 1024, 1440);
     align-items: center;
   }
 }
@@ -25,18 +39,16 @@
   display: block;
 
   @include mq(tb-middle) {
-    width: rclamp(160, 300, 1024, 1920);
+    width: rclamp(160, 225, 1024, 1440);
   }
 }
 
 .p-header-nav__list {
-  display: flex;
-  flex-direction: row;
-  gap: rclamp(23, 43, 1024, 1920);
-  align-items: center;
-
   @include mq(tb-middle) {
-    gap: rclamp(23, 43, 1024, 1920);
+    display: flex;
+    flex-direction: row;
+    gap: rclamp(23, 32, 1024, 1440);
+    align-items: center;
   }
 }
 
@@ -52,12 +64,29 @@
   flex-direction: row;
 
   @include mq(tb-middle) {
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(17, 24, 1024, 1440);
     align-items: center;
     justify-content: flex-end;
   }
 }
 
 .p-header-nav__item {
-  font-size: rclamp(10, 19, 1024, 1920);
+  font-size: rclamp(10, 14, 1024, 1440);
+}
+
+@include mq(tb-middle) {
+  .p-header-nav__item a {
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: solid;
+        text-underline-offset: 0.2em;
+      }
+    }
+  }
+
+  /* PC: 電話番号は表示のみ（クリック不可） */
+  .c-global-nav--pc .c-tel-number[href^="tel:"] {
+    pointer-events: none;
+    cursor: default;
+  }
 }

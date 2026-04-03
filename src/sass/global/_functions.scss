@@ -16,5 +16,4 @@
   $vwScaleRem: $vwScale * 100;
 
   @return clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
-  @debug clamp(#{$minRem}rem, #{$baseOffsetRem}rem + #{$vwScaleRem}vw, #{$maxRem}rem);
 }

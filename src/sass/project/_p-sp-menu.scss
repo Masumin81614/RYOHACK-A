@@ -1,8 +1,9 @@
 @use "../global" as *;
 
 .p-sp-menu-toggle {
-  width: rclamp(30, 82, 375, 1023);
-  height: rclamp(30, 82, 375, 1023);
+  position: fixed;
+  width: rclamp(28, 76, 375, 1023);
+  height: rclamp(18, 49, 375, 1023);
   background: $white-color;
   border: none;
   position: relative;
@@ -45,16 +46,18 @@
     translate 0.4s ease;
 
   &:nth-of-type(1) {
-    top: 25%;
+    top: 0%;
+    translate: 0 0;
   }
 
   &:nth-of-type(2) {
-    top: 56%;
+    top: 50%;
     translate: 0 -50%;
   }
 
   &:nth-of-type(3) {
-    top: 75%;
+    top: 100%;
+    translate: 0 -100%;
   }
 }
 

@@ -3,14 +3,18 @@
 .p-section--faq {
   background: $brown-background;
 
-  @include mq(tb-middle) {
-    position: relative;
-  }
-
+ 
   .l-inner {
     @include mq(tb-middle) {
-      padding-inline: rclamp(199, 373, 1024, 1920);
+      position: relative;
     }
+  }
+}
+
+.p-section--faq__inner {
+  @include mq(tb-middle) {
+    max-width: 880px;
+    margin-inline: auto;
   }
 }
 
@@ -27,7 +31,7 @@
 
   &.is-open {
     @include mq(tb-middle) {
-      gap: rclamp(17, 32, 1024, 1920);
+      gap: rclamp(17, 24, 1024, 1440);
     }
     .p-faq-item__body {
       grid-template-rows: 1fr;
@@ -62,10 +66,10 @@
   height: auto;
 
   @include mq(tb-middle) {
-    width: rclamp(97, 183, 1024, 1920);
+    width: rclamp(97, 137, 1024, 1440);
     position: absolute;
-    bottom: rclamp(41, 77, 1024, 1920);
-    right: rclamp(58, 109, 1024, 1920);
+    bottom: rclamp(41, 51, 1024, 1440);
+    right: rclamp(58, 82, 1024, 1440);
   }
 }
 
@@ -76,7 +80,7 @@
 
   @include mq(tb-middle) {
     gap: 32px;
-    margin-top: rclamp(43, 80, 1024, 1920);
+    margin-top: rclamp(38, 54, 1024, 1440);
   }
 }
 
@@ -95,11 +99,13 @@ button.p-faq-item__button {
   position: relative;
   padding: rclamp(16, 44, 375, 1023);
   border-radius: 10px;
+  cursor: pointer;
 
   @include mq(tb-middle) {
-    padding-block: rclamp(11, 21, 1024, 1920);
-    padding-inline: rclamp(17, 32, 1024, 1920);
-    gap: rclamp(17, 32, 1024, 1920);
+    padding-block: rclamp(9, 13, 1024, 1440);
+    padding-inline: rclamp(17, 24, 1024, 1440);
+    gap: rclamp(17, 24, 1024, 1440);
+    min-height: rclamp(48, 68, 1024, 1440);
   }
 }
 
@@ -119,9 +125,9 @@ button.p-faq-item__button {
   border-radius: 50%;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
-    width: rclamp(26, 48, 1024, 1920);
-    height: rclamp(26, 48, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
+    width: rclamp(26, 36, 1024, 1440);
+    height: rclamp(26, 36, 1024, 1440);
   }
 }
 
@@ -142,7 +148,7 @@ button.p-faq-item__button {
   color: $main-text-color;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
     line-height: 2.5;
     letter-spacing: 1.2px;
   }
@@ -155,19 +161,20 @@ button.p-faq-item__button {
   height: rclamp(16, 24, 375, 1023);
   display: block;
   align-self: center;
+  pointer-events: none;
 
   @include mq(tb-middle) {
-    width: rclamp(11, 21, 1024, 1920);
-    height: rclamp(11, 21, 1024, 1920);
+    width: rclamp(11, 16, 1024, 1440);
+    height: rclamp(11, 16, 1024, 1440);
   }
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 46%;
+    left: 46%;
+    transform: translate(-46%, -46%);
     background: $main-blue-color;
     transition: transform 0.3s ease;
   }
@@ -210,8 +217,8 @@ button.p-faq-item__button {
   transition: padding 0.3s ease;
 
   @include mq(tb-middle) {
-    padding-inline: rclamp(18, 35, 1024, 1920);
-    gap: rclamp(18, 33, 1024, 1920);
+    padding-inline: rclamp(20, 28, 1024, 1440);
+    gap: rclamp(18, 24, 1024, 1440);
   }
 }
 
@@ -221,7 +228,7 @@ button.p-faq-item__button {
   letter-spacing: 0.75px;
 
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
-    letter-spacing: 1.1px;
+    font-size: rclamp(11, 16, 1024, 1440);
+    letter-spacing: 0.8px;
   }
 }

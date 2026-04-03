@@ -159,3 +159,25 @@ smoothScrollTriggers.forEach(function (trigger) {
     }
   });
 });
+
+$(window).on("scroll", function () {
+  const scrollTop = $(this).scrollTop();
+  const windowHeight = $(window).height();
+  const $contact = $("#contact");
+  const $jsBtn = $(".p-main__fix--btn"); // クラス名に合わせて修正
+
+  const contactTop = $contact.length ? $contact.offset().top : Infinity;
+  const isShow = scrollTop > 80 && (scrollTop + windowHeight < contactTop);
+
+  if (isShow) {
+    $jsBtn.addClass("is-show"); // クラスを付与
+  } else {
+    $jsBtn.removeClass("is-show"); // クラスを削除
+  }
+});
+
+// クリックイベント
+$(".p-main__fix--btn-link").on("click", function () {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+  return false;
+});

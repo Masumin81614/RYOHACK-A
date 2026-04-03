@@ -2,13 +2,22 @@
 
 .l-footer {
   background: $light-green-color;
+  padding-block: rclamp(60, 164, 375, 1023);
+  padding-inline: rclamp(20, 55, 375, 1023);
 
-  .l-inner {
-    @include mq(tb-middle) {
-      padding-inline: rclamp(142, 267, 1024, 1920);
-      padding-block: rclamp(43, 80, 1024, 1920);
-    }
+  @include mq(tb-middle) {
+    padding-block: rclamp(43, 60, 1024, 1920);
+    padding-inline: rclamp(7, 10, 1024, 1920)
   }
+}
+
+.l-footer__inner{
+
+  @include mq(tb-middle) {
+    max-width: 1040px;
+    margin-inline: auto;
+  }
+  
 }
 
 .p-footer-info {
@@ -25,7 +34,17 @@
 
   .c-tel-icon {
     @include mq(tb-middle) {
-      width: rclamp(22, 41, 1024, 1920);
+      width: rclamp(22, 31, 1024, 1440);
+    }
+  }
+
+  .c-contact__tel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    @include mq(tb-middle) {
+      gap: rclamp(6, 8, 1024, 1440);
     }
   }
 }
@@ -36,7 +55,7 @@
   margin-inline: auto;
 
   @include mq(tb-middle) {
-    width: rclamp(160, 300, 1024, 1920);
+    max-width: 225px;
     margin-inline: 0;
   }
 }
@@ -45,7 +64,7 @@
   margin-top: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    margin-top: rclamp(14, 27, 1024, 1920);
+    margin-top: rclamp(14, 27, 1024, 1440);
   }
 }
 
@@ -57,14 +76,47 @@
 
   @include mq(tb-middle) {
     flex-direction: row;
-    gap: rclamp(17, 32, 1024, 1920);
+    gap: rclamp(17, 32, 1024, 1440);
   }
 
   li {
     font-size: rclamp(14, 38, 375, 1023);
     @include mq(tb-middle) {
-      font-size: rclamp(10, 19, 1024, 1920);
+      font-size: rclamp(10, 14, 1024, 1440);
     }
+  }
+
+  @include mq(tb-middle) {
+    a {
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: solid;
+          text-underline-offset: 0.2em;
+        }
+      }
+    }
+  }
+}
+
+@include mq(tb-middle) {
+  .p-footer-info .c-tel-number[href^="tel:"] {
+    pointer-events: cursor;
+    cursor: default;
+  }
+}
+
+
+
+.p-footer-menu__tel-number{
+  @include mq(tb-middle) {
+    font-size: rclamp(17, 24, 1024, 1440);
+  }
+}
+
+.p-footer-menu__tel-time{
+
+  @include mq(tb-middle) {
+    font-size: rclamp(9, 12, 1024, 1440);
   }
 }
 
@@ -75,7 +127,7 @@
   margin-block: rclamp(32, 87, 375, 1023);
 
   @include mq(tb-middle) {
-    margin-block: rclamp(23, 43, 1024, 1920);
+    margin-block: rclamp(23, 32, 1024, 1440);
   }
 }
 
@@ -97,8 +149,21 @@
   justify-content: center;
 
   @include mq(tb-middle) {
-    gap: rclamp(11, 21, 1024, 1920);
+    gap: rclamp(11, 16, 1024, 1440);
   }
+}
+
+.p-footer__sns-item {
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.p-footer__sns-link {
+  display: flex;
+  cursor: pointer;
 }
 
 .p-footer-copy {
@@ -106,6 +171,6 @@
   text-align: center;
 
   @include mq(tb-middle) {
-    font-size: rclamp(9, 16, 1024, 1920);
+    font-size: rclamp(9, 12, 1024, 1440);
   }
 }

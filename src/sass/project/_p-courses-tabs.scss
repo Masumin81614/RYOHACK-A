@@ -2,26 +2,22 @@
 
 .p-courses {
   background: $light-green-color;
-}
-
-.p-courses__inner {
-  @include mq(tb-middle) {
-    position: relative;
-  }
 
   .l-inner {
     @include mq(tb-middle) {
-      padding-inline: rclamp(199, 373, 1024, 1920);
-      padding-top: rclamp(92, 173, 1024, 1920);
+      position: relative;
     }
   }
 }
+
 
 .p-courses-tabs {
   margin-top: rclamp(40, 109, 375, 1023);
 
   @include mq(tb-middle) {
-    margin-top: rclamp(43, 81, 1024, 1920);
+    margin-top: rclamp(43, 60, 1024, 1440); 
+    max-width: 880px;
+    margin-inline: auto;
   }
 }
 
@@ -47,21 +43,23 @@
 .p-course__head--image {
   @include mq(tb-middle) {
     position: absolute;
-    bottom: rclamp(85, 160, 1024, 1920);
-    left: rclamp(114, 215, 1024, 1920);
+    bottom: rclamp(85, 120, 1024, 1440);
+    left: rclamp(114, 162, 1024, 1440);
   }
+  
   img {
     width: rclamp(73, 199, 375, 1023);
     height: auto;
 
     @include mq(tb-middle) {
-      width: rclamp(87, 163, 1024, 1920);
+      width: rclamp(87, 122, 1024, 1440);
     }
   }
 }
 
 .p-courses-tabs__list {
   display: flex;
+  align-items: flex-end;
 }
 
 .p-courses-tabs__item {
@@ -74,25 +72,39 @@
   font-size: rclamp(16, 44, 375, 1023);
   font-weight: 400;
   line-height: normal;
+  align-items: center;
 
   @include mq(tb-middle) {
     display: flex;
     justify-content: center;
-    padding-block: rclamp(14, 27, 1024, 1920);
-    padding-inline: rclamp(7, 13, 1024, 1920);
-    font-size: rclamp(11, 21, 1024, 1920);
+    padding-inline: rclamp(7, 10, 1024, 1440);
+    font-size: rclamp(11, 16, 1024, 1440);
+    padding-block: 0;
   }
+
+
 
   &[aria-selected="true"] {
     background: $white-color;
     color: $main-blue-color;
     pointer-events: none;
+  
+    @include mq(tb-middle) {
+      height: 69px;
+      padding-block: rclamp(14, 20, 1024, 1440);
+
+    }
   }
 
   &[aria-selected="false"] {
     transition: opacity 0.3s ease;
     background: $brown-background;
     color: $sub-text-color;
+
+    @include mq(tb-middle) {
+      height: 60px;
+      padding-block: rclamp(7, 10, 1024, 1440);
+    }
 
     @media (any-hover: hover) {
       &:hover {
@@ -116,16 +128,22 @@
   }
 }
 
+.p-courses-tabs__content{
+  padding-block: rclamp(32, 87, 375, 1023);
+
+  @include mq(tb-middle) {
+    padding-block: rclamp(28, 40, 1024, 1440);
+  }
+}
+
 .p-courses__boxes {
   display: flex;
   flex-wrap: wrap;
   gap: rclamp(32, 87, 375, 1023);
-  padding-block: rclamp(32, 87, 375, 1023);
   justify-content: center;
 
   @include mq(tb-middle) {
-    gap: 27px;
-    padding-block: rclamp(32, 60, 1024, 1920);
+    gap: rclamp(17, 24, 1024, 1440);
     flex-direction: column;
   }
 }
@@ -140,7 +158,7 @@
 
   @include mq(tb-middle) {
     gap: 12px;
-    padding-inline: rclamp(105, 197, 1024, 1920);
+    padding-inline: rclamp(105, 148, 1024, 1440);
   }
 }
 
@@ -151,7 +169,7 @@
 
   @include mq(tb-middle) {
     text-align: left;
-    font-size: rclamp(16, 29, 1024, 1920);
+    font-size: rclamp(16, 22, 1024, 1440);
     line-height: 150%; /* 33px */
     letter-spacing: 1.1px;
   }
@@ -159,16 +177,48 @@
 
 .p-courses__text {
   @include mq(tb-middle) {
-    font-size: rclamp(11, 21, 1024, 1920);
+    font-size: rclamp(11, 16, 1024, 1440);
     line-height: 160%; /* 25.6px */
     letter-spacing: 0.8px;
   }
 }
 
 .p-courses-tab__btn {
-  @include mq(tb-middle) {
-    max-width: rclamp(156, 293, 1024, 1920);
-    margin-inline: auto;
+  border: 1px solid transparent;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+
+    @include mq(tb-middle) {
+      margin-inline: auto;
+      margin-top: rclamp(24, 34, 1024, 1440);
+    }
+
+  .c-btn--text,
+  svg,
+  .c-btn__arrow {
+    color: $white-color;
+    transition:
+      color 0.3s ease,
+      fill 0.3s ease;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $white-color;
+      border-color: $main-blue-color;
+      border: 1px solid $main-blue-color;
+
+      color: $main-blue-color;
+
+      .c-btn--text {
+        color: $main-blue-color;
+      }
+
+      .c-btn__arrow {
+        fill: $white-color;
+      }
+    }
   }
 }
 
@@ -184,8 +234,8 @@
   background: $white-color;
 
   @include mq(tb-middle) {
-    width: min(1000px, 95%);
-    max-height: calc(80vh - 40px);
+    width: min(905px, 92vw);
+    max-height: min(560px, 82vh);
   }
 }
 
@@ -220,10 +270,11 @@
   border-radius: 50%;
   border: none;
   font-size: rclamp(20, 55, 375, 1023);
+  cursor: pointer;
 
   @include mq(tb-middle) {
-    width: rclamp(28, 53, 1024, 1920);
-    height: rclamp(28, 53, 1024, 1920);
+    width: rclamp(28, 40, 1024, 1440);
+    height: rclamp(28, 40, 1024, 1440);
     font-size: 1rem;
   }
 }
@@ -234,8 +285,8 @@
   padding-inline: rclamp(16, 44, 375, 1023);
 
   @include mq(tb-middle) {
-    padding-block: rclamp(28, 53, 1024, 1920);
-    padding-inline: rclamp(85, 160, 1024, 1920);
+    padding-block: rclamp(57, 80, 1024, 1440);
+    padding-inline: rclamp(85, 120, 1024, 1440);
   }
 }
 
@@ -247,13 +298,17 @@
   gap: rclamp(60, 164, 375, 1023);
 
   @include mq(tb-middle) {
-    gap: rclamp(28, 53, 1024, 1920);
+    gap: rclamp(28, 40, 1024, 1440);
   }
 }
 
 .p-modal__content {
   margin-top: rclamp(16, 44, 375, 1023);
-  width: 100%;
+  width: 100%; 
+
+  @include mq(tb-middle) {
+    margin-top: 0;
+  }
 }
 
 .p-modal__head {
@@ -261,7 +316,7 @@
 
   @include mq(tb-middle) {
     display: flex;
-    gap: rclamp(14, 27, 1024, 1920);
+    gap: rclamp(14, 27, 1024, 1440);
     align-items: center;
     padding-inline: 0;
   }
@@ -274,7 +329,7 @@
   font-weight: 700;
 
   @include mq(tb-middle) {
-    font-size: rclamp(16, 29, 1024, 1920);
+    font-size: rclamp(16, 22, 1024, 1440);
   }
 }
 
@@ -299,8 +354,8 @@
   margin-top: rclamp(16, 44, 375, 1023);
 
   @include mq(tb-middle) {
-    margin-top: rclamp(16, 29, 1024, 1920);
-    gap: rclamp(17, 32, 1024, 1920);
+    margin-top: rclamp(16, 29, 1024, 1440);
+    gap: rclamp(17, 32, 1024, 1440);
   }
 }
 
@@ -342,7 +397,4 @@
   flex-direction: row;
   align-items: center;
   gap: rclamp(10, 27, 375, 1023);
-
-  @include mq(tb-middle) {
-  }
 }
